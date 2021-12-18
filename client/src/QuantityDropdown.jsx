@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unused-state */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import ReactDom from 'react-dom';
-
 
 class QuantityDropdown extends React.Component {
   constructor() {
@@ -30,13 +33,13 @@ class QuantityDropdown extends React.Component {
   }
 
   render() {
-
-    let range = this.props.quantity > 15 ? 15 : this.props.quantity;
-    let amount = [];
+    const range = this.props.quantity > 15 ? 15 : this.props.quantity;
+    const amount = [];
+    // eslint-disable-next-line no-plusplus
     for (let i = 1; i <= range; i++) {
       amount.push(i);
     }
-    let sizePicked = "-";
+    let sizePicked = '-';
     if (this.props.size) {
       if (this.props.amount) {
         sizePicked = this.props.amount;
@@ -48,7 +51,7 @@ class QuantityDropdown extends React.Component {
     return (
       <div>
         Quantity
-        <button onClick={this.showMenu}>
+        <button type="button" onClick={this.showMenu}>
           {sizePicked}
         </button>
 
@@ -57,7 +60,7 @@ class QuantityDropdown extends React.Component {
             ? (
               <div className="menu">
                 {amount.map((item, index) => (
-                  <button value={item} onClick={this.props.chooseAmount} key={index}>{item}</button>
+                  <button type="button" value={item} onClick={this.props.chooseAmount} key={index}>{item}</button>
 
                 ))}
 
