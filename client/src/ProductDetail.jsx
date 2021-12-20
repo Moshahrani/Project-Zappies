@@ -3,10 +3,10 @@ import ReactDom from 'react-dom';
 import axios from 'axios'
 import ColorsDropdown from './ColorsDropdown.jsx';
 import SizesDropdown from './SizesDropdown.jsx';
-import QuantityDropdown from '/Users/moshfeqshahrani/Documents/Zappies/client/src/QuantityDropdown.jsx'
-import StarRatings from '/Users/moshfeqshahrani/Documents/Zappies/client/src/StarRatings.jsx'
-import SocialMedia from '/Users/moshfeqshahrani/Documents/Zappies/client/src/SocialMedia.jsx'
-import ShoppingCart from '/Users/moshfeqshahrani/Documents/Zappies/client/src/ShoppingCart.jsx'
+import QuantityDropdown from './QuantityDropdown.jsx'
+import StarRatings from './StarRatings.jsx'
+import SocialMedia from './SocialMedia.jsx'
+import ShoppingCart from './ShoppingCart.jsx'
 
 
 class ProductDetail extends React.Component {
