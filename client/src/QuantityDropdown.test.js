@@ -5,6 +5,6 @@ import QuantityDropdown from './QuantityDropdown.jsx';
 
 it("renders Quantity ", () => {
     const wrapper = shallow(<QuantityDropdown />);
-    const colorsDisplay = "Quantity";
-    expect(wrapper.contains(colorsDisplay)).toEqual(true);
+    const quantityDisplay = "Quantity";
+    expect(wrapper.contains(quantityDisplay)).toEqual(true);
 })
