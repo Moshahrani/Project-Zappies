@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import StarRatings from './StarRatings.jsx';
 
 
-it("renders Quantity ", () => {
+it("renders Stars Phrase ", () => {
     const wrapper = shallow(<StarRatings />);
     const starRatings = "Stars";
     expect(wrapper.contains(starRatings)).toEqual(true);

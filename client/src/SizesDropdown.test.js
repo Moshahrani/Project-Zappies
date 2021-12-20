@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SizesDropdown from './SizesDropdown.jsx';
 
 
-it("renders Quantity ", () => {
+it("renders Sizes phrase ", () => {
     const wrapper = shallow(<SizesDropdown />);
     const sizesDropdown = "Sizes";
     expect(wrapper.contains(sizesDropdown)).toEqual(true);
