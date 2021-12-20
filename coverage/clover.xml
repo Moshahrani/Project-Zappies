@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1639977925253" clover="3.2.0">
-  <project timestamp="1639977925253" name="All files">
-    <metrics statements="168" coveredstatements="14" conditionals="42" coveredconditionals="2" methods="42" coveredmethods="6" elements="252" coveredelements="22" complexity="0" loc="168" ncloc="168" packages="1" files="9" classes="9"/>
+<coverage generated="1639978992899" clover="3.2.0">
+  <project timestamp="1639978992899" name="All files">
+    <metrics statements="168" coveredstatements="24" conditionals="42" coveredconditionals="5" methods="42" coveredmethods="8" elements="252" coveredelements="37" complexity="0" loc="168" ncloc="168" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
       <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
       <line num="14" count="3" type="stmt"/>
@@ -116,26 +116,26 @@
       <line num="230" count="0" type="stmt"/>
     </file>
     <file name="QuantityDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/QuantityDropdown.jsx">
-      <metrics statements="20" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="7" coveredmethods="0"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
+      <metrics statements="20" coveredstatements="10" conditionals="8" coveredconditionals="3" methods="7" coveredmethods="2"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
       <line num="22" count="0" type="stmt"/>
       <line num="24" count="0" type="stmt"/>
       <line num="25" count="0" type="stmt"/>
       <line num="30" count="0" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
-      <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="37" count="0" type="stmt"/>
-      <line num="39" count="0" type="stmt"/>
+      <line num="36" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
       <line num="40" count="0" type="stmt"/>
-      <line num="42" count="0" type="stmt"/>
-      <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="45" count="0" type="stmt"/>
       <line num="47" count="0" type="stmt"/>
-      <line num="51" count="0" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
       <line num="63" count="0" type="stmt"/>
     </file>
     <file name="ShoppingCart.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ShoppingCart.jsx">

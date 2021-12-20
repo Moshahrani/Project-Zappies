@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">52.38% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>11/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">37.5% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>3/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>10/20</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -149,25 +149,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -178,19 +172,25 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -225,16 +225,16 @@ import React from 'react';
 import ReactDom from 'react-dom';
 &nbsp;
 class QuantityDropdown extends React.Component {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
-<span class="cstat-no" title="statement not covered" >    super();</span>
+  constructor() {
+    super();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+    this.state = {
       showMenu: false,
       quantities: [],
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.showMenu = this.showMenu.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >    this.closeMenu = this.closeMenu.bind(this);</span>
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  sh</span>owMenu(event) {
@@ -251,15 +251,15 @@ class QuantityDropdown extends React.Component {
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
-    const range = <span class="cstat-no" title="statement not covered" >this.props.quantity &gt; 15 ? 15 : this.props.quantity;</span>
-    const amount = <span class="cstat-no" title="statement not covered" >[];</span>
+  render() {
+    const range = this.props.quantity &gt; 15 ? <span class="branch-0 cbranch-no" title="branch not covered" >15 </span>: this.props.quantity;
+    const amount = [];
     // eslint-disable-next-line no-plusplus
-<span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >1;</span> i &lt;= range; i++) {</span>
+    for (let i = 1; i &lt;= range; i++) {
 <span class="cstat-no" title="statement not covered" >      amount.push(i);</span>
     }
-    let sizePicked = <span class="cstat-no" title="statement not covered" >'-';</span>
-<span class="cstat-no" title="statement not covered" >    if (this.props.size) {</span>
+    let sizePicked = '-';
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.size) {
 <span class="cstat-no" title="statement not covered" >      if (this.props.amount) {</span>
 <span class="cstat-no" title="statement not covered" >        sizePicked = this.props.amount;</span>
       } else {
@@ -267,7 +267,7 @@ class QuantityDropdown extends React.Component {
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;div&gt;
         Quantity
         &lt;button type="button" onClick={this.showMenu}&gt;
@@ -277,7 +277,7 @@ class QuantityDropdown extends React.Component {
         {
           this.state.showMenu
             ? (
-              &lt;div className="menu"&gt;
+<span class="branch-0 cbranch-no" title="branch not covered" >              &lt;div className="menu"&gt;</span>
                 {amount.map(<span class="fstat-no" title="function not covered" >(i</span>tem, index) =&gt; (
 <span class="cstat-no" title="statement not covered" >                  &lt;button type="button" value={item} onClick={this.props.chooseAmount} key={index}&gt;{item}&lt;/button&gt;</span>
 &nbsp;
@@ -301,7 +301,7 @@ export default QuantityDropdown;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener">istanbul</a>
-                at Sun Dec 19 2021 21:25:25 GMT-0800 (Pacific Standard Time)
+                at Sun Dec 19 2021 21:43:12 GMT-0800 (Pacific Standard Time)
             </div>
         </div>
         <script src="prettify.js"></script>
