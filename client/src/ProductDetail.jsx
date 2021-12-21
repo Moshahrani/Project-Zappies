@@ -216,7 +216,9 @@ class ProductDetail extends React.Component {
         if (!this.state.currentItem) {
             return (
                 <div>
+                    <h1>
                     <button onClick={this.getSpecificShoe}>Vans</button>
+                    </h1>
                 </div>
 
 

@@ -14,3 +14,11 @@ it("renders without issues", () => {
     shallow(<ProductDetail />);
 });
 
+describe('MainPage first test', () => {
+    it('should have a header tag with Brand Name of Product', () => {
+      const wrapper = shallow(<ProductDetail />);
+      expect(wrapper.find('h1').text()).toEqual('Vans');
+    });
+  });
+
+
