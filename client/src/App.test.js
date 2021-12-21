@@ -2,10 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import MainPage from './MainPage.jsx';
-
 import ProductDetail from './ProductDetail.jsx';
-import ShoppingCart from './ShoppingCart.jsx'
-import Dropdown from './ColorsDropdown.jsx';
 //import StarRatings from './StarRatings';
 import App from './App.jsx';
 
