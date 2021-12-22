@@ -18,6 +18,7 @@ class ProductDetail extends React.Component {
             productId: '',
             productName: '',
             currentItem: '',
+            itemExists: false,
             currentDetails: null,
             description: [],
             price: null,
@@ -154,6 +155,7 @@ class ProductDetail extends React.Component {
                 currentItem: imageLink,
                 description: describe,
                 currentDetails: shoeDetails[imageLink],
+                itemExists: true,
                 //price: cost,
                 productRating: rating,
                 // sizes: [...shoeSizes],
@@ -204,29 +206,29 @@ class ProductDetail extends React.Component {
     }
 
 
-
+    
 
     render() {
+
+        let array = [1,2,3,4,5]
+
         //console.log(this.state.currentDetails)
         //console.log(this.state.sizes)
         //console.log(this.state.quantity)
         console.log(this.state.shoeDetails)
         console.log(this.state.price)
         console.log(this.state.cart)
-        if (!this.state.currentItem) {
+        if (!this.state.itemExists) {
             return (
-                <div>
+                <div id="pd">
                     <h1>
-                    <button onClick={this.getSpecificShoe}>Vans</button>
+                        <button onClick={this.getSpecificShoe}>Vans</button>
                     </h1>
                 </div>
-
-
             )
         } else {
             return (
-                <div>
-
+                <div id="id" className="productDetail" >
                     <div>
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
                             <img src={item} key={index}></img>
@@ -249,17 +251,26 @@ class ProductDetail extends React.Component {
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                 </div>
             )
+            //}
+
+
         }
 
-
     }
-
-
 
 
 }
 
 export default ProductDetail;
+
+// <div>
+//                         {this.state.allImages[this.state.currentItem].map((item, index) => (
+//                             <img src={item} key={index}></img>
+//                         ))}
+//                     </div>
+
+
+
 
 
 
@@ -297,7 +308,7 @@ export default ProductDetail;
             //             images[response.data.product[0].styles[i].color] = "https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[1].imageId + "._AC_SR700,525_.jpg";
             //             let allImages = [];
             //             for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
-            //                 allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId+ "._AC_SR700,525_.jpg") 
+            //                 allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId+ "._AC_SR700,525_.jpg")
             //             }
             //             //console.log(allImages)
             //             allPictures[response.data.product[0].styles[i].color] = [...allImages]
