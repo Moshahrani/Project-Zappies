@@ -7,7 +7,8 @@ import ProductDetail from './ProductDetail.jsx';
 import App from './App.jsx';
 
 it("renders without issues", () => {
-    shallow(<App />);
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
 });
 
 it("renders App", () => {

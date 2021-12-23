@@ -29,7 +29,7 @@ class ColorsDropdown extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="colors" className="colors">
         <button type="button" onClick={this.showMenu}>
           Colors
         </button>
