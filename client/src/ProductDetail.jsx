@@ -210,25 +210,25 @@ class ProductDetail extends React.Component {
 
     render() {
 
-        let array = [1,2,3,4,5]
+
 
         //console.log(this.state.currentDetails)
         //console.log(this.state.sizes)
         //console.log(this.state.quantity)
-        console.log(this.state.shoeDetails)
-        console.log(this.state.price)
-        console.log(this.state.cart)
+        // console.log(this.state.shoeDetails)
+        // console.log(this.state.price)
+        // console.log(this.state.cart)
         if (!this.state.itemExists) {
             return (
-                <div id="pd">
+                <div id="getProductDetails" className="beforeGetShoe">
                     <h1>
-                        <button onClick={this.getSpecificShoe}>Vans</button>
+                        <button id="button" className="getShoeButton" onClick={this.getSpecificShoe}>Vans</button>
                     </h1>
                 </div>
             )
         } else {
             return (
-                <div id="id" className="productDetail" >
+                <div id="pd" className="productDetail" >
                     <div>
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
                             <img src={item} key={index}></img>
@@ -251,7 +251,7 @@ class ProductDetail extends React.Component {
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                 </div>
             )
-            //}
+        
 
 
         }

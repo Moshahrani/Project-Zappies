@@ -73,31 +73,27 @@ class App extends React.Component {
 
 
   render() {
-    if (this.state.nextPage) {
-      return (
-        <div>
-          <ProductDetail />
-        </div>
-      )
-    } else {
-      return (<div id="app" className="app">
-        <h1>
+    // if (this.state.nextPage) {
+    //   return (
+    //     <div>
+    //       <ProductDetail />
+    //     </div>
+    //   )
+    // } else {
+    return (<div id="app" className="app">
+      <h1>
         Zappies
-        </h1>
-        
-        <MainPage />
-        <div>
-          <ul>
-            {this.state.items.map(item => (
-              <li>{item}</li>
-            ))}
-          </ul>
-          <button onClick={this.getMensShoes}>Products</button>
-        </div>
-      </div>)
-    }
+      </h1>
+
+      <MainPage />
+      <div >
+        <button type="button" className="getShoes" onClick={this.getMensShoes}>Products</button>
+      </div>
+    </div>
+    )
+    //}
   }
-  
+
 }
 
 export default App;

@@ -8,27 +8,28 @@ import StarRatings from './StarRatings.jsx';
 import SocialMedia from './SocialMedia.jsx';
 import ShoppingCart from './ShoppingCart.jsx';
 import ProductDetail from './ProductDetail.jsx';
+import { TestWatcher } from 'jest';
 
 
 it("renders without issues", () => {
     shallow(<ProductDetail />);
 });
 
-describe('Productdetail renders first part of conditional', () => {
+describe('ProductDetail renders first part of conditional', () => {
     it('should have a header tag with Brand Name of Product', () => {
         const wrapper = shallow(<ProductDetail />);
         expect(wrapper.find('h1').text()).toEqual('Vans');
     });
 });
 
-it('should render ColorsDropdown component', () => {
+it('should render all Child components/ second part of conditional', () => {
     const wrapper = mount(<ProductDetail />);
     wrapper.setState({
         itemExists: true,
         allImages: { red: [] },
         currentItem: ['red']
     });
-    const PD = wrapper.find('#id');
+    const PD = wrapper.find('#pd');
     expect(PD.exists()).toBe(true);
     const CD = wrapper.find(ColorsDropdown);
     const SD = wrapper.find(SizesDropdown);
@@ -45,13 +46,30 @@ it('should render ColorsDropdown component', () => {
     //expect(SC.exists()).toBe(true);
 });
 
+it('should render getShoe button', () => {
+    const wrapper = shallow(<ProductDetail />)
+    const details = wrapper.find("#getProductDetails");
+    const button = details.find("#button");
+    expect(button.length).toBe(1);
+});
+// describe('test getShoe Button', () => {
+//     it('test click event', () => {
+//         const mockCB = jest.fn();
+//         const wrapper = shallow((<ProductDetail getSpecificShoe={mockCB} />)); 
+//         wrapper.find("button").simulate('click');
+//         expect(mockCB).toHaveBeenCalled();
+//     });
+// });
 
-// it('should render ColorsDropdown component', () => {
-//     const wrapper = mount(<ProductDetail />);
-//     //const productDetail = wrapper.find('#pd');
-//     //expect(productDetail.exists()).toBe(true);
-//      const CD = wrapper.find(ColorsDropdown);
-//      expect(CD.exists()).toBe(true);
+
+
+// describe('test getShoe Button', () => {
+//     it('test click event', () => {
+//         const mockCB = jest.fn();
+//         const wrapper = shallow(<ProductDetail onClick={mockCB} />);
+//         wrapper.find('button').simulate('click');
+//         expect(mockCB).toHaveBeenCalled();
+//     });
 // });
 
 
