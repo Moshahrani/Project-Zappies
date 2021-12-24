@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1640282072902" clover="3.2.0">
-  <project timestamp="1640282072902" name="All files">
-    <metrics statements="162" coveredstatements="62" conditionals="40" coveredconditionals="15" methods="41" coveredmethods="17" elements="243" coveredelements="94" complexity="0" loc="162" ncloc="162" packages="1" files="9" classes="9"/>
+<coverage generated="1640305741482" clover="3.2.0">
+  <project timestamp="1640305741483" name="All files">
+    <metrics statements="162" coveredstatements="65" conditionals="40" coveredconditionals="16" methods="41" coveredmethods="19" elements="243" coveredelements="100" complexity="0" loc="162" ncloc="162" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="12" count="4" type="stmt"/>
@@ -12,18 +12,18 @@
       <line num="83" count="6" type="stmt"/>
     </file>
     <file name="ColorsDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ColorsDropdown.jsx">
-      <metrics statements="11" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="2"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="8" count="3" type="stmt"/>
-      <line num="12" count="3" type="stmt"/>
-      <line num="13" count="3" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
-      <line num="19" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
+      <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="4"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
       <line num="25" count="0" type="stmt"/>
       <line num="26" count="0" type="stmt"/>
-      <line num="31" count="3" type="stmt"/>
-      <line num="42" count="0" type="stmt"/>
+      <line num="31" count="7" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
     </file>
     <file name="MainPage.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/MainPage.jsx">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

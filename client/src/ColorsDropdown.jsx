@@ -28,18 +28,19 @@ class ColorsDropdown extends React.Component {
   }
 
   render() {
-    return (
+    return (<div>
       <div id="colors" className="colors">
-        <button type="button" onClick={this.showMenu}>
+        <button type="button" id="showMenu" onClick={this.showMenu}>
           Colors
         </button>
+       </div>
 
         {
           this.state.showMenu
             ? (
               <div className="menu">
                 {this.props.colors.map((item, index) => (
-                  <button type="button" value={item} onClick={this.props.printShoe} key={index}>{item}</button>
+                  <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>{item}</button>
 
                 ))}
 

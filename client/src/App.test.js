@@ -40,7 +40,7 @@ describe('getShoe Button', () => {
     })
     it('test click event', () => {
         button.simulate('click');
-        console.log(button.debug());
+       // console.log(button.debug());
         wrapper.instance().forceUpdate();
         expect(wrapper.state('nextPage')).toEqual(true);
     });
