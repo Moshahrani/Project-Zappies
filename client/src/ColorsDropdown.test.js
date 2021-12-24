@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ColorsDropdown from './ColorsDropdown.jsx';
-import ProductDetail from './ProductDetail.jsx';
+
 
 it('renders Colors Component without any issues', () => {
     const wrapper = shallow(<ColorsDropdown />);
@@ -22,17 +22,16 @@ describe('Colors button ', () => {
     it('Colors button exists', () => {
         expect(menuButton.exists()).toBe(true);
     });
-    it('showMenu method changes state to true', () => {
+    it('showMenu method changes showMenu state to true', () => {
         wrapper.setState({
         showMenu: false
         });
-        //console.log(menuButton.debug());
         menuButton.simulate('click', {
         preventDefault() { }
         });
         wrapper.instance().forceUpdate();
         expect(wrapper.state('showMenu')).toEqual(true);
-        console.log(wrapper.debug());
+        //console.log(wrapper.debug());
     });
 });
       

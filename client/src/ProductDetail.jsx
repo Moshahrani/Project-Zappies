@@ -222,7 +222,7 @@ class ProductDetail extends React.Component {
             return (
                 <div id="getProductDetails" className="beforeGetShoe">
                     <h1>
-                        <button id="button" className="getShoeButton" onClick={this.getSpecificShoe}>Vans</button>
+                        <button type="button" id="getShoeButton" className="getShoeButton" onClick={this.getSpecificShoe}>Vans</button>
                     </h1>
                 </div>
             )
