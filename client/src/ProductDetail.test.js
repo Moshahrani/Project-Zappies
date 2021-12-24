@@ -54,7 +54,6 @@ describe('ProductDetail renders for second half of conditional ', () => {
         expect(SM.exists()).toBe(true);
         //expect(SC.exists()).toBe(true);
     });
-
 });
 
 

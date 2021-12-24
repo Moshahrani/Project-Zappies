@@ -51,7 +51,7 @@ class QuantityDropdown extends React.Component {
     return (
       <div>
         Quantity
-        <button type="button" onClick={this.showMenu}>
+        <button type="button" id="showMenu" onClick={this.showMenu}>
           {sizePicked}
         </button>
 
