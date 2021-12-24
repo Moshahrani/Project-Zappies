@@ -56,24 +56,5 @@ describe('ProductDetail renders for second half of conditional ', () => {
     });
 
 });
-// describe('test getShoe Button', () => {
-//     it('test click event', () => {
-//         const mockCB = jest.fn();
-//         const wrapper = shallow((<ProductDetail getSpecificShoe={mockCB} />)); 
-//         wrapper.find("button").simulate('click');
-//         expect(mockCB).toHaveBeenCalled();
-//     });
-// });
-
-
-
-// describe('test getShoe Button', () => {
-//     it('test click event', () => {
-//         const mockCB = jest.fn();
-//         const wrapper = shallow(<ProductDetail onClick={mockCB} />);
-//         wrapper.find('button').simulate('click');
-//         expect(mockCB).toHaveBeenCalled();
-//     });
-// });
 
 
