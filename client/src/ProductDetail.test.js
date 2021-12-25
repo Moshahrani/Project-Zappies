@@ -20,8 +20,6 @@ describe('ProductDetail renders first part of conditional', () => {
     const wrapper = shallow(<ProductDetail />);
     wrapper.setState({
         itemExists: false
-        //allImages: { red: [] },
-        //currentItem: ['red']
     });
     it('should have a header tag with Brand Name of Product', () => {
         expect(wrapper.find('h1').text()).toEqual('Vans');
@@ -39,6 +37,11 @@ describe('ProductDetail renders for second half of conditional ', () => {
         allImages: { red: [] },
         currentItem: ['red']
     });
+    it('renders an image', () => {
+        const image = wrapper.find('#images')
+        //console.log(image.debug())
+        expect(wrapper.find("#img")).toBeTruthy();
+     });
     it('should render all Child components/ second part of conditional', () => {
         const CD = wrapper.find(ColorsDropdown);
         const SD = wrapper.find(SizesDropdown);

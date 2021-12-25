@@ -28,22 +28,25 @@ class ColorsDropdown extends React.Component {
   }
 
   render() {
-    return (<div>
-      <div id="colors" className="colors">
-        <button type="button" id="showMenu" onClick={this.showMenu}>
-          Colors
-        </button>
-       </div>
-
+    if (!this.state.showMenu) {
+      return (<div id="colors">
+        <div id="menu" className="colors">
+          <button type="button" id="showMenu" onClick={this.showMenu}>
+            Colors
+          </button>
+        </div>
+      </div>
+      )
+    } else {
+      return (<div id="showShoes">
         {
           this.state.showMenu
             ? (
-              <div className="menu">
+              <div id="showShoe" className="showShoe">
                 {this.props.colors.map((item, index) => (
-                  <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>{item}</button>
-
+                  <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>{item}
+                  </button>
                 ))}
-
               </div>
             )
             : (
@@ -51,7 +54,35 @@ class ColorsDropdown extends React.Component {
             )
         }
       </div>
-    );
+      )
+    }
+
   }
 }
 export default ColorsDropdown;
+
+
+// return (<div id="colors">
+//       <div id="menu" className="colors">
+//         <button type="button" id="showMenu" onClick={this.showMenu}>
+//           Colors
+//         </button>
+//       </div>
+
+//       {
+//         this.state.showMenu
+//           ? (
+//             <div id="showShoe" className="showShoe">
+//               {this.props.colors.map((item, index) => (
+//                 <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>{item}</button>
+
+//               ))}
+
+//             </div>
+//           )
+//           : (
+//             null
+//           )
+//       }
+//     </div>
+//     );

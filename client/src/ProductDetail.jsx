@@ -106,17 +106,12 @@ class ProductDetail extends React.Component {
                 let regPrice = parseFloat((cost).toFixed(2))
                 sizeInventory["price"] = regPrice;
 
-
-
                 shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
             }
             console.log(shoeDetails)
 
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
             // let shoeDetail = {};
-
-
-
 
             //console.log(response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating)
             //console.log(response.data.product[0].reviewSummary.reviewWithMostVotes.summary)
@@ -205,16 +200,10 @@ class ProductDetail extends React.Component {
         }
     }
 
-
-    
-
     render() {
-
-
-
         //console.log(this.state.currentDetails)
         //console.log(this.state.sizes)
-        //console.log(this.state.quantity)
+        console.log(this.state.quantity)
         // console.log(this.state.shoeDetails)
         // console.log(this.state.price)
         // console.log(this.state.cart)
@@ -229,9 +218,9 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
-                    <div>
+                    <div id="images" >
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
-                            <img src={item} key={index}></img>
+                            <img id="img" src={item} key={index}></img>
                         ))}
                     </div>
                     <div>
@@ -240,7 +229,7 @@ class ProductDetail extends React.Component {
                     <div>
                         <SocialMedia />
                     </div>
-                    <div>
+                    <div id="dropdowns">
                         <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
                         <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
                         <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
@@ -251,14 +240,8 @@ class ProductDetail extends React.Component {
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                 </div>
             )
-        
-
-
         }
-
     }
-
-
 }
 
 export default ProductDetail;

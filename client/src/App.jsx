@@ -73,13 +73,13 @@ class App extends React.Component {
 
 
   render() {
-    // if (this.state.nextPage) {
-    //   return (
-    //     <div>
-    //       <ProductDetail />
-    //     </div>
-    //   )
-    // } else {
+    if (this.state.nextPage) {
+      return (
+        <div>
+          <ProductDetail />
+        </div>
+      )
+    } else {
     return (<div id="app" className="app">
       <h1>
         Zappies
@@ -91,7 +91,7 @@ class App extends React.Component {
       </div>
     </div>
     )
-    //}
+    }
   }
 
 }
