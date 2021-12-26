@@ -29,13 +29,12 @@ class ColorsDropdown extends React.Component {
 
   render() {
     if (!this.state.showMenu) {
-      return (<div id="colors">
+      return (
         <div id="menu" className="colors">
           <button type="button" id="showMenu" onClick={this.showMenu}>
             Colors
           </button>
         </div>
-      </div>
       )
     } else {
       return (<div id="showShoes">
@@ -55,7 +54,7 @@ class ColorsDropdown extends React.Component {
         }
       </div>
       )
-    }
+  }
 
   }
 }

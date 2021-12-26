@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1640398938177" clover="3.2.0">
-  <project timestamp="1640398938177" name="All files">
-    <metrics statements="167" coveredstatements="74" conditionals="44" coveredconditionals="20" methods="41" coveredmethods="22" elements="252" coveredelements="116" complexity="0" loc="167" ncloc="167" packages="1" files="9" classes="9"/>
+<coverage generated="1640477198303" clover="3.2.0">
+  <project timestamp="1640477198303" name="All files">
+    <metrics statements="163" coveredstatements="76" conditionals="44" coveredconditionals="20" methods="41" coveredmethods="23" elements="248" coveredelements="119" complexity="0" loc="163" ncloc="163" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <line num="12" count="4" type="stmt"/>
@@ -26,8 +26,8 @@
       <line num="26" count="0" type="stmt"/>
       <line num="31" count="9" type="cond" truecount="2" falsecount="0"/>
       <line num="32" count="5" type="stmt"/>
-      <line num="41" count="4" type="stmt"/>
-      <line num="47" count="2" type="stmt"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="46" count="2" type="stmt"/>
     </file>
     <file name="MainPage.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/MainPage.jsx">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -36,25 +36,22 @@
       <line num="13" count="2" type="stmt"/>
     </file>
     <file name="ProductDetail.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ProductDetail.jsx">
-      <metrics statements="76" coveredstatements="16" conditionals="8" coveredconditionals="2" methods="10" coveredmethods="2"/>
-      <line num="14" count="3" type="stmt"/>
-      <line num="15" count="3" type="stmt"/>
-      <line num="37" count="3" type="stmt"/>
-      <line num="38" count="3" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
-      <line num="40" count="3" type="stmt"/>
-      <line num="41" count="3" type="stmt"/>
-      <line num="45" count="3" type="stmt"/>
-      <line num="52" count="0" type="stmt"/>
-      <line num="53" count="0" type="stmt"/>
+      <metrics statements="72" coveredstatements="18" conditionals="8" coveredconditionals="2" methods="10" coveredmethods="3"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="41" count="4" type="stmt"/>
+      <line num="45" count="4" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
       <line num="54" count="0" type="stmt"/>
-      <line num="57" count="0" type="stmt"/>
-      <line num="67" count="3" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+      <line num="67" count="4" type="stmt"/>
       <line num="68" count="0" type="stmt"/>
       <line num="78" count="0" type="stmt"/>
-      <line num="79" count="0" type="stmt"/>
-      <line num="80" count="0" type="stmt"/>
-      <line num="81" count="0" type="stmt"/>
       <line num="82" count="0" type="stmt"/>
       <line num="83" count="0" type="stmt"/>
       <line num="84" count="0" type="stmt"/>
@@ -92,11 +89,11 @@
       <line num="146" count="0" type="stmt"/>
       <line num="149" count="0" type="stmt"/>
       <line num="163" count="0" type="stmt"/>
-      <line num="168" count="3" type="stmt"/>
+      <line num="168" count="4" type="stmt"/>
       <line num="169" count="0" type="stmt"/>
-      <line num="175" count="3" type="stmt"/>
+      <line num="175" count="4" type="stmt"/>
       <line num="177" count="0" type="stmt"/>
-      <line num="182" count="3" type="stmt"/>
+      <line num="182" count="4" type="stmt"/>
       <line num="183" count="0" type="stmt"/>
       <line num="184" count="0" type="stmt"/>
       <line num="186" count="0" type="cond" truecount="0" falsecount="4"/>
@@ -108,10 +105,9 @@
       <line num="192" count="0" type="stmt"/>
       <line num="195" count="0" type="stmt"/>
       <line num="197" count="0" type="stmt"/>
-      <line num="206" count="5" type="stmt"/>
-      <line num="210" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="211" count="4" type="stmt"/>
-      <line num="219" count="1" type="stmt"/>
+      <line num="210" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="211" count="5" type="stmt"/>
+      <line num="219" count="3" type="stmt"/>
       <line num="223" count="0" type="stmt"/>
     </file>
     <file name="QuantityDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/QuantityDropdown.jsx">

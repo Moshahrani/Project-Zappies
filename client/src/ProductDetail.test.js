@@ -9,6 +9,7 @@ import SocialMedia from './SocialMedia.jsx';
 import ShoppingCart from './ShoppingCart.jsx';
 import ProductDetail from './ProductDetail.jsx';
 import { TestWatcher } from 'jest';
+import { json } from 'body-parser';
 
 
 it("renders without issues", () => {
@@ -39,7 +40,6 @@ describe('ProductDetail renders for second half of conditional ', () => {
     });
     it('renders an image', () => {
         const image = wrapper.find('#images')
-        //console.log(image.debug())
         expect(wrapper.find("#img")).toBeTruthy();
      });
     it('should render all Child components/ second part of conditional', () => {
@@ -58,5 +58,23 @@ describe('ProductDetail renders for second half of conditional ', () => {
         //expect(SC.exists()).toBe(true);
     });
 });
+
+it('should invoke printShoe prop in ColorsDropdown Component', () => {
+    let wrapper = shallow(<ProductDetail />);
+    wrapper.setState({
+        itemExists: true,
+        allImages: { red: [],
+        blue: [] },
+        color: null,
+        currentItem: ['red'],
+        shoeDetails: {'red': {sizes: 1 },
+    'blue': {sizes: 2}}
+    });
+    const event = {
+        target: { value: 'blue' }
+    }
+    wrapper.find('ColorsDropdown').props().printShoe(event);
+    expect(wrapper.state('color')).toEqual('blue');
+  });
 
 

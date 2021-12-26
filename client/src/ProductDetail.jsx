@@ -76,9 +76,9 @@ class ProductDetail extends React.Component {
         };
 
         axios.request(options).then((response) => {
-            console.log(response.data.product[0].styles[1].stocks)
-            console.log(response.data.product[0].styles[0].color)
-            console.log(response.data.product[0].styles[0])
+            // console.log(response.data.product[0].styles[1].stocks)
+            // console.log(response.data.product[0].styles[0].color)
+            // console.log(response.data.product[0].styles[0])
             let shoeDetails = {}
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
@@ -203,7 +203,7 @@ class ProductDetail extends React.Component {
     render() {
         //console.log(this.state.currentDetails)
         //console.log(this.state.sizes)
-        console.log(this.state.quantity)
+        //console.log(this.state.quantity)
         // console.log(this.state.shoeDetails)
         // console.log(this.state.price)
         // console.log(this.state.cart)

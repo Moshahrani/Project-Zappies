@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import ColorsDropdown from './ColorsDropdown.jsx';
 
 it('renders Colors Component without any issues', () => {
@@ -18,7 +18,6 @@ it('renders Colors text ', () => {
 describe('Colors shoeMenu button ', () => {
     const wrapper = shallow(<ColorsDropdown colors={[]} />);
     const menuButton = wrapper.find('#showMenu');
-    console.log(menuButton.debug());
     it('Colors menu button exists', () => {
         expect(menuButton.exists()).toBe(true);
     });
@@ -31,7 +30,6 @@ describe('Colors shoeMenu button ', () => {
         });
         wrapper.instance().forceUpdate();
         expect(wrapper.state('showMenu')).toEqual(true);
-        //console.log(wrapper.debug());
     });
 
 });
@@ -42,17 +40,14 @@ describe('Colors printShoe button ', () => {
         showMenu: true
     });
     const printButton = wrapper.find('#showShoe');
-    //console.log(printButton.debug());
     it('PrintShoe button exists', () => {
         expect(printButton.exists()).toBe(true);
     });
     it('color button should click and render color/style of shoe', () => {
         printButton.simulate('click', {
-        preventDefault() { }
-    });
+            preventDefault() { }
+        });
         wrapper.instance().forceUpdate();
-        console.log(wrapper.debug());
-    expect(wrapper.state('showMenu')).toEqual(true);
-    //expect(wrapper.prop('colors')).toEqual('red');
+        expect(wrapper.state('showMenu')).toEqual(true);
     });
 });
