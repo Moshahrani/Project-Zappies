@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1640477198303" clover="3.2.0">
-  <project timestamp="1640477198303" name="All files">
-    <metrics statements="163" coveredstatements="76" conditionals="44" coveredconditionals="20" methods="41" coveredmethods="23" elements="248" coveredelements="119" complexity="0" loc="163" ncloc="163" packages="1" files="9" classes="9"/>
+<coverage generated="1640581195476" clover="3.2.0">
+  <project timestamp="1640581195476" name="All files">
+    <metrics statements="163" coveredstatements="79" conditionals="44" coveredconditionals="20" methods="41" coveredmethods="25" elements="248" coveredelements="124" complexity="0" loc="163" ncloc="163" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <line num="12" count="4" type="stmt"/>
@@ -36,20 +36,20 @@
       <line num="13" count="2" type="stmt"/>
     </file>
     <file name="ProductDetail.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ProductDetail.jsx">
-      <metrics statements="72" coveredstatements="18" conditionals="8" coveredconditionals="2" methods="10" coveredmethods="3"/>
-      <line num="14" count="4" type="stmt"/>
-      <line num="15" count="4" type="stmt"/>
-      <line num="37" count="4" type="stmt"/>
-      <line num="38" count="4" type="stmt"/>
-      <line num="39" count="4" type="stmt"/>
-      <line num="40" count="4" type="stmt"/>
-      <line num="41" count="4" type="stmt"/>
-      <line num="45" count="4" type="stmt"/>
+      <metrics statements="72" coveredstatements="21" conditionals="8" coveredconditionals="2" methods="10" coveredmethods="5"/>
+      <line num="14" count="6" type="stmt"/>
+      <line num="15" count="6" type="stmt"/>
+      <line num="37" count="6" type="stmt"/>
+      <line num="38" count="6" type="stmt"/>
+      <line num="39" count="6" type="stmt"/>
+      <line num="40" count="6" type="stmt"/>
+      <line num="41" count="6" type="stmt"/>
+      <line num="45" count="6" type="stmt"/>
       <line num="52" count="1" type="stmt"/>
       <line num="53" count="1" type="stmt"/>
-      <line num="54" count="0" type="stmt"/>
+      <line num="54" count="3" type="stmt"/>
       <line num="57" count="1" type="stmt"/>
-      <line num="67" count="4" type="stmt"/>
+      <line num="67" count="6" type="stmt"/>
       <line num="68" count="0" type="stmt"/>
       <line num="78" count="0" type="stmt"/>
       <line num="82" count="0" type="stmt"/>
@@ -89,26 +89,26 @@
       <line num="146" count="0" type="stmt"/>
       <line num="149" count="0" type="stmt"/>
       <line num="163" count="0" type="stmt"/>
-      <line num="168" count="4" type="stmt"/>
-      <line num="169" count="0" type="stmt"/>
-      <line num="175" count="4" type="stmt"/>
-      <line num="177" count="0" type="stmt"/>
-      <line num="182" count="4" type="stmt"/>
-      <line num="183" count="0" type="stmt"/>
-      <line num="184" count="0" type="stmt"/>
-      <line num="186" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="187" count="0" type="stmt"/>
-      <line num="188" count="0" type="stmt"/>
+      <line num="170" count="6" type="stmt"/>
+      <line num="171" count="1" type="stmt"/>
+      <line num="178" count="6" type="stmt"/>
+      <line num="179" count="1" type="stmt"/>
+      <line num="184" count="6" type="stmt"/>
+      <line num="185" count="0" type="stmt"/>
+      <line num="186" count="0" type="stmt"/>
+      <line num="188" count="0" type="cond" truecount="0" falsecount="4"/>
       <line num="189" count="0" type="stmt"/>
       <line num="190" count="0" type="stmt"/>
       <line num="191" count="0" type="stmt"/>
       <line num="192" count="0" type="stmt"/>
-      <line num="195" count="0" type="stmt"/>
+      <line num="193" count="0" type="stmt"/>
+      <line num="194" count="0" type="stmt"/>
       <line num="197" count="0" type="stmt"/>
-      <line num="210" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="211" count="5" type="stmt"/>
-      <line num="219" count="3" type="stmt"/>
-      <line num="223" count="0" type="stmt"/>
+      <line num="199" count="0" type="stmt"/>
+      <line num="212" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="213" count="7" type="stmt"/>
+      <line num="221" count="7" type="stmt"/>
+      <line num="225" count="0" type="stmt"/>
     </file>
     <file name="QuantityDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/QuantityDropdown.jsx">
       <metrics statements="20" coveredstatements="13" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="4"/>

@@ -61,7 +61,7 @@ class ProductDetail extends React.Component {
             price: this.state.shoeDetails[event.target.value]["price"]
         })
 
-
+        
     }
 
     getSpecificShoe = () => {
@@ -165,6 +165,8 @@ class ProductDetail extends React.Component {
 
 
     }
+
+
     chooseSize = (event) => {
         this.setState({
             size: event.target.value,
@@ -172,8 +174,8 @@ class ProductDetail extends React.Component {
         })
 
     }
-    chooseAmount = (event) => {
 
+    chooseAmount = (event) => {
         this.setState({
             amount: event.target.value
         })

@@ -59,7 +59,7 @@ describe('ProductDetail renders for second half of conditional ', () => {
     });
 });
 
-it('should invoke printShoe prop in ColorsDropdown Component', () => {
+it('should invoke printShoe method as a prop in ColorsDropdown Component', () => {
     let wrapper = shallow(<ProductDetail />);
     wrapper.setState({
         itemExists: true,
@@ -67,14 +67,56 @@ it('should invoke printShoe prop in ColorsDropdown Component', () => {
         blue: [] },
         color: null,
         currentItem: ['red'],
-        shoeDetails: {'red': {sizes: 1 },
-    'blue': {sizes: 2}}
+        shoeDetails: {'red': {sizes: [1,2,3] },
+    'blue': {sizes: [6,2,7]}},
+    sizes: null
     });
     const event = {
         target: { value: 'blue' }
     }
     wrapper.find('ColorsDropdown').props().printShoe(event);
     expect(wrapper.state('color')).toEqual('blue');
+   
   });
+
+  it('should invoke chooseSize method as a prop in SizesDropdown Component', () => {
+    let wrapper = shallow(<ProductDetail />);
+    wrapper.setState({
+        itemExists: true,
+        allImages: { red: [],
+        blue: [] },
+        color: 'red',
+        currentItem: 'red',
+        shoeDetails: {'red': {sizes: {1:10, 2: 4, 3: 5}} },
+    size: 0,
+    sizes: null
+    });
+    const event = {
+        target: { value: 2 }
+    }
+    wrapper.find('SizesDropdown').props().getSize(event);
+    expect(wrapper.state('size')).toEqual(2);
+  });
+
+  it('should invoke chooseAmount method as a prop in QuantityDropdown Component', () => {
+    let wrapper = shallow(<ProductDetail />);
+    wrapper.setState({
+        itemExists: true,
+        allImages: { red: [], blue: [] },
+        amount: null,
+        color: 'red',
+        currentItem: 'red',
+        shoeDetails: {'red': {sizes: {1:10, 2: 4, 3: 5}} },
+    size: 0,
+    sizes: null
+    });
+    const event = {
+        target: { value: 1 }
+    }
+    wrapper.find('QuantityDropdown').props().chooseAmount(event);
+    expect(wrapper.state('amount')).toEqual(1);
+  });
+
+
 
 
