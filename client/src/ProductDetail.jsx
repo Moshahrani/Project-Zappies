@@ -130,7 +130,7 @@ class ProductDetail extends React.Component {
                 styleList.push(response.data.product[0].styles[i].color);
                 let allImages = [];
                 for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
-                    allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
+                    allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,50_.jpg")
                 }
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
             }
