@@ -7,6 +7,7 @@ import QuantityDropdown from './QuantityDropdown.jsx'
 import StarRatings from './StarRatings.jsx'
 import SocialMedia from './SocialMedia.jsx'
 import ShoppingCart from './ShoppingCart.jsx'
+import PhotoGallery from './PhotoGallery.jsx'
 
 
 class ProductDetail extends React.Component {
@@ -220,6 +221,7 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
+                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]}/>
                     <div id="images" >
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
                             <img id="img" src={item} key={index}></img>
