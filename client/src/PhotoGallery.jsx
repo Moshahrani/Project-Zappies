@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import ProductDetail from './ProductDetail.jsx'
 import './PhotoGallery.css';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 class PhotoGallery extends React.Component {
     constructor(props) {
@@ -41,6 +43,13 @@ class PhotoGallery extends React.Component {
             className="carouselInner" 
             style={{ backgroundImage: `url(${image})` }}
             >
+                <div className="left">
+                    <ArrowBackIosIcon />
+                </div>
+                <div className="center"></div>
+                <div className="right">
+                    <ArrowForwardIosIcon />
+                </div>
             </div>
             </div> 
         ) 
