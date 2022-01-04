@@ -34,13 +34,16 @@ class ProductDetail extends React.Component {
             color: null,
             quantity: null,
             cart: {},
+            currentIndex: 0,
+            lastIndex: null
         }
         this.getSpecificShoe = this.getSpecificShoe.bind(this);
         this.printShoe = this.printShoe.bind(this);
         this.chooseSize = this.chooseSize.bind(this);
         this.chooseAmount = this.chooseAmount.bind(this);
         this.addToCart = this.addToCart.bind(this);
-        // this.shoeQuantity = this.shoeQuantity.bind(this);
+        this.rightArrowClick = this.rightArrowClick.bind(this);
+        this.leftArrowClick = this.leftArrowClick.bind(this);
     }
 
     printShoe = (event) => {
@@ -158,6 +161,7 @@ class ProductDetail extends React.Component {
                 sizes: [...allSizes],
                 colors: [...styleList],
                 allImages: allPictures,
+                lastIndex: allPictures[imageLink].length - 1,
                 shoeDetails: shoeDetails
             })
         }).catch((error) => {
@@ -203,6 +207,32 @@ class ProductDetail extends React.Component {
         }
     }
 
+
+    leftArrowClick = (event) => {
+        if (this.state.currentIndex === 0) {
+            this.setState({ 
+                currentIndex: this.state.lastIndex
+            })
+        } else {
+            this.setState({
+                currentIndex: this.state.currentIndex - 1
+            })
+        }
+    }
+
+    rightArrowClick = (event) => {
+        if (this.state.currentIndex === this.state.lastIndex) {
+            this.setState({ 
+                currentIndex: 0
+            })
+        } else {
+            this.setState({
+                currentIndex: this.state.currentIndex + 1
+            })
+        }
+    }
+
+
     render() {
         //console.log(this.state.currentDetails)
         //console.log(this.state.sizes)
@@ -221,7 +251,8 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
-                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]}/>
+                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]}  firstIndex={this.state.currentIndex} 
+                    leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick}/>
                     <div id="images" >
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
                             <img id="img" src={item} key={index}></img>

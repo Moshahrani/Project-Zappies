@@ -10,44 +10,61 @@ class PhotoGallery extends React.Component {
         super();
 
         this.state = {
-            imageList: [],
-            currentItemPhotos: [],
-            currentIndex: 0
+            imageList: []
+
         };
     }
 
-    
-
-    // rightArrowClick = (event) => {
-
-    // }
 
     // leftArrowClick = (event) => {
-
+    //     if (this.state.currentIndex === 0) {
+    //         this.setState({ 
+    //             currentIndex: this.props.lastImageIndex
+    //         })
+    //     } else (
+    //         this.setState({
+    //             currentIndex: currentIndex - 1
+    //         })
+    //     )
     // }
+
+    // rightArrowClick = (event) => {
+    //     if (this.state.currentIndex === this.props.lastImageIndex) {
+    //         this.setState({ 
+    //             currentIndex: 0
+    //         })
+    //     } else (
+    //         this.setState({
+    //             currentIndex: currentIndex + 1
+    //         })
+    //     )
+    // }
+
 
 
     render() {
-        let images = [];
-        let firstIndex = 0;
-        let lastIndex = null;
-        if(this.props.imageList) {
-          images = [...this.props.imageList]
-          lastIndex = this.props.imageList.length - 1;
-        }
-       console.log(images[this.state.currentIndex])
-        let image = images[this.state.currentIndex]
-        
+    //     let images = [];
+    //     //let firstIndex = 0;
+    //     //let lastIndex = null;
+    //     if(this.props.imageList) {
+    //       images = [...this.props.imageList]
+    //       //lastIndex = this.props.imageList.length - 1;
+    //     }
+    //    //console.log(images[this.state.currentIndex])
+    //     //let image = images[this.state.currentIndex]
+    //     //console.log(this.props.imageList)
+        // let image = this.props.imageList[this.r]
+        // console.log(this.props.imageList)
         return (<div className="carousel">
             <div 
             className="carouselInner" 
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
             >
-                <div className="left">
+                <div className="left" onClick={this.props.leftArrow}>
                     <ArrowBackIosIcon />
                 </div>
                 <div className="center"></div>
-                <div className="right">
+                <div className="right" onClick={this.props.rightArrow}>
                     <ArrowForwardIosIcon />
                 </div>
             </div>
