@@ -44,6 +44,7 @@ class ProductDetail extends React.Component {
         this.addToCart = this.addToCart.bind(this);
         this.rightArrowClick = this.rightArrowClick.bind(this);
         this.leftArrowClick = this.leftArrowClick.bind(this);
+        this.chooseImage = this.chooseImage.bind(this);
     }
 
     printShoe = (event) => {
@@ -206,9 +207,24 @@ class ProductDetail extends React.Component {
             })
         }
     }
+    chooseImage = (event) => {
+        console.log(event.target.src)
+        let chosenImage = event.target.src;
+        let images = this.state.allImages[this.state.currentItem];
+        let index = null;
+        for (let i = 0; i < images.length - 1; i++) {
+          if (chosenImage === images[i]) {
+              index = i;
+          }
+        }
+        this.setState({
+            currentIndex: index
+        })
+    }
 
 
     leftArrowClick = (event) => {
+        console.log(event.target)
         if (this.state.currentIndex === 0) {
             this.setState({ 
                 currentIndex: this.state.lastIndex
@@ -255,7 +271,7 @@ class ProductDetail extends React.Component {
                     leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick}/>
                     <div id="images" >
                         {this.state.allImages[this.state.currentItem].map((item, index) => (
-                            <img id="img" src={item} key={index}></img>
+                            <img id="img" src={item} key={index} onClick={this.chooseImage}></img>
                         ))}
                     </div>
                     <div>

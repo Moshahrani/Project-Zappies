@@ -60,12 +60,12 @@ class PhotoGallery extends React.Component {
             className="carouselInner" 
             style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
             >
-                <div className="left" onClick={this.props.leftArrow}>
-                    <ArrowBackIosIcon />
+                <div className="left" >
+                    <ArrowBackIosIcon  onClick={this.props.leftArrow}/>
                 </div>
                 <div className="center"></div>
-                <div className="right" onClick={this.props.rightArrow}>
-                    <ArrowForwardIosIcon />
+                <div className="right" >
+                    <ArrowForwardIosIcon onClick={this.props.rightArrow} />
                 </div>
             </div>
             </div> 
