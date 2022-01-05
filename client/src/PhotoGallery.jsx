@@ -43,33 +43,33 @@ class PhotoGallery extends React.Component {
 
 
     render() {
-    //     let images = [];
-    //     //let firstIndex = 0;
-    //     //let lastIndex = null;
-    //     if(this.props.imageList) {
-    //       images = [...this.props.imageList]
-    //       //lastIndex = this.props.imageList.length - 1;
-    //     }
-    //    //console.log(images[this.state.currentIndex])
-    //     //let image = images[this.state.currentIndex]
-    //     //console.log(this.props.imageList)
+        //     let images = [];
+        //     //let firstIndex = 0;
+        //     //let lastIndex = null;
+        //     if(this.props.imageList) {
+        //       images = [...this.props.imageList]
+        //       //lastIndex = this.props.imageList.length - 1;
+        //     }
+        //    //console.log(images[this.state.currentIndex])
+        //     //let image = images[this.state.currentIndex]
+        //     //console.log(this.props.imageList)
         // let image = this.props.imageList[this.r]
         // console.log(this.props.imageList)
         return (<div className="carousel">
-            <div 
-            className="carouselInner" 
-            style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
+            <div
+                className="carouselInner"
+                style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
             >
                 <div className="left" >
-                    <ArrowBackIosIcon  onClick={this.props.leftArrow}/>
+                    <ArrowBackIosIcon onClick={this.props.leftArrow} />
                 </div>
                 <div className="center"></div>
                 <div className="right" >
                     <ArrowForwardIosIcon onClick={this.props.rightArrow} />
                 </div>
             </div>
-            </div> 
-        ) 
+        </div>
+        )
     }
 }
 export default PhotoGallery;

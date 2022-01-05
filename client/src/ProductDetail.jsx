@@ -29,6 +29,7 @@ class ProductDetail extends React.Component {
             sizes: null,
             colors: [],
             allImages: {},
+            allThumbnails: {},
             shoeDetails: {},
             size: null,
             color: null,
@@ -66,7 +67,7 @@ class ProductDetail extends React.Component {
             price: this.state.shoeDetails[event.target.value]["price"]
         })
 
-        
+
     }
 
     getSpecificShoe = () => {
@@ -129,15 +130,19 @@ class ProductDetail extends React.Component {
             let styleList = [];
             let shoeSizes = [];
             let allPictures = {};
+            let allThumbnails = {};
 
             let imageLink = response.data.product[0].styles[0].color
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 styleList.push(response.data.product[0].styles[i].color);
                 let allImages = [];
+                let thumbnails = [];
                 for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
-                    allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
+                    allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg");
+                    thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,050_.jpg")
                 }
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
+                allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
             }
             //console.log(allPictures)
             //for (let i = 1; i < response.data.product[0].sizing.allValues.length; i++) {
@@ -162,6 +167,7 @@ class ProductDetail extends React.Component {
                 sizes: [...allSizes],
                 colors: [...styleList],
                 allImages: allPictures,
+                allThumbnails: allThumbnails,
                 lastIndex: allPictures[imageLink].length - 1,
                 shoeDetails: shoeDetails
             })
@@ -208,14 +214,18 @@ class ProductDetail extends React.Component {
         }
     }
     chooseImage = (event) => {
-        console.log(event.target.src)
-        let chosenImage = event.target.src;
+        let chosenImage = event.target.src.split("._AC_SR700,050_.jpg");
         let images = this.state.allImages[this.state.currentItem];
         let index = null;
-        for (let i = 0; i < images.length - 1; i++) {
-          if (chosenImage === images[i]) {
-              index = i;
-          }
+
+        for (let i = 0; i < images.length; i++) {
+            let match = images[i].split("._AC_SR700,525_.jpg")
+            console.log(match)
+            console.log(chosenImage[0])
+            if (chosenImage[0] === match[0]) {
+                index = i;
+                console.log('true')
+            }
         }
         this.setState({
             currentIndex: index
@@ -226,7 +236,7 @@ class ProductDetail extends React.Component {
     leftArrowClick = (event) => {
         console.log(event.target)
         if (this.state.currentIndex === 0) {
-            this.setState({ 
+            this.setState({
                 currentIndex: this.state.lastIndex
             })
         } else {
@@ -238,7 +248,7 @@ class ProductDetail extends React.Component {
 
     rightArrowClick = (event) => {
         if (this.state.currentIndex === this.state.lastIndex) {
-            this.setState({ 
+            this.setState({
                 currentIndex: 0
             })
         } else {
@@ -267,10 +277,10 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
-                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]}  firstIndex={this.state.currentIndex} 
-                    leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick}/>
+                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
+                        leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div id="images" >
-                        {this.state.allImages[this.state.currentItem].map((item, index) => (
+                        {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
                             <img id="img" src={item} key={index} onClick={this.chooseImage}></img>
                         ))}
                     </div>
