@@ -224,7 +224,6 @@ class ProductDetail extends React.Component {
             console.log(chosenImage[0])
             if (chosenImage[0] === match[0]) {
                 index = i;
-                console.log('true')
             }
         }
         this.setState({
