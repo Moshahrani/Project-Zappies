@@ -50,6 +50,9 @@ class ProductDetail extends React.Component {
 
     printShoe = (event) => {
 
+       // possibility of adding on sale information for products 
+       // pending for now 
+
         // for (var i in this.state.shoeDetails[event.target.value]) {
         //     if (i !== "onSale" || i !== "originalPrice" || i !== "percentOff" || i !== "price") {
         //         console.log(typeof i)
@@ -220,8 +223,6 @@ class ProductDetail extends React.Component {
 
         for (let i = 0; i < images.length; i++) {
             let match = images[i].split("._AC_SR700,525_.jpg")
-            console.log(match)
-            console.log(chosenImage[0])
             if (chosenImage[0] === match[0]) {
                 index = i;
             }
@@ -259,12 +260,6 @@ class ProductDetail extends React.Component {
 
 
     render() {
-        //console.log(this.state.currentDetails)
-        //console.log(this.state.sizes)
-        //console.log(this.state.quantity)
-        // console.log(this.state.shoeDetails)
-        // console.log(this.state.price)
-        // console.log(this.state.cart)
         if (!this.state.itemExists) {
             return (
                 <div id="getProductDetails" className="beforeGetShoe">
@@ -305,12 +300,6 @@ class ProductDetail extends React.Component {
 }
 
 export default ProductDetail;
-
-// <div>
-//                         {this.state.allImages[this.state.currentItem].map((item, index) => (
-//                             <img src={item} key={index}></img>
-//                         ))}
-//                     </div>
 
 
 
