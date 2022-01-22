@@ -25,6 +25,7 @@ class ProductDetail extends React.Component {
             price: null,
             productRating: '',
             reviewRating: '',
+            reviews: {},
             colors: '',
             sizes: null,
             colors: [],
@@ -85,6 +86,10 @@ class ProductDetail extends React.Component {
         };
 
         axios.request(options).then((response) => {
+            console.log(response.data.product[0])
+            console.log(response.data.product[0].reviewSummary)
+            console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
+            console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
             // console.log(response.data.product[0].styles[1].stocks)
             // console.log(response.data.product[0].styles[0].color)
             // console.log(response.data.product[0].styles[0])
@@ -172,6 +177,7 @@ class ProductDetail extends React.Component {
                 allImages: allPictures,
                 allThumbnails: allThumbnails,
                 lastIndex: allPictures[imageLink].length - 1,
+                reviews: response.data.product[0].reviewSummary.reviewWithMostVotes,
                 shoeDetails: shoeDetails
             })
         }).catch((error) => {
