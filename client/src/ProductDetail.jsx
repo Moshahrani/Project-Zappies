@@ -27,6 +27,8 @@ class ProductDetail extends React.Component {
             productRating: '',
             reviewRating: '',
             reviews: {},
+            leastUpVotes: '',
+            mostUpVotes: '',
             colors: '',
             sizes: null,
             colors: [],
@@ -48,6 +50,8 @@ class ProductDetail extends React.Component {
         this.rightArrowClick = this.rightArrowClick.bind(this);
         this.leftArrowClick = this.leftArrowClick.bind(this);
         this.chooseImage = this.chooseImage.bind(this);
+        this.mostUpVote = this.mostUpVote.bind(this);
+        this.leastUpVote = this.leastUpVote.bind(this);
     }
 
     printShoe = (event) => {
@@ -175,6 +179,8 @@ class ProductDetail extends React.Component {
                 allThumbnails: allThumbnails,
                 lastIndex: allPictures[imageLink].length - 1,
                 reviews: response.data.product[0].reviewSummary,
+                leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
+                mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
                 shoeDetails: shoeDetails
             })
         }).catch((error) => {
@@ -261,6 +267,17 @@ class ProductDetail extends React.Component {
         }
     }
 
+    mostUpVote = (event) => {
+       this.setState({
+           mostUpVotes : this.state.mostUpVotes + 1
+       })
+    }
+    leastUpVote = (event) => {
+        this.setState({
+            leastUpVotes : this.state.leastUpVotes + 1
+        })
+     }
+
 
     render() {
         if (!this.state.itemExists) {
@@ -293,7 +310,8 @@ class ProductDetail extends React.Component {
                         <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
                     </div>
                     <div>
-                     <Reviews reviews={this.state.reviews}/>
+                     <Reviews reviews={this.state.reviews}  leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
+                     leastUpVote={this.leastUpVote}/>
                     </div>
                     <div>
                         <button className="Cart" onClick={this.addToCart}>Add to Cart</button>

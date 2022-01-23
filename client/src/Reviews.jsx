@@ -8,6 +8,7 @@ function Reviews(props) {
     let reviewLeastVotes = props.reviews.reviewWithLeastVotes;
     console.log(reviewLeastVotes);
     console.log(reviewMostVotes);
+    console.log(Number(reviewMostVotes.upVotes))
 
 
     return (
@@ -29,10 +30,10 @@ function Reviews(props) {
                     Width : {reviewMostVotes.shoeWidth}
                 </p>
                 <div>
-                    Upvotes : {reviewMostVotes.upVotes}
+                    Upvotes : {props.mostVotes}
                 </div>
                 <div className="upvoteArrow" >
-                    <ArrowUpwardIcon  />
+                    <ArrowUpwardIcon onClick={props.mostUpVote} />
                 </div>
             </div>
             <div>
@@ -53,10 +54,10 @@ function Reviews(props) {
                 </p>
                 <div>
                     <p>
-                        Upvotes : {reviewLeastVotes.upVotes}
+                        Upvotes : {props.leastVotes}
                     </p>
                     <div className="upvoteArrow" >
-                    <ArrowUpwardIcon  />
+                    <ArrowUpwardIcon  onClick={props.leastUpVote}/>
                 </div>
                 </div>
             </div>
