@@ -3,11 +3,12 @@ import ReactDom from 'react-dom';
 import axios from 'axios'
 import ColorsDropdown from './ColorsDropdown.jsx';
 import SizesDropdown from './SizesDropdown.jsx';
-import QuantityDropdown from './QuantityDropdown.jsx'
-import StarRatings from './StarRatings.jsx'
-import SocialMedia from './SocialMedia.jsx'
-import ShoppingCart from './ShoppingCart.jsx'
-import PhotoGallery from './PhotoGallery.jsx'
+import QuantityDropdown from './QuantityDropdown.jsx';
+import StarRatings from './StarRatings.jsx';
+import SocialMedia from './SocialMedia.jsx';
+import ShoppingCart from './ShoppingCart.jsx';
+import PhotoGallery from './PhotoGallery.jsx';
+import Reviews from './Reviews.jsx';
 
 
 class ProductDetail extends React.Component {
@@ -86,10 +87,10 @@ class ProductDetail extends React.Component {
         };
 
         axios.request(options).then((response) => {
-            console.log(response.data.product[0])
-            console.log(response.data.product[0].reviewSummary)
-            console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
-            console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
+            // console.log(response.data.product[0])
+            // console.log(response.data.product[0].reviewSummary)
+            // console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
+            // console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
             // console.log(response.data.product[0].styles[1].stocks)
             // console.log(response.data.product[0].styles[0].color)
             // console.log(response.data.product[0].styles[0])
@@ -122,7 +123,7 @@ class ProductDetail extends React.Component {
 
                 shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
             }
-            console.log(shoeDetails)
+            //console.log(shoeDetails)
 
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
             // let shoeDetail = {};
@@ -177,7 +178,7 @@ class ProductDetail extends React.Component {
                 allImages: allPictures,
                 allThumbnails: allThumbnails,
                 lastIndex: allPictures[imageLink].length - 1,
-                reviews: response.data.product[0].reviewSummary.reviewWithMostVotes,
+                reviews: response.data.product[0].reviewSummary,
                 shoeDetails: shoeDetails
             })
         }).catch((error) => {
@@ -294,6 +295,9 @@ class ProductDetail extends React.Component {
                         <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
                         <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
                         <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
+                    </div>
+                    <div>
+                     <Reviews reviews={this.state.reviews}/>
                     </div>
                     <div>
                         <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
