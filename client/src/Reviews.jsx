@@ -5,18 +5,28 @@ function Reviews(props) {
 
     let reviewMostVotes = props.reviews.reviewWithMostVotes;
     let reviewLeastVotes = props.reviews.reviewWithLeastVotes;
-    console.log(props.reviews)
+    console.log(reviewLeastVotes);
     console.log(reviewMostVotes);
 
 
     return (
-        <div>
+        <div className="reviews" >
             <div>
                 Review With Most Votes
                 <p>
                     {reviewMostVotes.summary}
-                    Upvotes : {reviewMostVotes.upVotes}
                 </p>
+                <p>
+                    Comfort Rating : {reviewMostVotes.comfortRating};
+                </p>
+                <p> Sizing : {reviewMostVotes.shoeSize}
+                </p> 
+                <p>
+                    Width : {reviewMostVotes.shoeWidth}
+                </p>
+                <div>
+                    Upvotes : {reviewMostVotes.upVotes}
+                </div>
             </div>
             <div>
                 Review with Least Votes
@@ -24,8 +34,18 @@ function Reviews(props) {
                     {reviewLeastVotes.summary}
                 </p>
                 <p>
-                    Upvotes : {reviewLeastVotes.upVotes}
+                    Comfort Rating : {reviewLeastVotes.comfortRating}
                 </p>
+                <p> Sizing : {reviewLeastVotes.shoeSize}
+                </p> 
+                <p>
+                    Width : {reviewLeastVotes.shoeWidth}
+                </p>
+                <div>
+                    <p>
+                        Upvotes : {reviewLeastVotes.upVotes}
+                    </p>
+                </div>
             </div>
 
         </div>
