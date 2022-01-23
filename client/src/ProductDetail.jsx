@@ -123,14 +123,10 @@ class ProductDetail extends React.Component {
 
                 shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
             }
-            //console.log(shoeDetails)
+
 
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
-            // let shoeDetail = {};
-
-            //console.log(response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating)
-            //console.log(response.data.product[0].reviewSummary.reviewWithMostVotes.summary)
-
+         
             let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
             // Getting general shoe information
             // all colors, product images, price
