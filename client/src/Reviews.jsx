@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 function Reviews(props) {
 
@@ -30,6 +31,9 @@ function Reviews(props) {
                 <div>
                     Upvotes : {reviewMostVotes.upVotes}
                 </div>
+                <div className="upvoteArrow" >
+                    <ArrowUpwardIcon  />
+                </div>
             </div>
             <div>
                 Review with Least Votes
@@ -51,6 +55,9 @@ function Reviews(props) {
                     <p>
                         Upvotes : {reviewLeastVotes.upVotes}
                     </p>
+                    <div className="upvoteArrow" >
+                    <ArrowUpwardIcon  />
+                </div>
                 </div>
             </div>
 
