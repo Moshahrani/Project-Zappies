@@ -17,7 +17,10 @@ function Reviews(props) {
                     {reviewMostVotes.summary}
                 </p>
                 <p>
-                    Comfort Rating : {reviewMostVotes.comfortRating};
+                    Comfort Rating : {reviewMostVotes.comfortRating}
+                </p>
+                <p>
+                    Overall Rating : {reviewMostVotes.overallRating}
                 </p>
                 <p> Sizing : {reviewMostVotes.shoeSize}
                 </p> 
@@ -35,6 +38,9 @@ function Reviews(props) {
                 </p>
                 <p>
                     Comfort Rating : {reviewLeastVotes.comfortRating}
+                </p>
+                <p>
+                    Overall Rating : {reviewMostVotes.overallRating}
                 </p>
                 <p> Sizing : {reviewLeastVotes.shoeSize}
                 </p> 
