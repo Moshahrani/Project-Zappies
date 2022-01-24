@@ -9,9 +9,10 @@ function Reviews(props) {
     console.log(reviewLeastVotes);
     console.log(reviewMostVotes);
     console.log(Number(reviewMostVotes.upVotes))
-
-
+    
+   
     return (
+
         <div className="reviews" >
             <div>
                 Review With Most Votes

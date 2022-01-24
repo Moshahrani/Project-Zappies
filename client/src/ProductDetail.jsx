@@ -29,6 +29,8 @@ class ProductDetail extends React.Component {
             reviews: {},
             leastUpVotes: '',
             mostUpVotes: '',
+            mostVoteSubmit: false,
+            leastVoteSubmit: false,
             colors: '',
             sizes: null,
             colors: [],
@@ -56,8 +58,8 @@ class ProductDetail extends React.Component {
 
     printShoe = (event) => {
 
-       // possibility of adding on sale information for products 
-       // pending for now 
+        // possibility of adding on sale information for products 
+        // pending for now 
 
         // for (var i in this.state.shoeDetails[event.target.value]) {
         //     if (i !== "onSale" || i !== "originalPrice" || i !== "percentOff" || i !== "price") {
@@ -130,7 +132,7 @@ class ProductDetail extends React.Component {
 
 
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
-         
+
             let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
             // Getting general shoe information
             // all colors, product images, price
@@ -268,15 +270,31 @@ class ProductDetail extends React.Component {
     }
 
     mostUpVote = (event) => {
-       this.setState({
-           mostUpVotes : this.state.mostUpVotes + 1
-       })
+        if (!this.state.mostVoteSubmit) {
+            this.setState({
+                mostUpVotes: this.state.mostUpVotes + 1,
+                mostVoteSubmit: true
+            })
+        } else {
+            this.setState({
+                mostUpVotes: this.state.mostUpVotes - 1,
+                mostVoteSubmit: false
+            })
+        }
     }
     leastUpVote = (event) => {
-        this.setState({
-            leastUpVotes : this.state.leastUpVotes + 1
-        })
-     }
+        if (!this.state.leastVoteSubmit) {
+            this.setState({
+                leastUpVotes: this.state.leastUpVotes + 1,
+                leastVoteSubmit: true
+            })
+        } else {
+            this.setState({
+                leastUpVotes: this.state.leastUpVotes - 1,
+                leastVoteSubmit: false
+            })
+        }
+    }
 
 
     render() {
@@ -310,8 +328,8 @@ class ProductDetail extends React.Component {
                         <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
                     </div>
                     <div>
-                     <Reviews reviews={this.state.reviews}  leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
-                     leastUpVote={this.leastUpVote}/>
+                        <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
+                            leastUpVote={this.leastUpVote} />
                     </div>
                     <div>
                         <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
