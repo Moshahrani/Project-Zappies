@@ -9,6 +9,7 @@ import SocialMedia from './SocialMedia.jsx';
 import ShoppingCart from './ShoppingCart.jsx';
 import PhotoGallery from './PhotoGallery.jsx';
 import Reviews from './Reviews.jsx';
+import RatingBar from './RatingBar.jsx';
 
 
 class ProductDetail extends React.Component {
@@ -27,6 +28,7 @@ class ProductDetail extends React.Component {
             productRating: '',
             reviewRating: '',
             reviews: {},
+            ratings: {},
             leastUpVotes: '',
             mostUpVotes: '',
             mostVoteSubmit: false,
@@ -93,7 +95,6 @@ class ProductDetail extends React.Component {
         };
 
         axios.request(options).then((response) => {
-            // console.log(response.data.product[0])
             // console.log(response.data.product[0].reviewSummary)
             // console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
             // console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
@@ -181,6 +182,7 @@ class ProductDetail extends React.Component {
                 allThumbnails: allThumbnails,
                 lastIndex: allPictures[imageLink].length - 1,
                 reviews: response.data.product[0].reviewSummary,
+                ratings: response.data.product[0].overallRating,
                 leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
                 mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
                 shoeDetails: shoeDetails
@@ -335,6 +337,9 @@ class ProductDetail extends React.Component {
                         <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
+                    <div>
+                        <RatingBar ratings={this.state.ratings}/>
+                    </div>
                 </div>
             )
         }
