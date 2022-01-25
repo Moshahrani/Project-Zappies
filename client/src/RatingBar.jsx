@@ -16,10 +16,7 @@ function RatingBar(props) {
     for (let i in ratings) {
         ratings[i] = String(Math.round(100 * (ratings[i] / totalRatings))) + '%';
     }
-    console.log(ratings)
-
-    let percent = '50%';
-
+    
     return (
 
         <div className="bar-ratings">

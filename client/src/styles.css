@@ -219,7 +219,7 @@
     animation: show-ratings-four 1.2s 0.4s forwards;
   }
   
-  /* Bar Graph Horizontal Animations */
+  /* Horizontal Animations */
   @-webkit-keyframes show-ratings-one {
     0% {
       width: 0;
