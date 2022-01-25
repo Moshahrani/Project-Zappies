@@ -147,30 +147,116 @@
     width:100%;
   }
 
+  .ratings-graph .year {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    opacity: 0;
+  }
+  
+  .ratings-graph-horizontal {
+    max-width: 380px;
+  }
+  
+  .ratings-graph-horizontal > div {
+    float: left;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  
+  .ratings-graph-horizontal .rating {
+    float: left;
+    margin-top: 18px;
+    width: 50px;
+  }
+  
+  .ratings-graph-horizontal .ratings {
+    border-radius: 3px;
+    height: 55px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+  }
+  
+  .ratings-graph-one .ratings::after {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    color: #fff;
+    content: attr(numOfReviews);
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    top: 17px;
+  }
+  
+  .ratings-graph-one .ratings-one .ratings {
+    background-color: #2ecc71;
+    -webkit-animation: show-ratings-one 1.2s 0.1s forwards;
+    -moz-animation: show-ratings-one 1.2s 0.1s forwards;
+    animation: show-ratings-one 1.2s 0.1s forwards;
+  }
+  
+  .ratings-graph-one .ratings-two .ratings {
+    background-color: #2ecc71;
+    -webkit-animation: show-ratings-two 1.2s 0.2s forwards;
+    -moz-animation: show-ratings-two 1.2s 0.2s forwards;
+    animation: show-ratings-two 1.2s 0.2s forwards;
+  }
+  
+  .ratings-graph-one .ratings-three .ratings {
+    background-color: #2ecc71;
+    -webkit-animation: show-ratings-three 1.2s 0.3s forwards;
+    -moz-animation: show-ratings-three 1.2s 0.3s forwards;
+    animation: show-ratings-three 1.2s 0.3s forwards;
+  }
+  
+  .ratings-graph-one .ratings-four .ratings {
+    background-color: #2ecc71;
+    -webkit-animation: show-ratings-four 1.2s 0.4s forwards;
+    -moz-animation: show-ratings-four 1.2s 0.4s forwards;
+    animation: show-ratings-four 1.2s 0.4s forwards;
+  }
+  
+  /* Bar Graph Horizontal Animations */
+  @-webkit-keyframes show-ratings-one {
+    0% {
+      width: 0;
+    }
+    
+  }
+  
+  @-webkit-keyframes show-ratings-two {
+    0% {
+      width: 0;
+    }
+  }
+  
+  @-webkit-keyframes show-ratings-three {
+    0% {
+      width: 0;
+    }
+  }
+  
+  @-webkit-keyframes show-ratings-four {
+    0% {
+      width: 0;
+    }
+  }
 
-.container {
-  width: 500px;
-  margin: 0 auto;
-  position: relative;
-  top: 50;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  min-height: 680px;
-  box-sizing: border-box;
-  padding: 15px;
-  background-color: #fff;
-}
-
-.bar {
-  background-color: #d3d3d3;
-  width: 100%;
-  height: 200px;
-  margin-bottom: 40px;
-}
-
-.bar-inner{
-  background-color: #2ecc71;
-  width: 0%;
-  height: 40px;
-  position: relative;
-}
+  @-webkit-keyframes show-ratings-five {
+    0% {
+      width: 0;
+    }
+  }
+  
+  @-webkit-keyframes fade-in-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
