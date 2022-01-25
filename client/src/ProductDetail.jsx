@@ -338,7 +338,9 @@ class ProductDetail extends React.Component {
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                     <div>
-                        <RatingBar ratings={this.state.ratings}/>
+                        <div>
+                            <RatingBar ratings={this.state.ratings} />
+                        </div>
                     </div>
                 </div>
             )
