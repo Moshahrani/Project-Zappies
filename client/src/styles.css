@@ -147,7 +147,9 @@
     width:100%;
   }
 
-  .ratings-graph .year {
+  
+
+  .ratings-graph .rating {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
     -moz-animation: fade-in-text 2.2s 0.1s forwards;
     animation: fade-in-text 2.2s 0.1s forwards;
@@ -162,14 +164,30 @@
     float: left;
     margin-bottom: 8px;
     width: 100%;
+    background-color: lightgrey;
+    
   }
   
   .ratings-graph-horizontal .rating {
     float: left;
+    width: 20px;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .rating-graph-horizontal .numOfReviews {
+    float:right;
     margin-top: 18px;
-    width: 50px;
+  }
+
+  .ratings-graph-horizontal .totalRatings {
+    float: right;
+    margin-top: 18px;
+    font-weight: 700;
   }
   
+  
+
   .ratings-graph-horizontal .ratings {
     border-radius: 3px;
     height: 55px;
@@ -177,18 +195,13 @@
     overflow: hidden;
     position: relative;
     width: 0;
+    max-width: 300px;
   }
   
   .ratings-graph-one .ratings::after {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
     -moz-animation: fade-in-text 2.2s 0.1s forwards;
     animation: fade-in-text 2.2s 0.1s forwards;
-    color: #fff;
-    content: attr(numOfReviews);
-    font-weight: 700;
-    position: absolute;
-    right: 16px;
-    top: 17px;
   }
   
   .ratings-graph-one .ratings-one .ratings {
@@ -259,4 +272,5 @@
       opacity: 1;
     }
   }
+  
   
