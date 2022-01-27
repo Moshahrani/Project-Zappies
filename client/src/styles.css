@@ -157,7 +157,7 @@
   }
   
   .ratings-graph-horizontal {
-    max-width: 380px;
+    max-width: 400px;
   }
   
   .ratings-graph-horizontal > div {
@@ -170,24 +170,18 @@
   
   .ratings-graph-horizontal .rating {
     float: left;
-    width: 20px;
-    padding: 20px;
+    width: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: white;
-  }
-
-  .rating-graph-horizontal .numOfReviews {
-    float:right;
-    margin-top: 18px;
   }
 
   .ratings-graph-horizontal .totalRatings {
     float: right;
     margin-top: 18px;
-    font-weight: 700;
+    font-weight: 600;
   }
   
-  
-
   .ratings-graph-horizontal .ratings {
     border-radius: 3px;
     height: 55px;
@@ -195,7 +189,13 @@
     overflow: hidden;
     position: relative;
     width: 0;
-    max-width: 300px;
+    max-width: 400px;
+  }
+  .ratings-graph-horizontal .numOfRatings {
+    float: right;
+    overflow: hidden;
+    position: relative;
+    width: 40px;
   }
   
   .ratings-graph-one .ratings::after {
@@ -230,6 +230,13 @@
     -webkit-animation: show-ratings-four 1.2s 0.4s forwards;
     -moz-animation: show-ratings-four 1.2s 0.4s forwards;
     animation: show-ratings-four 1.2s 0.4s forwards;
+  }
+  
+  .ratings-graph-one .ratings-five .ratings {
+    background-color: #2ecc71;
+    -webkit-animation: show-ratings-five 1.2s 0.4s forwards;
+    -moz-animation: show-ratings-five 1.2s 0.4s forwards;
+    animation: show-ratings-five 1.2s 0.4s forwards;
   }
   
   /* Horizontal Animations */

@@ -23,8 +23,9 @@ function RatingBar(props) {
     return (
 
         <div className="bar-ratings">
-            Ratings               # of Reviews
+            Ratings      
             <div className="ratings-graph ratings-graph-horizontal ratings-graph-one">
+                <span className="numOfRatings"> # of Ratings</span>
                 <div className="ratings-one" >
                     <span className="rating">5</span>
                     <span className="totalRatings">{reviewCount[5]}</span>
@@ -45,7 +46,7 @@ function RatingBar(props) {
                     <span className="totalRatings">{reviewCount[2]}</span>
                     <div className="ratings" style={{ width: ratings[2] }}></div>
                 </div>
-                <div className="ratings-four" >
+                <div className="ratings-five" >
                     <span className="rating">1</span>
                     <span className="totalRatings">{reviewCount[1]}</span>
                     <div className="ratings" style={{ width: ratings[1] }}></div>
