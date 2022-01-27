@@ -23,9 +23,9 @@ function RatingBar(props) {
     return (
 
         <div className="bar-ratings">
-            Ratings      
             <div className="ratings-graph ratings-graph-horizontal ratings-graph-one">
-                <span className="numOfRatings"> # of Ratings</span>
+                < span className="wordRating">Ratings</span>
+                <span className="numOfRatings"> Total Ratings</span>
                 <div className="ratings-one" >
                     <span className="rating">5</span>
                     <span className="totalRatings">{reviewCount[5]}</span>

@@ -195,7 +195,15 @@
     float: right;
     overflow: hidden;
     position: relative;
-    width: 40px;
+    width: 50px;
+  }
+
+  .ratings-graph-horizontal .wordRating {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+    padding-top: 10px;
   }
   
   .ratings-graph-one .ratings::after {
