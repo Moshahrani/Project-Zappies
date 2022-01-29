@@ -168,6 +168,7 @@ class ProductDetail extends React.Component {
                 allSizes.push(i)
             }
 
+
             this.setState({
                 currentItem: imageLink,
                 description: describe,
@@ -283,6 +284,8 @@ class ProductDetail extends React.Component {
                 mostVoteSubmit: false
             })
         }
+
+        console.log(this.state.ratings)
     }
     leastUpVote = (event) => {
         if (!this.state.leastVoteSubmit) {
@@ -296,6 +299,7 @@ class ProductDetail extends React.Component {
                 leastVoteSubmit: false
             })
         }
+       
     }
 
 
@@ -338,9 +342,7 @@ class ProductDetail extends React.Component {
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                     <div>
-                        <div>
-                            <RatingBar ratings={this.state.ratings} />
-                        </div>
+                        <RatingBar ratings={this.state.ratings} />
                     </div>
                 </div>
             )

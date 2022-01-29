@@ -6,11 +6,11 @@ function Reviews(props) {
 
     let reviewMostVotes = props.reviews.reviewWithMostVotes;
     let reviewLeastVotes = props.reviews.reviewWithLeastVotes;
-    console.log(reviewLeastVotes);
-    console.log(reviewMostVotes);
-    console.log(Number(reviewMostVotes.upVotes))
+    // console.log(reviewLeastVotes);
+    // console.log(reviewMostVotes);
+    // console.log(Number(reviewMostVotes.upVotes))
     
-   
+
     return (
 
         <div className="reviews" >
