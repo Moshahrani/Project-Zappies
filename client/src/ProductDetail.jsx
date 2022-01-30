@@ -156,10 +156,7 @@ class ProductDetail extends React.Component {
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
                 allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
             }
-            //console.log(allPictures)
-            //for (let i = 1; i < response.data.product[0].sizing.allValues.length; i++) {
-            //   shoeSizes.push(response.data.product[0].sizing.allValues[i].value)
-            //}
+            
 
             // Get all sizes for particular color in array for efficient dropdown mapping
 
@@ -246,9 +243,9 @@ class ProductDetail extends React.Component {
         })
     }
 
-
     leftArrowClick = (event) => {
         console.log(event.target)
+        event.preventDefa
         if (this.state.currentIndex === 0) {
             this.setState({
                 currentIndex: this.state.lastIndex
