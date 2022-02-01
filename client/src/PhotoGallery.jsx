@@ -4,6 +4,7 @@ import ProductDetail from './ProductDetail.jsx'
 import './PhotoGallery.css';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ImageMagnifier from './ImageMagnifier.jsx';
 
 class PhotoGallery extends React.Component {
     constructor(props) {
@@ -27,6 +28,8 @@ class PhotoGallery extends React.Component {
         //     //let image = images[this.state.currentIndex]
         //     //console.log(this.props.imageList)
         // let image = this.props.imageList[this.r]
+
+
         return (<div className="carousel">
             <div
                 className="carouselInner"
@@ -35,7 +38,9 @@ class PhotoGallery extends React.Component {
                 <div className="left" >
                     <ArrowBackIosIcon onClick={this.props.leftArrow} />
                 </div>
-                <div className="center"></div>
+                <div className="center">
+                    <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`}/>
+                </div>
                 <div className="right" >
                     <ArrowForwardIosIcon onClick={this.props.rightArrow} />
                 </div>

@@ -10,6 +10,7 @@ import ShoppingCart from './ShoppingCart.jsx';
 import PhotoGallery from './PhotoGallery.jsx';
 import Reviews from './Reviews.jsx';
 import RatingBar from './RatingBar.jsx';
+import ImageMagnifier from './ImageMagnifier.jsx';
 
 
 class ProductDetail extends React.Component {
