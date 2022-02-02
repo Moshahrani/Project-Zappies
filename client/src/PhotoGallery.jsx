@@ -74,9 +74,3 @@ class PhotoGallery extends React.Component {
 }
 export default PhotoGallery;
 
-
-{/* <div 
-            className="carouselInner">
-                <img id="img" src={images[this.state.currentIndex]} ></img>
-            </div>
-            </div> */}
