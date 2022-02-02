@@ -315,7 +315,7 @@ class ProductDetail extends React.Component {
                 <div id="pd" className="productDetail" >
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
-                    <div id="thumbnails" >
+                    <div className="thumbnails" >
                         {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
                             <img id="img" src={item} key={index} onClick={this.chooseImage}></img>
                         ))}

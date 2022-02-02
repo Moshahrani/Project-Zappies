@@ -1,6 +1,6 @@
 .carousel {
-    width: 400px;
     height: 300px;
+    width: 400px;
     background-color: black;
 }
 .carouselInner {
@@ -64,4 +64,9 @@
     display: grid;
     place-items: center;
     color: white;
+}
+
+.thumbnails { 
+    height: 50px;
+    width: 400px;
 }
