@@ -11,42 +11,65 @@ class PhotoGallery extends React.Component {
         super();
 
         this.state = {
-            imageList: []
-
+            showPopup: false
         };
+        this.imageClick = this.imageClick.bind(this);
+
+    }
+    
+    imageClick =  (event) => {
+        this.setState({
+            showPopup: true
+        })
+
     }
 
+
+
     render() {
-        //     let images = [];
-        //     //let firstIndex = 0;
-        //     //let lastIndex = null;
-        //     if(this.props.imageList) {
-        //       images = [...this.props.imageList]
-        //       //lastIndex = this.props.imageList.length - 1;
-        //     }
-        //    //console.log(images[this.state.currentIndex])
-        //     //let image = images[this.state.currentIndex]
-        //     //console.log(this.props.imageList)
-        // let image = this.props.imageList[this.r]
+        const expandView = this.state.showPopup;
 
+        if (expandView) {
+            return (
+                <div className="expandedCarousel">
+                    <div
+                        className="expandedCarouselInner"
+                        style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
+                    >
+                        <div className="left" >
+                            <ArrowBackIosIcon onClick={this.props.leftArrow} />
+                        </div>
+                        <div className="center">
+                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.imageClick}/>
+                        </div>
+                        <div className="right" >
+                            <ArrowForwardIosIcon onClick={this.props.rightArrow} />
+                        </div>
+                    </div>
+                </div>
 
-        return (<div className="carousel">
-            <div
-                className="carouselInner"
-                style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
-            >
-                <div className="left" >
-                    <ArrowBackIosIcon onClick={this.props.leftArrow} />
+            )
+        } else {
+
+            return (
+                <div className="carousel">
+                    <div
+                        className="carouselInner"
+                        style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
+                    >
+                        <div className="left" >
+                            <ArrowBackIosIcon onClick={this.props.leftArrow} />
+                        </div>
+                        <div className="center">
+                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.imageClick}/>
+                        </div>
+                        <div className="right" >
+                            <ArrowForwardIosIcon onClick={this.props.rightArrow} />
+                        </div>
+                    </div>
                 </div>
-                <div className="center">
-                    <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`}/>
-                </div>
-                <div className="right" >
-                    <ArrowForwardIosIcon onClick={this.props.rightArrow} />
-                </div>
-            </div>
-        </div>
-        )
+            )
+        }
     }
 }
 export default PhotoGallery;

@@ -6,7 +6,7 @@ import React, { useState } from 'react';
     const height = '100%';
     const magnifierHeight = 100;
     const magnifieWidth = 100;
-    const zoomLevel = 2;
+    const zoomLevel = 1.75;
   
     const [[x, y], setXY] = useState([0, 0]);
     const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
@@ -24,6 +24,7 @@ import React, { useState } from 'react';
         <img
           src={src}
           style={{ height: height, width: width }}
+          onClick={props.imageClick}
           onMouseEnter={(e) => {
             // updates image size and turns on magnifier
             const elem = e.currentTarget;
