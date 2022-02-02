@@ -147,6 +147,10 @@
     width:100%;
   }
 
+.thumbnails-container {
+
+}
+
   
   .ratings-graph .rating {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
