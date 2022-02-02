@@ -26,7 +26,7 @@ function StarRatings(props) {
 
   return (
     <div>
-      <p>{props.rating}
+      <p>
         Stars
       </p>
       <div className="stars" data-percent={total} />
