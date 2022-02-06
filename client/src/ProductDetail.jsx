@@ -229,7 +229,7 @@ class ProductDetail extends React.Component {
         }
     }
     chooseImage = (event) => {
-        let chosenImage = event.target.src.split("._AC_SR700,050_.jpg");
+        let chosenImage = event.target.src.split("._AC_SR700,005_.jpg");
         let images = this.state.allImages[this.state.currentItem];
         let index = null;
 
@@ -317,7 +317,7 @@ class ProductDetail extends React.Component {
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >
                         {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
-                            <img id="img" src={item} key={index} onClick={this.chooseImage}></img>
+                            <img id="img" className="images"src={item} key={index} onClick={this.chooseImage}></img>
                         ))}
                     </div>
                     <div>
