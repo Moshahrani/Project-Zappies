@@ -4,7 +4,7 @@ import './styles.css';
 
 
 function RatingBar(props) {
-  console.log(props.ratings)
+
     let ratings = props.ratings;
 
     let reviewCount = {}
@@ -18,7 +18,7 @@ function RatingBar(props) {
         totalRatings += num;
         numRatings.push(num)
     }
-    console.log(numRatings)
+    
 
      
     for (let i in ratings) {

@@ -152,7 +152,7 @@ class ProductDetail extends React.Component {
                 let thumbnails = [];
                 for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
                     allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg");
-                    thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,050_.jpg")
+                    thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
                 }
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
                 allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
@@ -229,7 +229,7 @@ class ProductDetail extends React.Component {
         }
     }
     chooseImage = (event) => {
-        let chosenImage = event.target.src.split("._AC_SR700,005_.jpg");
+        let chosenImage = event.target.src.split("._AC_SR700,525_.jpg");
         let images = this.state.allImages[this.state.currentItem];
         let index = null;
 
@@ -317,7 +317,7 @@ class ProductDetail extends React.Component {
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >
                         {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
-                            <img id="img" className="images"src={item} key={index} onClick={this.chooseImage}></img>
+                            <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
                         ))}
                     </div>
                     <div>
