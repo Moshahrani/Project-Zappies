@@ -66,29 +66,13 @@
     color: white;
 }
 
-/* .thumbnails {
-    width: 300px;
-    height: 50px;  
-    vertical-align: bottom;
-    display: table-cell;
-} */
+.thumbnails {
+    display: flex;
+    width: 400px;
+    padding-top: 5px;
+}
 
-/* .images {  
-    width: 500px;  
-    height: auto;  
-    }  */
-    .thumbnails {
-        display: flex;
-        width: 400px;
-        padding-top: 5px;
-      }
-/*       
-      .image {
-        flex: 33.33%;
-        padding: 5px;
-      }
-      .thumbnails { display:block; width: 100%; height:auto;} */
-     .images {
-         width: 70px;
-         height: 50px;
-     }
+.images {
+     width: 70px;
+     height: 50px;
+}
