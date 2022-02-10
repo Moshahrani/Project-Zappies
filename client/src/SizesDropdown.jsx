@@ -39,7 +39,7 @@ class SizesDropdown extends React.Component {
     return (
       <div>
         <button type="button" onClick={this.showMenu}>
-          Sizes{option}
+          {option}
         </button>
 
         {
