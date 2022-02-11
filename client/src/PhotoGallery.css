@@ -53,8 +53,9 @@
     color: black;
 }
 .expandedCarouselInner .center {
-    flex: 100%;
+    flex: 80%;
     height: 100%;
+    width: 50%;
 }
 .expandedCarouselInner .right {
     flex: 5%;
