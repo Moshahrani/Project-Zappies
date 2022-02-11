@@ -28,6 +28,9 @@ class PhotoGallery extends React.Component {
 
     showExpanded(event) {
         event.preventDefault();
+        console.log(typeof event.target)
+        console.log(event.target)
+      
     
         this.setState({ showPopup: true }, () => {
           document.addEventListener('click', this.showExpanded);
@@ -55,7 +58,8 @@ class PhotoGallery extends React.Component {
                         <div className="left" >
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
-                        <div className="center" >
+                        <div className="center" onClick={this.showExpanded}>
+                            
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
