@@ -55,8 +55,8 @@ class PhotoGallery extends React.Component {
                         <div className="left" >
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
-                        <div className="center">
-                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.showExpanded}/>
+                        <div className="center" >
+                        <p onClick={this.showExpanded}> </p>
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
@@ -71,13 +71,13 @@ class PhotoGallery extends React.Component {
                 <div className="carousel">
                     <div
                         className="carouselInner"
-                        style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
+                        
                     >
                         <div className="left" >
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
-                        <div className="center">
-                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.showExpanded}/>
+                        <div className="center" onClick={this.showExpanded} style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }} >
+                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} />
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />

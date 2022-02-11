@@ -24,7 +24,7 @@ import React, { useState } from 'react';
         <img
           src={src}
           style={{ height: height, width: width }}
-          onClick={props.imageClick}
+          //onClick={props.imageClick}
           onMouseEnter={(e) => {
             // updates image size and turns on magnifier
             const elem = e.currentTarget;
