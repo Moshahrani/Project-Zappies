@@ -14,6 +14,8 @@ class PhotoGallery extends React.Component {
             showPopup: false
         };
         this.imageClick = this.imageClick.bind(this);
+        this.showExpanded = this.showExpanded.bind(this);
+        this.closeExpanded = this.closeExpanded.bind(this);
 
     }
     
@@ -23,6 +25,20 @@ class PhotoGallery extends React.Component {
         })
 
     }
+
+    showExpanded(event) {
+        event.preventDefault();
+    
+        this.setState({ showPopup: true }, () => {
+          document.addEventListener('click', this.closeExpanded);
+        });
+      }
+    
+      closeExpanded() {
+        this.setState({ showPopup: false }, () => {
+          document.removeEventListener('click', this.closeExpanded);
+        });
+      }
 
 
 
@@ -40,7 +56,7 @@ class PhotoGallery extends React.Component {
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
                         <div className="center">
-                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.imageClick}/>
+                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.showExpanded}/>
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
@@ -61,7 +77,7 @@ class PhotoGallery extends React.Component {
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
                         <div className="center">
-                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.imageClick}/>
+                            <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} imageClick={this.showExpanded}/>
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
