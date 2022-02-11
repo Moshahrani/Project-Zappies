@@ -13,7 +13,7 @@ class SizesDropdown extends React.Component {
     };
 
     this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
+    //this.closeMenu = this.closeMenu.bind(this);
   }
 
   showMenu(event) {
@@ -24,11 +24,11 @@ class SizesDropdown extends React.Component {
     });
   }
 
-  closeMenu() {
-    this.setState({ showMenu: false }, () => {
-      document.removeEventListener('click', this.closeMenu);
-    });
-  }
+  // closeMenu() {
+  //   this.setState({ showMenu: false }, () => {
+  //     document.removeEventListener('click', this.closeMenu);
+  //   });
+  // }
 
   render() {
     let option = 'Select Size';

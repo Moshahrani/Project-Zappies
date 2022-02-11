@@ -15,7 +15,7 @@ class PhotoGallery extends React.Component {
         };
         this.imageClick = this.imageClick.bind(this);
         this.showExpanded = this.showExpanded.bind(this);
-        this.closeExpanded = this.closeExpanded.bind(this);
+        //this.closeExpanded = this.closeExpanded.bind(this);
 
     }
     
@@ -30,15 +30,15 @@ class PhotoGallery extends React.Component {
         event.preventDefault();
     
         this.setState({ showPopup: true }, () => {
-          document.addEventListener('click', this.closeExpanded);
+          document.addEventListener('click', this.showExpanded);
         });
       }
     
-      closeExpanded() {
-        this.setState({ showPopup: false }, () => {
-          document.removeEventListener('click', this.closeExpanded);
-        });
-      }
+    //   closeExpanded() {
+    //     this.setState({ showPopup: false }, () => {
+    //       document.removeEventListener('click', this.closeExpanded);
+    //     });
+    //   }
 
 
 
@@ -56,7 +56,6 @@ class PhotoGallery extends React.Component {
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
                         <div className="center" >
-                        <p onClick={this.showExpanded}> </p>
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
