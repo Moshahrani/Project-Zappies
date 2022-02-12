@@ -14,7 +14,6 @@ class PhotoGallery extends React.Component {
         };
         this.imageClick = this.imageClick.bind(this);
         this.showExpanded = this.showExpanded.bind(this);
-        //this.closeExpanded = this.closeExpanded.bind(this);
         this.outside = React.createRef();
         this.outsideClick = this.outsideClick.bind(this);
 
@@ -56,18 +55,6 @@ class PhotoGallery extends React.Component {
             });
         }
     }
-
-    //     this.setState({ showPopup: true }, () => {
-    //       document.addEventListener('click', this.showExpanded);
-    //     });
-    //   }
-
-    //   closeExpanded() {
-    //     this.setState({ showPopup: false }, () => {
-    //       document.removeEventListener('click', this.closeExpanded);
-    //     });
-    //   }
-
 
 
     render() {
