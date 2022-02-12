@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDom, { flushSync } from 'react-dom';
 import ProductDetail from './ProductDetail.jsx'
 import './PhotoGallery.css';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -9,17 +9,31 @@ import ImageMagnifier from './ImageMagnifier.jsx';
 class PhotoGallery extends React.Component {
     constructor(props) {
         super();
-
         this.state = {
             showPopup: false
         };
         this.imageClick = this.imageClick.bind(this);
         this.showExpanded = this.showExpanded.bind(this);
         //this.closeExpanded = this.closeExpanded.bind(this);
+        this.outside = React.createRef();
+        this.outsideClick = this.outsideClick.bind(this);
 
     }
+    componentDidMount() {
+        document.addEventListener('mousedown', this.outsideClick);
+    }
     
-    imageClick =  (event) => {
+    outsideClick = (event) => {
+        if (this.outside && !this.outside.current.contains(event.target)) {
+            console.log('clicked outside')
+            this.setState({
+                showPopup: false
+            })
+        }
+    }
+
+
+    imageClick = (event) => {
         this.setState({
             showPopup: true
         })
@@ -28,15 +42,26 @@ class PhotoGallery extends React.Component {
 
     showExpanded(event) {
         event.preventDefault();
-        console.log(typeof event.target)
+        console.log(event.target.alt)
         console.log(event.target)
-      
-    
-        this.setState({ showPopup: true }, () => {
-          document.addEventListener('click', this.showExpanded);
-        });
-      }
-    
+        if ((event.target.alt === "img") || (event.target.className === "center")) {
+            this.setState({
+                showPopup: !this.state.showPopup
+            });
+        }
+
+        else if ((event.target.className !== "left") || (event.target.className !== "right")) {
+            this.setState({
+                showPopup: false
+            });
+        }
+    }
+
+    //     this.setState({ showPopup: true }, () => {
+    //       document.addEventListener('click', this.showExpanded);
+    //     });
+    //   }
+
     //   closeExpanded() {
     //     this.setState({ showPopup: false }, () => {
     //       document.removeEventListener('click', this.closeExpanded);
@@ -50,7 +75,7 @@ class PhotoGallery extends React.Component {
 
         if (expandView) {
             return (
-                <div className="expandedCarousel">
+                <div className="expandedCarousel" ref={this.outside}>
                     <div
                         className="expandedCarouselInner"
                         style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
@@ -59,7 +84,7 @@ class PhotoGallery extends React.Component {
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
                         </div>
                         <div className="center" onClick={this.showExpanded}>
-                            
+
                         </div>
                         <div className="right" >
                             <ArrowForwardIosIcon onClick={this.props.rightArrow} />
@@ -71,10 +96,10 @@ class PhotoGallery extends React.Component {
         } else {
 
             return (
-                <div className="carousel">
+                <div className="carousel" ref={this.outside}>
                     <div
                         className="carouselInner"
-                        
+
                     >
                         <div className="left" >
                             <ArrowBackIosIcon onClick={this.props.leftArrow} />
