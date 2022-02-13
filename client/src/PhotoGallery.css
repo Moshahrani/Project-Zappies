@@ -33,6 +33,7 @@
 }
 
 .expandedCarousel {
+    position: relative;
     width: 1680px;
     height: 1050px;
     background-color: black;

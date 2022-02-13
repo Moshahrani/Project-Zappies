@@ -332,11 +332,11 @@ class ProductDetail extends React.Component {
                         <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
                     </div>
                     <div>
-                        <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
-                            leastUpVote={this.leastUpVote} />
+                        <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
                     </div>
                     <div>
-                        <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
+                        <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
+                            leastUpVote={this.leastUpVote} />
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                     <div>
