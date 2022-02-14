@@ -22,7 +22,6 @@ class PhotoGallery extends React.Component {
 
 
     outsideImage = (event) => {
-        console.log(event.target)
         if (event.target.className === "expandedCarousel")
             this.setState({
                 showPopup: false
@@ -32,8 +31,6 @@ class PhotoGallery extends React.Component {
 
     showExpanded(event) {
         event.preventDefault();
-        console.log(event.target.alt)
-        console.log(event.target)
         if ((event.target.alt === "img") || (event.target.className === "center")) {
             this.setState({
                 showPopup: !this.state.showPopup
