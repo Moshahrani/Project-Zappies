@@ -4,6 +4,8 @@ import ProductDetail from './ProductDetail.jsx'
 import './PhotoGallery.css';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ImageMagnifier from './ImageMagnifier.jsx';
 
 class PhotoGallery extends React.Component {
@@ -56,13 +58,13 @@ class PhotoGallery extends React.Component {
                         style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
                     >
                         <div className="left" >
-                            <ArrowBackIosIcon onClick={this.props.leftArrow} />
+                            <ArrowCircleLeftOutlinedIcon onClick={this.props.leftArrow}  style={{ fontSize: 60 , color: "black"  }} />
                         </div>
                         <div className="center" onClick={this.showExpanded}>
 
                         </div>
                         <div className="right" >
-                            <ArrowForwardIosIcon onClick={this.props.rightArrow} />
+                            <ArrowCircleRightOutlinedIcon onClick={this.props.rightArrow} style={{ fontSize: 60, color: "black"  }}/>
                         </div>
                     </div>
                 </div>
