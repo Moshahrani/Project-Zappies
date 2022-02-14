@@ -43,7 +43,7 @@ class PhotoGallery extends React.Component {
         event.preventDefault();
         console.log(event.target.alt)
         console.log(event.target)
-        if ((event.target.alt === "img") || (event.target.className === "center")) {
+        if ((event.target.alt === "img") ){
             this.setState({
                 showPopup: !this.state.showPopup
             });

@@ -33,11 +33,19 @@
 }
 
 .expandedCarousel {
-    position: relative;
-    width: 1680px;
-    height: 1050px;
-    background-color: black;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1200px;
+    height: 750px;
+    padding: 25%;
+    /* background-color: black; */
+    background: rgba(0, 0, 0, 0.8);
 }
+    
 .expandedCarouselInner {
     height: 100%;
     width: 100%;
