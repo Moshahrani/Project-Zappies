@@ -59,7 +59,7 @@
     width: 50%;
 }
 .expandedCarouselInner .right {
-    flex: 5%;
+    position:right;
     height: 100%;
     display: grid;
     place-items: start;
