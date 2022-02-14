@@ -12,29 +12,32 @@ class PhotoGallery extends React.Component {
         this.state = {
             showPopup: false
         };
-        this.imageClick = this.imageClick.bind(this);
+        this.outsideImage = this.outsideImage.bind(this);
         this.showExpanded = this.showExpanded.bind(this);
-        this.outside = React.createRef();
-        this.outsideClick = this.outsideClick.bind(this);
+        // this.outside = React.createRef();
+        // this.outsideClick = this.outsideClick.bind(this);
 
     }
     componentDidMount() {
         document.addEventListener('mousedown', this.outsideClick);
     }
     
-    outsideClick = (event) => {
-        if (this.outside && !this.outside.current.contains(event.target)) {
-            console.log('clicked outside')
-            this.setState({
-                showPopup: false
-            })
-        }
-    }
+    // outsideClick = (event) => {
+    //     console.log(event)
+    //     if (this.outside && !this.outside.current.contains(event.target)) {
+    //         console.log('clicked outside')
+    //         this.setState({
+    //             showPopup: false
+    //         })
+    //     }
+    // }
 
 
-    imageClick = (event) => {
+    outsideImage = (event) => {
+        console.log(event.target)
+        if(event.target.className === "expandedCarousel")
         this.setState({
-            showPopup: true
+            showPopup: false
         })
 
     }
@@ -43,7 +46,7 @@ class PhotoGallery extends React.Component {
         event.preventDefault();
         console.log(event.target.alt)
         console.log(event.target)
-        if ((event.target.alt === "img") ){
+        if ((event.target.alt === "img") || (event.target.className === "center")) {
             this.setState({
                 showPopup: !this.state.showPopup
             });
@@ -62,7 +65,7 @@ class PhotoGallery extends React.Component {
 
         if (expandView) {
             return (
-                <div className="expandedCarousel" ref={this.outside}>
+                <div className="expandedCarousel" onClick={this.outsideImage}>
                     <div
                         className="expandedCarouselInner"
                         style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
