@@ -14,31 +14,19 @@ class PhotoGallery extends React.Component {
         };
         this.outsideImage = this.outsideImage.bind(this);
         this.showExpanded = this.showExpanded.bind(this);
-        // this.outside = React.createRef();
-        // this.outsideClick = this.outsideClick.bind(this);
-
     }
     componentDidMount() {
         document.addEventListener('mousedown', this.outsideClick);
     }
-    
-    // outsideClick = (event) => {
-    //     console.log(event)
-    //     if (this.outside && !this.outside.current.contains(event.target)) {
-    //         console.log('clicked outside')
-    //         this.setState({
-    //             showPopup: false
-    //         })
-    //     }
-    // }
+
 
 
     outsideImage = (event) => {
         console.log(event.target)
-        if(event.target.className === "expandedCarousel")
-        this.setState({
-            showPopup: false
-        })
+        if (event.target.className === "expandedCarousel")
+            this.setState({
+                showPopup: false
+            })
 
     }
 
@@ -62,7 +50,7 @@ class PhotoGallery extends React.Component {
 
     render() {
         const expandView = this.state.showPopup;
-
+         // expanded Product Image Carousel/View
         if (expandView) {
             return (
                 <div className="expandedCarousel" onClick={this.outsideImage}>
@@ -84,7 +72,7 @@ class PhotoGallery extends React.Component {
 
             )
         } else {
-
+                 // normal product image carousel/view
             return (
                 <div className="carousel" ref={this.outside}>
                     <div
@@ -108,3 +96,21 @@ class PhotoGallery extends React.Component {
 }
 export default PhotoGallery;
 
+
+
+
+// Outside click method that might be implemented later
+
+// this.outside = React.createRef();
+        // this.outsideClick = this.outsideClick.bind(this);
+
+
+    // outsideClick = (event) => {
+    //     console.log(event)
+    //     if (this.outside && !this.outside.current.contains(event.target)) {
+    //         console.log('clicked outside')
+    //         this.setState({
+    //             showPopup: false
+    //         })
+    //     }
+    // }
