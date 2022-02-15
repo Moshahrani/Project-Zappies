@@ -106,7 +106,7 @@ class ProductDetail extends React.Component {
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
                 let sizes = {};
-                //console.log(response.data.product[0].styles[i].stocks[1])
+                 //Converting sizes in stock from strings to Numbers
                 for (let j = 0; j < response.data.product[0].styles[i].stocks.length; j++) {
                     sizes[response.data.product[0].styles[i].stocks[j].size] = Number(response.data.product[0].styles[i].stocks[j].onHand);
                 }
