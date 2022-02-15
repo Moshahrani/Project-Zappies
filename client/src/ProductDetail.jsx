@@ -99,9 +99,6 @@ class ProductDetail extends React.Component {
             // console.log(response.data.product[0].reviewSummary)
             // console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
             // console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
-            // console.log(response.data.product[0].styles[1].stocks)
-            // console.log(response.data.product[0].styles[0].color)
-            // console.log(response.data.product[0].styles[0])
             let shoeDetails = {}
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
