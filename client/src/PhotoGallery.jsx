@@ -49,7 +49,7 @@ class PhotoGallery extends React.Component {
 
     render() {
         const expandView = this.state.showPopup;
-         // expanded Product Image Carousel/View
+        // expanded Product Image Carousel/View
         if (expandView) {
             return (
                 <div className="expandedCarousel" onClick={this.outsideImage}>
@@ -58,20 +58,20 @@ class PhotoGallery extends React.Component {
                         style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
                     >
                         <div className="left" >
-                            <ArrowCircleLeftOutlinedIcon onClick={this.props.leftArrow}  style={{ fontSize: 60 , color: "black"  }} />
+                            <ArrowCircleLeftOutlinedIcon onClick={this.props.leftArrow} style={{ fontSize: 60, color: "black" }} />
                         </div>
                         <div className="center" onClick={this.showExpanded}>
 
                         </div>
                         <div className="right" >
-                            <ArrowCircleRightOutlinedIcon onClick={this.props.rightArrow} style={{ fontSize: 60, color: "black"  }}/>
+                            <ArrowCircleRightOutlinedIcon onClick={this.props.rightArrow} style={{ fontSize: 60, color: "black" }} />
                         </div>
                     </div>
                 </div>
 
             )
         } else {
-                 // normal product image carousel/view
+            // normal product image carousel/view
             return (
                 <div className="carousel" ref={this.outside}>
                     <div
