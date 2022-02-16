@@ -103,7 +103,7 @@ class ProductDetail extends React.Component {
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
                 let sizes = {};
-                 //Converting sizes in stock from strings to Numbers
+                //Converting sizes in stock from strings to Numbers
                 for (let j = 0; j < response.data.product[0].styles[i].stocks.length; j++) {
                     sizes[response.data.product[0].styles[i].stocks[j].size] = Number(response.data.product[0].styles[i].stocks[j].onHand);
                 }
@@ -154,7 +154,7 @@ class ProductDetail extends React.Component {
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
                 allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
             }
-            
+
 
             // Get all sizes for particular color in array for efficient dropdown mapping
 
@@ -294,7 +294,7 @@ class ProductDetail extends React.Component {
                 leastVoteSubmit: false
             })
         }
-       
+
     }
 
 
