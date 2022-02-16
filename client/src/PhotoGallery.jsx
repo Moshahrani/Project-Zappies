@@ -30,7 +30,7 @@ class PhotoGallery extends React.Component {
             })
 
     }
-
+    // Renders Expanded Image View
     showExpanded(event) {
         event.preventDefault();
         if ((event.target.alt === "img") || (event.target.className === "center")) {
