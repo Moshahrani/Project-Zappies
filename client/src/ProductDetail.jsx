@@ -11,6 +11,7 @@ import PhotoGallery from './PhotoGallery.jsx';
 import Reviews from './Reviews.jsx';
 import RatingBar from './RatingBar.jsx';
 import ImageMagnifier from './ImageMagnifier.jsx';
+import Logo from './logo.png'
 
 
 class ProductDetail extends React.Component {
@@ -310,6 +311,7 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
+                    
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >

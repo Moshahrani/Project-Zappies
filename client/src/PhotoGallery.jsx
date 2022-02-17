@@ -8,6 +8,7 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ImageMagnifier from './ImageMagnifier.jsx';
 
+
 class PhotoGallery extends React.Component {
     constructor(props) {
         super();
