@@ -311,7 +311,7 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
-                    <img src={Logo} />
+                    <img id="logo" src={Logo} />
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >
