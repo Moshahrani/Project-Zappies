@@ -97,9 +97,6 @@ class ProductDetail extends React.Component {
         };
 
         axios.request(options).then((response) => {
-            // console.log(response.data.product[0].reviewSummary)
-            // console.log(response.data.product[0].reviewSummary.reviewWithMostVotes)
-            // console.log(response.data.product[0].reviewSummary.reviewWithLeastVotes)
             let shoeDetails = {}
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
