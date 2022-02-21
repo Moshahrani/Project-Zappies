@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-//import './styles.css';
+import './styles.css';
 
 function StarRatings(props) {
   let rating = Number(props.rating);
