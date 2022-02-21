@@ -11,7 +11,8 @@ function StarRatings(props) {
     rating = rating - 1;
     percent += 20;
   }
-
+   // logic for Range of 0 - 5 stars 
+   
   if (rating > .12 && rating <= .38) {
     quarterPiece += 5;
   } else if (rating > .38 && rating <= .62) {
