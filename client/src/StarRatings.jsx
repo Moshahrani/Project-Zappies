@@ -35,10 +35,4 @@ function StarRatings(props) {
 }
 
 export default StarRatings;
-//   return (
-//     <div>
-//         <p>{props.rating}</p>
-//     <div className="stars" data-percent={rating} >
-//     </div>
-//     </div>
-// )
+
