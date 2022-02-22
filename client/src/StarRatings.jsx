@@ -22,7 +22,8 @@ function StarRatings(props) {
   } else if (rating > .88) {
     quarterPiece += 20;
   }
-
+  // total will be used to predict overall star rating score;
+  
   const total = (quarterPiece + percent).toString();
 
   return (
