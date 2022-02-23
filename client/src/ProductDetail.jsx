@@ -309,7 +309,7 @@ class ProductDetail extends React.Component {
             return (
                 <div id="pd" className="productDetail" >
                     <div className="topBar">
-                        <img id="logo" src={Logo} />
+                        <img id="logo" className="storeLogo"src={Logo} />
                     </div>
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
