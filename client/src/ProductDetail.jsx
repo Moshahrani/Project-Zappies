@@ -12,7 +12,7 @@ import Reviews from './Reviews.jsx';
 import RatingBar from './RatingBar.jsx';
 import ImageMagnifier from './ImageMagnifier.jsx';
 import Logo from './logo.png'
-
+import Brands from './Brands.jsx'
 
 class ProductDetail extends React.Component {
     constructor(props) {
@@ -308,7 +308,9 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div id="pd" className="productDetail" >
-                    <img id="logo" src={Logo} />
+                    <div className="topBar">
+                        <img id="logo" src={Logo} />
+                    </div>
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >
@@ -337,6 +339,9 @@ class ProductDetail extends React.Component {
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                     <div>
                         <RatingBar ratings={this.state.ratings} />
+                    </div>
+                    <div>
+                        <Brands />
                     </div>
                 </div>
             )
