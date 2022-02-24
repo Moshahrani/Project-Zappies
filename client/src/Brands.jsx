@@ -13,10 +13,14 @@ import Lacoste from './BrandLogos/Lacoste.png';
 import NewBalance from './BrandLogos/New Balance.png';
 import Puma from './BrandLogos/Puma.png';
 import Reebok from './BrandLogos/Reebok.png';
-import Saucony from './BrandLogos/Saucony.png'
-
-
-
+import Saucony from './BrandLogos/Saucony.png';
+import Skechers from './BrandLogos/Skechers.png';
+import SkechersPerformance from './BrandLogos/SkechersPerformance.png';
+import Sperry from './BrandLogos/Sperry.png';
+import SteveMadden from './BrandLogos/SteveMadden.png';
+import Ugg from './BrandLogos/Ugg.png';
+import UnderArmour from './BrandLogos/UnderArmour.png';
+import Vans from './BrandLogos/Vans.png';
 
 function Brands(props) {
 
@@ -35,6 +39,13 @@ function Brands(props) {
             <img id="brand" src={Puma} />
             <img id="brand" src={Reebok} />
             <img id="brand" src={Saucony} />
+            <img id="brand" src={Skechers} />
+            <img id="brand" src={SkechersPerformance} />
+            <img id="brand" src={Sperry} />
+            <img id="brand" src={SteveMadden} />
+            <img id="brand" src={Ugg} />
+            <img id="brand" src={UnderArmour} />
+            <img id="brand" src={Vans} />
         </div>
     );
 }
