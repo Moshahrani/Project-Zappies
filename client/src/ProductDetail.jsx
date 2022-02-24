@@ -309,7 +309,7 @@ class ProductDetail extends React.Component {
             return (
                 <div id="pd" className="productDetail" >
                     <div className="topBar">
-                        
+
                     </div>
                     <img id="logo" className="storeLogo" src={Logo} />
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
@@ -340,9 +340,6 @@ class ProductDetail extends React.Component {
                     <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                     <div>
                         <RatingBar ratings={this.state.ratings} />
-                    </div>
-                    <div>
-                        space
                     </div>
                     <div className="brands">
                         <Brands />
