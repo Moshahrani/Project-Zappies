@@ -11,6 +11,16 @@
   width: 285px;
   z-index: 2
 }
+.brandsContainer {
+  width: 75%;
+  height: 300px;
+}
+#brand {
+  width: 200px;
+  height: 150px;
+  padding: 25px;
+}
+
 .stars {
     display:inline-block;
     width:auto;

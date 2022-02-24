@@ -342,6 +342,9 @@ class ProductDetail extends React.Component {
                         <RatingBar ratings={this.state.ratings} />
                     </div>
                     <div>
+                        space
+                    </div>
+                    <div className="brands">
                         <Brands />
                     </div>
                 </div>
