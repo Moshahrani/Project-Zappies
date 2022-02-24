@@ -1,4 +1,16 @@
+.topBar {
+  height: 100px;
+  width: 100%;
+  background-color: #00BFFF;
+  text-align: center;
+  z-index: 4;
+}
 
+.storeLogo {
+  height: 350px;
+  width: 285px;
+  z-index: 2
+}
 .stars {
     display:inline-block;
     width:auto;
