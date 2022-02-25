@@ -307,7 +307,7 @@ class ProductDetail extends React.Component {
             )
         } else {
             return (
-                <div id="pd" className="productDetail" >
+                <div id="pd" className="productDetailWrapper" >
                     <div className="topBar">
 
                     </div>
