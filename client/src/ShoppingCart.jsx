@@ -7,20 +7,20 @@ class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-           cart : [],
-           size: null,
-           color: null,
-           quantity: null
+            cart: [],
+            size: null,
+            color: null,
+            quantity: null
         }
         this.addToCart = this.addToCart.bind(this);
-    
+
     }
-    
-    
+
+
     addToCart = (event) => {
         let add = {};
         let order = {};
-        
+
         if (this.state.size && this.state.amount) {
             let price = this.state.price;
             let quantity = this.state.amount;
@@ -29,9 +29,9 @@ class ShoppingCart extends React.Component {
             order["quantity"] = this.state.amount;
             order["size"] = this.state.size;
 
-    
+
             add[this.state.currentItem] = order;
-            
+
             this.setState({
                 cart: add
             })
@@ -41,17 +41,17 @@ class ShoppingCart extends React.Component {
 
 
 
-render() {
-   return (
-       <div>
-        <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
-       </div>
-   )
+    render() {
+        return (
+            <div>
+                <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
+            </div>
+        )
 
 
 
 
-}
+    }
 
 
 
