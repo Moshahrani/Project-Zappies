@@ -16,8 +16,10 @@ body
 .storeLogo {
   height: 350px;
   width: 285px;
-  z-index: 2
+  position: relative;
+  z-index: 2;
 }
+
 .brandsContainer {
   position: relative;
   margin: auto;
@@ -25,7 +27,6 @@ body
   height: 600px;
 }
 #brand {
-  
   width: 225px;
   height: 150px;
   padding: 25px;
