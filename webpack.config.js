@@ -18,8 +18,8 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-transform-react-jsx'],
-        },
+          plugins: [['@babel/plugin-transform-react-jsx'],["@babel/plugin-proposal-decorators", { "legacy": true }]
+          ]},
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/,

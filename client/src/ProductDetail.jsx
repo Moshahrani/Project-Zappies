@@ -14,6 +14,7 @@ import ImageMagnifier from './ImageMagnifier.jsx';
 import Logo from './logo.png'
 import Brands from './Brands.jsx'
 
+
 class ProductDetail extends React.Component {
     constructor(props) {
         super(props);
@@ -139,6 +140,11 @@ class ProductDetail extends React.Component {
             let shoeSizes = [];
             let allPictures = {};
             let allThumbnails = {};
+            let brand = response.data.product[0].brandName;
+            let model = response.data.product[0].productName;
+            let id = response.data.product[0].productId;
+
+
 
             let imageLink = response.data.product[0].styles[0].color
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
@@ -163,6 +169,9 @@ class ProductDetail extends React.Component {
 
 
             this.setState({
+                brandName: brand,
+                productName: model,
+                productId: id,
                 currentItem: imageLink,
                 description: describe,
                 currentDetails: shoeDetails[imageLink],
@@ -312,6 +321,10 @@ class ProductDetail extends React.Component {
 
                     </div>
                     <img id="logo" className="storeLogo" src={Logo} />
+                    <div className="infoContainer" >
+                        <p id="brandName">{this.state.brandName}</p>
+                        <p id="model"> {this.state.productName}</p>
+                    </div>
                     <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                         leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                     <div className="thumbnails" >
