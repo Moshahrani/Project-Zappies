@@ -1,8 +1,8 @@
 .carousel {
     width: 840px;
     height: 599px;
-    position: relative;
-    margin-left: 10%;
+    /* position: relative; */
+    /* margin-left: 10%; */
 }
 .carouselInner {
     height: 100%;
@@ -77,7 +77,7 @@
     /* display: flex; */
     width: 840px;
     padding-top: 5px;
-    margin-left: 11.5%;
+    margin-left: 13%;
 }
 
 .images {

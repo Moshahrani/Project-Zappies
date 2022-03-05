@@ -322,12 +322,14 @@ class ProductDetail extends React.Component {
                     </div>
                     <img id="logo" className="storeLogo" src={Logo} />
                     <div id="pd" className="productDetailWrapper">
-                        <div className="infoContainer" >
-                            <p id="brandName">{this.state.brandName}</p>
-                            <p id="model"> {this.state.productName}</p>
-                        </div>
+                        <div className="shoeDetailWrapper">
                         <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                             leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
+                            <div className="infoContainer" >
+                            <h2 id="brandName">{this.state.brandName}</h2>
+                            <h3 id="model"> {this.state.productName}</h3>
+                        </div>
+                        </div>
                         <div className="thumbnails" >
                             {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
                                 <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>

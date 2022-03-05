@@ -7,13 +7,15 @@ body
     margin: 0;
     padding: 0;
 }
-.productDetailWrapper {
+.shoeDetailWrapper {
+  display: flex;
 }
 .infoContainer {
+  /* padding-left: 20px; */
   height: 80px;
   width: 150px;
-  position: relative;
-  margin-left: 60%;
+   /* position:absolute; */
+  /* margin-left: 60%;  */
 }
 .infoContainer #brandName{
   font-family: 'Montserrat', sans-serif;
