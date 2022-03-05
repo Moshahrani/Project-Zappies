@@ -32,7 +32,6 @@
     place-items: center;
     color: black;
 }
-
 .expandedCarousel {
     position: fixed;
     z-index: 999;
@@ -45,7 +44,6 @@
     padding: 25%;
     background: rgba(0, 0, 0, 0.8);
 }
-    
 .expandedCarouselInner {
     height: 100%;
     width: 100%;
@@ -75,12 +73,14 @@
 }
 
 .thumbnails {
-    display: flex;
-    width: 400px;
+    position: relative;
+    /* display: flex; */
+    width: 840px;
     padding-top: 5px;
+    margin-left: 11.5%;
 }
 
 .images {
-     width: 70px;
-     height: 50px;
+     width: 140px;
+     height: 100px;
 }
