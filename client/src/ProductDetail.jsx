@@ -316,43 +316,45 @@ class ProductDetail extends React.Component {
             )
         } else {
             return (
-                <div id="pd" className="productDetailWrapper" >
+                <div>
                     <div className="topBar">
 
                     </div>
                     <img id="logo" className="storeLogo" src={Logo} />
-                    <div className="infoContainer" >
-                        <p id="brandName">{this.state.brandName}</p>
-                        <p id="model"> {this.state.productName}</p>
-                    </div>
-                    <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
-                        leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
-                    <div className="thumbnails" >
-                        {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
-                            <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
-                        ))}
-                    </div>
-                    <div>
-                        <StarRatings rating={this.state.productRating} />
-                    </div>
-                    <div>
-                        <SocialMedia />
-                    </div>
-                    <div id="dropdowns">
-                        <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
-                        <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
-                        <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
-                    </div>
-                    <div>
-                        <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
-                    </div>
-                    <div>
-                        <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
-                            leastUpVote={this.leastUpVote} />
-                    </div>
-                    <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
-                    <div>
-                        <RatingBar ratings={this.state.ratings} />
+                    <div id="pd" className="productDetailWrapper">
+                        <div className="infoContainer" >
+                            <p id="brandName">{this.state.brandName}</p>
+                            <p id="model"> {this.state.productName}</p>
+                        </div>
+                        <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
+                            leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
+                        <div className="thumbnails" >
+                            {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
+                                <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
+                            ))}
+                        </div>
+                        <div>
+                            <StarRatings rating={this.state.productRating} />
+                        </div>
+                        <div>
+                            <SocialMedia />
+                        </div>
+                        <div id="dropdowns">
+                            <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
+                            <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
+                            <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
+                        </div>
+                        <div>
+                            <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
+                        </div>
+                        <div>
+                            <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
+                                leastUpVote={this.leastUpVote} />
+                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
+                        <div>
+                            <RatingBar ratings={this.state.ratings} />
+                        </div>
                     </div>
                     <div className="brands">
                         <Brands />

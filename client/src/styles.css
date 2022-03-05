@@ -10,18 +10,18 @@ body
 .productDetailWrapper {
 }
 .infoContainer {
-  height: 100px;
+  height: 80px;
   width: 150px;
   position: relative;
   margin-left: 60%;
 }
 .infoContainer #brandName{
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 .infoContainer #model {
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .topBar {
