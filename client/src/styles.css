@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 
 body
 {
@@ -7,11 +9,19 @@ body
 }
 .productDetailWrapper {
 }
-.infoContainer #brandName{
+.infoContainer {
   height: 100px;
   width: 150px;
+  position: relative;
+  margin-left: 60%;
+}
+.infoContainer #brandName{
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
+}
+.infoContainer #model {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
 }
 
 .topBar {
