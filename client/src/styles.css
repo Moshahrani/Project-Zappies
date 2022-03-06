@@ -9,6 +9,7 @@ body
 }
 .shoeDetailWrapper {
   display: flex;
+  margin-left: 15%;
 }
 .infoContainer {
   /* padding-left: 20px; */
