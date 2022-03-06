@@ -331,7 +331,7 @@ class ProductDetail extends React.Component {
                                 <p id="brandName">{this.state.brandName}</p>
                                 <p id="model"> {this.state.productName}</p>
                                 <h4 id="price" style={{ color: "#228B22" }} >{this.state.price}</h4>
-                                <div>
+                            <div>
                                     <StarRatings rating={this.state.productRating} />
                                 </div>
                                 <div className="socialMedia">

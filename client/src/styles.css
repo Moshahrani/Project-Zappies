@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body
 {
@@ -11,13 +11,14 @@ body
   display: flex;
   margin-left: 15%;
 }
-.infoContainer {
+/* .infoContainer {
   /* padding-left: 20px; */
   /* width: 150px; */
    /* position:absolute; */
   /* margin-left: 60%;  */
-
-}
+  /* height: 50px;
+  width: 50px;
+} */ 
 
 #brandName {
   font-family: 'Montserrat', sans-serif;
@@ -28,6 +29,7 @@ body
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 15px;
 }
 
 #price {
