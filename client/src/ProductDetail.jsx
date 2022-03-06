@@ -324,14 +324,19 @@ class ProductDetail extends React.Component {
                     <img id="logo" className="storeLogo" src={Logo} />
                     <div id="pd" className="productDetailWrapper">
                         <div className="shoeDetailWrapper">
+                        <div className="thumbnails" >
+                            {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
+                                <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
+                            ))}
+                        </div>
                             <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                                 leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                             <div className="infoContainer" >
                                 <p id="brandName">{this.state.brandName}</p>
                                 <p id="model"> {this.state.productName}</p>
                                 <p id="price" style={{ color: "#228B22" }} >{this.state.price}</p>
-                                <div  className="allStars">
-                                    <StarRatings rating={this.state.productRating} style={{ paddingLeft: '20px' }}/>
+                                <div className="allStars">
+                                    <StarRatings rating={this.state.productRating} style={{ paddingLeft: '20px' }} />
                                 </div>
                                 <div className="socialMedia" style={{ paddingLeft: '20px' }}>
                                     <SocialMedia />
@@ -342,16 +347,12 @@ class ProductDetail extends React.Component {
                                     <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
                                 </div>
                                 <div>
-                            <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
-                        </div>
+                                    <div className="cart" style={{ paddingLeft: '20px' }}>
+                                        <button className="Cart" onClick={this.addToCart} >Add to Cart</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                       
-                        <div className="thumbnails" >
-                                    {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
-                                        <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
-                                    ))}
-                                </div>
                         <div>
                             <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
                                 leastUpVote={this.leastUpVote} />
