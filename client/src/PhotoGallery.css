@@ -75,9 +75,10 @@
 .thumbnails {
     position: relative;
     /* display: flex; */
+    height: 60px;
     width: 840px;
-    padding-top: 5px;
-    margin-left: 13%;
+    padding-top: 150px;
+    margin-left: 300px;
 }
 
 .images {

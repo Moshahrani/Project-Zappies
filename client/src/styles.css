@@ -10,6 +10,8 @@ body
 .shoeDetailWrapper {
   display: flex;
   margin-left: 15%;
+  height: 600px;
+  width: 1200px;
 }
 /* .infoContainer {
   /* padding-left: 20px; */
@@ -23,6 +25,7 @@ body
 #brandName {
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
+  padding-left: 20px;
 }
 
 #model {
@@ -30,11 +33,13 @@ body
   font-size: 20px;
   color: rgba(0, 0, 0, 0.85);
   margin-bottom: 15px;
+  padding-left: 20px;
 }
 
 #price {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
+  padding-left: 20px;
 }
 #price::first-letter {
   font-size: 80%;
@@ -68,6 +73,12 @@ body
   padding: 25px;
 }
 
+.allStars {
+  padding-left: 20px;
+}
+
+/* Stars and rating totals */
+
 .stars {
     display:inline-block;
     width:auto;
@@ -78,7 +89,6 @@ body
     background-color:white;
       margin:5px;
   }
-  
   
   .stars:BEFORE {
     content:"★★★★★";

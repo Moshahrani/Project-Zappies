@@ -320,7 +320,6 @@ class ProductDetail extends React.Component {
             return (
                 <div>
                     <div className="topBar">
-
                     </div>
                     <img id="logo" className="storeLogo" src={Logo} />
                     <div id="pd" className="productDetailWrapper">
@@ -330,28 +329,29 @@ class ProductDetail extends React.Component {
                             <div className="infoContainer" >
                                 <p id="brandName">{this.state.brandName}</p>
                                 <p id="model"> {this.state.productName}</p>
-                                <h4 id="price" style={{ color: "#228B22" }} >{this.state.price}</h4>
-                            <div>
-                                    <StarRatings rating={this.state.productRating} />
+                                <p id="price" style={{ color: "#228B22" }} >{this.state.price}</p>
+                                <div  className="allStars">
+                                    <StarRatings rating={this.state.productRating} style={{ paddingLeft: '20px' }}/>
                                 </div>
-                                <div className="socialMedia">
+                                <div className="socialMedia" style={{ paddingLeft: '20px' }}>
                                     <SocialMedia />
                                 </div>
-                                <div className="thumbnails" >
+                                <div id="dropdowns">
+                                    <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
+                                    <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
+                                    <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
+                                </div>
+                                <div>
+                            <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
+                        </div>
+                            </div>
+                        </div>
+                       
+                        <div className="thumbnails" >
                                     {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
                                         <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
                                     ))}
                                 </div>
-                            </div>
-                        </div>
-                        <div id="dropdowns">
-                            <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
-                            <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
-                            <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
-                        </div>
-                        <div>
-                            <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
-                        </div>
                         <div>
                             <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
                                 leastUpVote={this.leastUpVote} />
