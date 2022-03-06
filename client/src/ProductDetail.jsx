@@ -331,15 +331,15 @@ class ProductDetail extends React.Component {
                                 <div>
                                     <StarRatings rating={this.state.productRating} />
                                 </div>
+                                <div className="socialMedia">
+                                    <SocialMedia />
+                                </div>
                                 <div className="thumbnails" >
                                     {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
                                         <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
                                     ))}
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <SocialMedia />
                         </div>
                         <div id="dropdowns">
                             <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
