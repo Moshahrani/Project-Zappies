@@ -99,6 +99,7 @@ class ProductDetail extends React.Component {
         axios.request(options).then((response) => {
             console.log(response.data.product[0])
             let shoeDetails = {};
+            let priceString = "";
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
                 let sizeInventory = {};
                 let sizes = {};
@@ -121,6 +122,7 @@ class ProductDetail extends React.Component {
                 }
                 // Removing $ sign from string value but for current price value
                 let price = response.data.product[0].styles[i].price.split('$')
+                priceString = response.data.product[0].styles[i].price;
                 let cost = Number(price[1])
                 let regPrice = parseFloat((cost).toFixed(2))
                 sizeInventory["price"] = regPrice;
@@ -176,7 +178,7 @@ class ProductDetail extends React.Component {
                 description: describe,
                 currentDetails: shoeDetails[imageLink],
                 itemExists: true,
-                //price: cost,
+                price: priceString,
                 productRating: rating,
                 // sizes: [...shoeSizes],
                 sizes: [...allSizes],
@@ -328,6 +330,7 @@ class ProductDetail extends React.Component {
                             <div className="infoContainer" >
                                 <h2 id="brandName">{this.state.brandName}</h2>
                                 <h3 id="model"> {this.state.productName}</h3>
+                                <h4 id="price" style={{ color: "#228B22" }} > {this.state.price}</h4>
                                 <div>
                                     <StarRatings rating={this.state.productRating} />
                                 </div>
