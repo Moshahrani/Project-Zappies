@@ -336,7 +336,7 @@ class ProductDetail extends React.Component {
                                 <div className="socialMedia" style={{ paddingLeft: '20px' }}>
                                     <SocialMedia />
                                 </div>
-                                <div id="dropdowns">
+                                <div id="dropdowns" style={{ paddingLeft: '20px' }}>
                                     <ColorsDropdown colors={this.state.colors} printShoe={this.printShoe} />
                                     <SizesDropdown size={this.state.size} sizes={this.state.sizes} currentShoe={this.state.currentItem} getSize={this.chooseSize} />
                                     <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
