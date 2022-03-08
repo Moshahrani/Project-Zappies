@@ -10,9 +10,9 @@ function Reviews(props) {
     return (
 
         <div className="reviews" >
-            <div className="mostVotes">
-                Review With Most Votes
-                <p>
+            <div className="positiveReview">
+                Top Positive Review
+                <p className="reviewSummary">
                     {reviewMostVotes.summary}
                 </p>
                 <p>
@@ -33,9 +33,9 @@ function Reviews(props) {
                     <ArrowUpwardIcon onClick={props.mostUpVote} />
                 </div>
             </div>
-            <div className="leastVotes">
-                Review with Least Votes
-                <p>
+            <div className="criticalReview">
+                Top Critical Review
+                <p className="reviewSummary">
                     {reviewLeastVotes.summary}
                 </p>
                 <p>

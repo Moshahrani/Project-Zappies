@@ -7,6 +7,7 @@ body
     margin: 0;
     padding: 0;
 }
+
 .shoeDetailWrapper {
   display: flex;
   height: 600px;
@@ -43,6 +44,26 @@ body
 #price::first-letter {
   font-size: 80%;
   font-family: 'Roboto', serif;
+}
+.reviews {
+  display: flex;
+  height: 850px;
+  width: 1250px;
+}
+.reviewSummary {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+.positiveReview {
+ height: 400px;
+ width: 600px;
+ padding-left: 300px;
+ padding-right: 20px;
+}
+.criticalReview {
+  height: 400px;
+  width: 600px;
+  padding-left: 360px;
 }
 
 .topBar {
