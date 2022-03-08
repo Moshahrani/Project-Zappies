@@ -30,7 +30,7 @@ function Reviews(props) {
                     Upvotes : {props.mostVotes}
                 </div>
                 <div className="upvoteArrow" >
-                    <ArrowUpwardIcon onClick={props.mostUpVote} />
+                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px" }}/>
                 </div>
             </div>
             <div className="reviewDivider" ></div>
