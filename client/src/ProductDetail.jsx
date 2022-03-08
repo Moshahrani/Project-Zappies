@@ -357,7 +357,7 @@ class ProductDetail extends React.Component {
                             <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
                                 leastUpVote={this.leastUpVote} />
                         </div>
-                        <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
+                        <div className="description" dangerouslySetInnerHTML={{ __html: this.state.description }} />
                         <div>
                             <RatingBar ratings={this.state.ratings} />
                         </div>

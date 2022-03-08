@@ -11,7 +11,7 @@ function Reviews(props) {
 
         <div className="reviews" >
             <div className="positiveReview">
-                Top Positive Review
+                <p id="reviewTitle">Top Positive Review</p>
                 <p className="reviewSummary">
                     {reviewMostVotes.summary}
                 </p>
@@ -30,12 +30,12 @@ function Reviews(props) {
                     Upvotes : {props.mostVotes}
                 </div>
                 <div className="upvoteArrow" >
-                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px" }}/>
+                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "20px" }}/>
                 </div>
             </div>
             <div className="reviewDivider" ></div>
             <div className="criticalReview">
-                Top Critical Review
+                <p id="reviewTitle">Top Critical Review</p>
                 <p className="reviewSummary">
                     {reviewLeastVotes.summary}
                 </p>
@@ -55,7 +55,7 @@ function Reviews(props) {
                         Upvotes : {props.leastVotes}
                     </p>
                     <div className="upvoteArrow" >
-                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px" }}/>
+                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "5px"  }}/>
                     </div>
                 </div>
             </div>
