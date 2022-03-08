@@ -55,7 +55,7 @@ function Reviews(props) {
                         Upvotes : {props.leastVotes}
                     </p>
                     <div className="upvoteArrow" >
-                        <ArrowUpwardIcon onClick={props.leastUpVote} />
+                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px" }}/>
                     </div>
                 </div>
             </div>
