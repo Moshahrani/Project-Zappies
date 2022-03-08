@@ -84,7 +84,6 @@ class App extends React.Component {
       <h1>
         Zappies
       </h1>
-
       <MainPage />
       <div >
         <button type="button" className="getShoes" onClick={this.getMensShoes}>Products</button>

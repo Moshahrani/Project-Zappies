@@ -58,11 +58,18 @@ body
  height: 400px;
  width: 650px;
  padding-left: 200px;
- padding-right: 50px;
+ padding-right: 75px;
 }
 .criticalReview {
   height: 400px;
   width: 650px;
+}
+
+.reviewDivider {
+  display: inline-block;
+  border-left: 8px solid rgba(0, 0, 0, 0.5);
+  height: 430px;
+  margin-right: 75px;
 }
 
 .topBar {

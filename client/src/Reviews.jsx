@@ -33,6 +33,7 @@ function Reviews(props) {
                     <ArrowUpwardIcon onClick={props.mostUpVote} />
                 </div>
             </div>
+            <div className="reviewDivider" ></div>
             <div className="criticalReview">
                 Top Critical Review
                 <p className="reviewSummary">
