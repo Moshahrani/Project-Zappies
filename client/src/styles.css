@@ -52,11 +52,13 @@ body
 }
 .reviews #reviewTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
 }
 .reviewSummary {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 .positiveReview {
  height: 400px;
