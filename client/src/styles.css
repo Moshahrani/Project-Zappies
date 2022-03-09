@@ -57,9 +57,10 @@ body
   color: rgba(0, 0, 0, 0.85);
 }
 .reviewSummary {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.5;
 }
 .positiveReview {
  height: 400px;
