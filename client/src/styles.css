@@ -46,6 +46,17 @@ body
   font-size: 80%;
   font-family: 'Roboto', serif;
 }
+.detailsContainer {
+  display: flex;
+  margin-left: 180px;
+}
+.description {
+  width: 550px;
+  padding-right: 400px;
+}
+#ratingBar {
+  width: 700px;
+}
 .reviews {
   display: flex;
   width: 1700px;
@@ -72,10 +83,17 @@ body
   height: 400px;
   width: 650px;
 }
-
+.horizontalDivider {
+  display: block;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.4);
+  height: 10px;
+  width: 1400px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
 .reviewDivider {
   display: inline-block;
-  border-left: 8px solid rgba(0, 0, 0, 0.5);
+  border-left: 8px solid rgba(0, 0, 0, 0.4);
   height: 430px;
   margin-right: 75px;
 }

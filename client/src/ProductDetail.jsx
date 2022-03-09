@@ -324,11 +324,11 @@ class ProductDetail extends React.Component {
                     <img id="logo" className="storeLogo" src={Logo} />
                     <div id="pd" className="productDetailWrapper">
                         <div className="shoeDetailWrapper">
-                        <div className="thumbnails" >
-                            {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
-                                <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
-                            ))}
-                        </div>
+                            <div className="thumbnails" >
+                                {this.state.allThumbnails[this.state.currentItem].map((item, index) => (
+                                    <img id="img" className="images" src={item} key={index} onClick={this.chooseImage}></img>
+                                ))}
+                            </div>
                             <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                                 leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                             <div className="infoContainer" >
@@ -353,13 +353,16 @@ class ProductDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="horizontalDivider" />
+                        <div className="detailsContainer">
+                            <div className="description" dangerouslySetInnerHTML={{ __html: this.state.description }} />
+                            <div id="ratingBar">
+                                <RatingBar ratings={this.state.ratings} />
+                            </div>
+                        </div>
                         <div>
                             <Reviews reviews={this.state.reviews} leastVotes={this.state.leastUpVotes} mostVotes={this.state.mostUpVotes} mostUpVote={this.mostUpVote}
                                 leastUpVote={this.leastUpVote} />
-                        </div>
-                        <div className="description" dangerouslySetInnerHTML={{ __html: this.state.description }} />
-                        <div>
-                            <RatingBar ratings={this.state.ratings} />
                         </div>
                     </div>
                     <div className="brands">
