@@ -83,6 +83,9 @@ body
   display: flex;
 }
 #overall {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.85);
   padding-right: 15px;
 }
 
