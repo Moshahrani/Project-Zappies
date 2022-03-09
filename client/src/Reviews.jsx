@@ -15,15 +15,14 @@ function Reviews(props) {
                 <p id="reviewTitle">Top Positive Review</p>
                 <div className="overallRateContainer">
                     <p id="overall">Overall</p>
-                    <StarRatings rating={reviewMostVotes.overallRating} />
+                    <StarRatings rating={reviewMostVotes.overallRating} style={{ fontSize: "21px" }} />
                 </div>
+                <p id="comfort">
+                    Comfort Rating  {reviewMostVotes.comfortRating}
+                </p>
                 <p className="reviewSummary">
                     {reviewMostVotes.summary}
                 </p>
-                <p>
-                    Comfort Rating : {reviewMostVotes.comfortRating}
-                </p>
-
                 <p> Sizing : {reviewMostVotes.shoeSize}
                 </p>
                 <p>
@@ -43,11 +42,11 @@ function Reviews(props) {
                     <p id="overall">Overall</p>
                     <StarRatings rating={reviewLeastVotes.overallRating} />
                 </div>
+                <p id="comfort">
+                    Comfort Rating  {reviewLeastVotes.comfortRating}
+                </p>
                 <p className="reviewSummary">
                     {reviewLeastVotes.summary}
-                </p>
-                <p>
-                    Comfort Rating : {reviewLeastVotes.comfortRating}
                 </p>
                 <p> Sizing : {reviewLeastVotes.shoeSize}
                 </p>

@@ -81,11 +81,13 @@ body
 
 .overallRateContainer {
   display: flex;
+  align-items: center;
 }
-#overall {
+#overall, #comfort {
   font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
-  color: rgba(0, 0, 0, 0.85);
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.80);
   padding-right: 15px;
 }
 
@@ -126,11 +128,11 @@ body
     display:inline-block;
     width:auto;
     position:relative;
-    font-size:28px;
+    font-size: 20px;
     /* border:2px outset #FC0;
     border-radius:5px; */
     background-color:white;
-      margin:5px;
+    padding: 2px;
   }
   
   .stars:BEFORE {
