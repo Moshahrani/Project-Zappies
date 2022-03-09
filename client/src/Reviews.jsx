@@ -21,19 +21,29 @@ function Reviews(props) {
                     <p id="ratingDetails">Comfort</p>
                     <p>{reviewMostVotes.comfortRating}</p>
                 </div>
+                <div className="rateContainer">
+                    <p id="ratingDetails"> Sizing</p>
+                    <p>
+                        {reviewMostVotes.shoeSize}
+                    </p>
+                </div>
+                <div className="rateContainer">
+                    <p id="ratingDetails">Width</p>
+                    <p>
+                        {reviewMostVotes.shoeWidth}
+                    </p>
+                </div>
                 <p className="reviewSummary">
                     {reviewMostVotes.summary}
                 </p>
-                <p> Sizing : {reviewMostVotes.shoeSize}
-                </p>
-                <p>
-                    Width : {reviewMostVotes.shoeWidth}
-                </p>
-                <div>
-                    Upvotes : {props.mostVotes}
+                <div className="rateContainer">
+                    <p id="ratingDetails"> Upvotes </p>
+                    <p>
+                        {props.mostVotes}
+                    </p>
                 </div>
                 <div className="upvoteArrow" >
-                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "20px" }} />
+                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "15px" }} />
                 </div>
             </div>
             <div className="reviewDivider" ></div>
@@ -47,24 +57,31 @@ function Reviews(props) {
                     <p id="ratingDetails">Comfort</p>
                     <p>{reviewLeastVotes.comfortRating}</p>
                 </div>
+                <div className="rateContainer">
+                    <p id="ratingDetails"> Sizing</p>
+                    <p>
+                        {reviewLeastVotes.shoeSize}
+                    </p>
+                </div>
+                <div className="rateContainer">
+                    <p id="ratingDetails">Width</p>
+                    <p>
+                        {reviewLeastVotes.shoeWidth}
+                    </p>
+                </div>
                 <p className="reviewSummary">
                     {reviewLeastVotes.summary}
                 </p>
-                <p> Sizing : {reviewLeastVotes.shoeSize}
-                </p>
-                <p>
-                    Width : {reviewLeastVotes.shoeWidth}
-                </p>
-                <div>
+                <div className="rateContainer">
+                    <p id="ratingDetails"> Upvotes </p>
                     <p>
-                        Upvotes : {props.leastVotes}
+                        {props.leastVotes}
                     </p>
-                    <div className="upvoteArrow" >
-                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "5px" }} />
-                    </div>
+                </div>
+                <div className="upvoteArrow" >
+                    <ArrowUpwardIcon onClick={props.leastUpVote} style={{ position: "relative", opacity: .75, fontSize: "40px", paddingTop: "15px" }} />
                 </div>
             </div>
-
         </div>
     );
 
