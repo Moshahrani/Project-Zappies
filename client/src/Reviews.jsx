@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import StarRatings from './StarRatings.jsx';
 
 function Reviews(props) {
 
@@ -12,15 +13,17 @@ function Reviews(props) {
         <div className="reviews" >
             <div className="positiveReview">
                 <p id="reviewTitle">Top Positive Review</p>
+                <div className="overallRateContainer">
+                    <p>Overall</p> 
+                    <StarRatings rating={reviewMostVotes.overallRating}/>
+                </div>
                 <p className="reviewSummary">
                     {reviewMostVotes.summary}
                 </p>
                 <p>
                     Comfort Rating : {reviewMostVotes.comfortRating}
                 </p>
-                <p>
-                    Overall Rating : {reviewMostVotes.overallRating}
-                </p>
+
                 <p> Sizing : {reviewMostVotes.shoeSize}
                 </p>
                 <p>
@@ -30,7 +33,7 @@ function Reviews(props) {
                     Upvotes : {props.mostVotes}
                 </div>
                 <div className="upvoteArrow" >
-                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "20px" }}/>
+                    <ArrowUpwardIcon onClick={props.mostUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "20px" }} />
                 </div>
             </div>
             <div className="reviewDivider" ></div>
@@ -55,7 +58,7 @@ function Reviews(props) {
                         Upvotes : {props.leastVotes}
                     </p>
                     <div className="upvoteArrow" >
-                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "5px"  }}/>
+                        <ArrowUpwardIcon onClick={props.leastUpVote} style={{ opacity: .75, fontSize: "40px", paddingTop: "5px" }} />
                     </div>
                 </div>
             </div>
