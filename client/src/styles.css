@@ -82,7 +82,9 @@ body
 .overallRateContainer {
   display: flex;
 }
- 
+#overall {
+  padding-right: 15px;
+}
 
 .topBar {
   height: 120px;
