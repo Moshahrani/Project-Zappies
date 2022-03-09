@@ -79,16 +79,17 @@ body
   margin-right: 75px;
 }
 
-.overallRateContainer {
+.rateContainer {
   display: flex;
   align-items: center;
-}
-#overall, #comfort {
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.80);
-  padding-right: 15px;
+}
+
+#ratingDetails {
+  padding-right: 25px;
 }
 
 .topBar {
