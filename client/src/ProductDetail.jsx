@@ -81,7 +81,7 @@ class ProductDetail extends React.Component {
             currentItem: event.target.value,
             color: event.target.value,
             sizes: [...allSizes],
-            price: this.state.shoeDetails[event.target.value]["price"]
+            price: '$' + this.state.shoeDetails[event.target.value]["price"]
         })
     }
 
