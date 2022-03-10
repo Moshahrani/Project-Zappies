@@ -332,6 +332,7 @@ class ProductDetail extends React.Component {
                             <PhotoGallery imageList={this.state.allImages[this.state.currentItem]} firstIndex={this.state.currentIndex}
                                 leftArrow={this.leftArrowClick} rightArrow={this.rightArrowClick} />
                             <div className="infoContainer" >
+                                <p id="productId">SKU  {this.state.productId}</p>
                                 <p id="brandName">{this.state.brandName}</p>
                                 <p id="model"> {this.state.productName}</p>
                                 <p id="price" style={{ color: "#228B22" }} >{this.state.price}</p>

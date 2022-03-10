@@ -23,6 +23,11 @@ body
   width: 50px;
 } */ 
 
+#productId {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding-left: 300px;
+}
 #brandName {
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
