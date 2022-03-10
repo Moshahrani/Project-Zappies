@@ -34,7 +34,7 @@ function RatingBar(props) {
                 <span className="numOfRatings"> Total Ratings</span>
                 <div className="ratings-one" >
                     <span className="rating">5</span>
-                    <span className="totalRatings">{props.ratings[3]}</span>
+                    <span className="totalRatings">{props.ratings[5]}</span>
                     <div className="ratings" style={{ width: (ratings[5] + "%")}}></div>
                 </div>
                 <div className="ratings-two" >

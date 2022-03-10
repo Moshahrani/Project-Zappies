@@ -320,6 +320,7 @@ body
     float: left;
     margin-bottom: 8px;
     width: 100%;
+    height: 55px;
     background-color: lightgrey;
     opacity: 0.85;
     
@@ -336,6 +337,7 @@ body
   .ratings-graph-horizontal .totalRatings {
     float: right;
     margin-top: 18px;
+    margin-right: 5px;
     font-weight: 600;
   }
   
