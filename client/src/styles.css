@@ -51,6 +51,75 @@ body
   font-size: 80%;
   font-family: 'Roboto', serif;
 }
+/* .ddList {
+  width: 400px;
+  height: 100vh;
+}
+dd.Content {
+  position: absolute;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  color: #333;
+  
+}
+
+.colorsButton {
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+} */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+#dd {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top:45px;
+  right:0px;
+  width: 200px;
+  background-color: white;
+  /* font-weight:bold; */
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+li a {
+  color: #000;
+  text-decoration: none;
+}
+li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#dds:last-child {
+  border-bottom: none;
+}
+#dds:hover {
+  background-color: #e5e5e5;
+}
+.button{
+  width:178px;
+  height:18px;
+  background-color:white;
+  padding:12px;
+  border-radius:5px;
+  border: 1px solid black;
+  font-weight:bold;
+  color:black;
+}
+
+/* #showShoe {
+  z-index: 990;
+} */
+
 .detailsContainer {
   display: flex;
   margin-left: 180px;
@@ -58,11 +127,13 @@ body
 }
 .description {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   width: 550px;
   padding-right: 300px;
 }
 #ratingBar {
   width: 700px;
+  padding: 100px;
 }
 .reviews {
   display: flex;

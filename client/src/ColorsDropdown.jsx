@@ -28,36 +28,55 @@ class ColorsDropdown extends React.Component {
   }
 
   render() {
-    if (!this.state.showMenu) {
-      return (
-        <div id="menu" className="colors">
-          <button type="button" id="showMenu" onClick={this.showMenu}>
-            Colors
-          </button>
-        </div>
-      )
-    } else {
-      return (<div id="showShoes">
-        {
-          this.state.showMenu
-            ? (
-              <div id="showShoe" className="showShoe">
-                {this.props.colors.map((item, index) => (
-                  <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>{item}
-                  </button>
-                ))}
-              </div>
-            )
-            : (
-              null
-            )
-        }
-      </div>
-      )
-  }
+    return (
+    <div  className="dropdown" style = {{width:"200px"}} >
+         <div className="button" onClick={this.showMenu}> Colors </div>
+
+          { this.state.showMenu ? (
+         <ul id="dd">
+         {this.props.colors.map((item, index) => (
+              <li id="dds" value={item} onClick={this.props.printShoe} key={index}>{item}</li>
+              )) }
+              </ul> )
+              :
+        (
+          null
+        )
+          }
+        
+       </div>
+    )
 
   }
 }
 export default ColorsDropdown;
 
 
+// if (!this.state.showMenu) {
+//   return (
+//     <div id="menu" className="colorsButton" onClick={this.showMenu}>
+//       Colors
+//     </div>
+//   )
+// } else {
+//   return (<div className="ddList">
+//     {
+//       this.state.showMenu
+//         ? (
+//           <div className="ddContent">
+//             {this.props.colors.map((item, index) => (
+//               <p className="dd-color-item" key={index}>
+//                 <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>
+//                   <span>{item}</span>
+//                 </button>
+//               </p>
+//             ))}
+//           </div>
+//         )
+//         : (
+//           null
+//         )
+//     }
+//   </div>
+//   )
+// }
