@@ -63,9 +63,6 @@ class ProductDetail extends React.Component {
     }
 
     printShoe = (event) => {
-         console.log(event.target.getAttribute('value'))
-        // console.log(event.target.value)
-        // console.log(event.target)
         // possibility of adding on sale information for products 
         // pending for now 
 
