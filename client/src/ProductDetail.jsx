@@ -63,7 +63,9 @@ class ProductDetail extends React.Component {
     }
 
     printShoe = (event) => {
-
+         console.log(event.target.getAttribute('value'))
+        // console.log(event.target.value)
+        // console.log(event.target)
         // possibility of adding on sale information for products 
         // pending for now 
 
@@ -72,16 +74,19 @@ class ProductDetail extends React.Component {
         //         console.log(typeof i)
         //     }
         // }
+        const chosenColor = event.target.getAttribute('value');
+
         let allSizes = [];
-        for (let i in this.state.shoeDetails[event.target.value].sizes) {
+        
+        for (let i in this.state.shoeDetails[chosenColor].sizes) {
             allSizes.push(i)
         }
 
         this.setState({
-            currentItem: event.target.value,
+            currentItem: chosenColor,
             color: event.target.value,
             sizes: [...allSizes],
-            price: '$' + this.state.shoeDetails[event.target.value]["price"]
+            price: '$' + this.state.shoeDetails[chosenColor]["price"]
         })
     }
 
