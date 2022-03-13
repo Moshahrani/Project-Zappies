@@ -37,28 +37,48 @@ class SizesDropdown extends React.Component {
     }
 
     return (
-      <div>
-        <button type="button" onClick={this.showMenu}>
-          {option}
-        </button>
-
-        {
-          this.state.showMenu
-            ? (
-              <div className="menu">
-                {this.props.sizes.map((item, index) => (
-                  <button type="button" value={item} onClick={this.props.getSize} key={index}>{item}</button>
-
-                ))}
-
-              </div>
-            )
-            : (
-              null
-            )
+      <div className="dropdown" style={{ width: "200px" }} >
+        <div className="button" onClick={this.showMenu}> Select Size </div>
+        {this.state.showMenu ? (
+          <ul id="dd">
+            {this.props.sizes.map((item, index) => (
+              <li value={item} onClick={this.props.getSize} key={index}>{item}</li>
+            ))}
+          </ul>
+        )
+          :
+          (
+            null
+          )
         }
       </div>
-    );
+    )
   }
 }
 export default SizesDropdown;
+
+
+// return (
+//   <div>
+//     <button type="button" onClick={this.showMenu}>
+//       {option}
+//     </button>
+
+//     {
+//       this.state.showMenu
+//         ? (
+//           <div className="menu">
+//             {this.props.sizes.map((item, index) => (
+//               <button type="button" value={item} onClick={this.props.getSize} key={index}>{item}</button>
+
+//             ))}
+
+//           </div>
+//         )
+//         : (
+//           null
+//         )
+//     }
+//   </div>
+// );
+// }
