@@ -74,7 +74,7 @@ class ProductDetail extends React.Component {
         const chosenColor = event.target.getAttribute('value');
 
         let allSizes = [];
-        
+
         for (let i in this.state.shoeDetails[chosenColor].sizes) {
             allSizes.push(i)
         }

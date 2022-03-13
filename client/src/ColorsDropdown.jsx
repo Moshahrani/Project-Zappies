@@ -32,7 +32,7 @@ class ColorsDropdown extends React.Component {
       <div className="dropdown" style={{ width: "200px" }} >
         <div className="button" onClick={this.showMenu}> Colors </div>
         {this.state.showMenu ? (
-          <ul id="dd" value="string">
+          <ul id="dd">
             {this.props.colors.map((item, index) => (
               <li value={item} onClick={this.props.printShoe} key={index}>{item}</li>
             ))}
