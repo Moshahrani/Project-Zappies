@@ -38,7 +38,7 @@ class SizesDropdown extends React.Component {
 
     return (
       <div className="dropdown" style={{ width: "200px" }} >
-        <div className="button" onClick={this.showMenu}> Select Size </div>
+        <div className="button" onClick={this.showMenu}>{option}</div>
         {this.state.showMenu ? (
           <ul id="dd">
             {this.props.sizes.map((item, index) => (
