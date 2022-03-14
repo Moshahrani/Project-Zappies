@@ -43,16 +43,14 @@ class QuantityDropdown extends React.Component {
     if (this.props.size) {
       if (this.props.amount) {
         sizePicked = this.props.amount;
-      } else {
-        sizePicked = "1";
-      }
+      } 
     }
 
     return (
-      <div className="dropdown" style={{ width: "200px" }} >
-        <div className="button" onClick={this.showMenu}>{sizePicked}</div>
+      <div className="dropdown" style={{ width: "75px" }} >
+        <div className="button" onClick={this.showMenu} style={{ width: "75px" }} >{sizePicked}</div>
         {this.state.showMenu ? (
-          <ul id="dd">
+          <ul id="dd" style={{ width: "75px" }} >
             {amount.map((item, index) => (
               <li value={item} onClick={this.props.chooseAmount} key={index}>{item}</li>
             ))}

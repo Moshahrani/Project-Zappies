@@ -74,6 +74,8 @@ class ProductDetail extends React.Component {
 
         let allSizes = [];
         let size = null;
+        let amount = this.state.amount
+
 
         for (let i in this.state.shoeDetails[chosenColor].sizes) {
             allSizes.push(i)
@@ -81,8 +83,12 @@ class ProductDetail extends React.Component {
 
         if (this.state.color === chosenColor) {
             size = this.state.size
+        } else {
+            amount = 'Quantity'
+            size = 'Select Size'
         }
         this.setState({
+            amount: amount,
             currentItem: chosenColor,
             color: chosenColor,
             size: size,

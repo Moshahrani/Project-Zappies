@@ -108,15 +108,17 @@ li:hover {
   background-color: lightgray;
   color: black;
 }
-.button{
-  width:178px;
-  height:18px;
-  background-color:white;
-  padding:12px;
-  border-radius:5px;
+.button {
+  width: 178px;
+  height: 18px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 5px;
   border: 1px solid black;
-  font-weight:bold;
-  color:black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
 }
 
 /* #showShoe {
