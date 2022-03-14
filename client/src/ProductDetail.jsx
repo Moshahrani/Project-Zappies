@@ -37,7 +37,6 @@ class ProductDetail extends React.Component {
             mostUpVotes: '',
             mostVoteSubmit: false,
             leastVoteSubmit: false,
-            colors: '',
             sizes: null,
             colors: [],
             allImages: {},
@@ -74,14 +73,19 @@ class ProductDetail extends React.Component {
         const chosenColor = event.target.getAttribute('value');
 
         let allSizes = [];
+        let size = null;
 
         for (let i in this.state.shoeDetails[chosenColor].sizes) {
             allSizes.push(i)
         }
 
+        if (this.state.color === chosenColor) {
+            size = this.state.size
+        }
         this.setState({
             currentItem: chosenColor,
-            color: event.target.value,
+            color: chosenColor,
+            size: size,
             sizes: [...allSizes],
             price: '$' + this.state.shoeDetails[chosenColor]["price"]
         })

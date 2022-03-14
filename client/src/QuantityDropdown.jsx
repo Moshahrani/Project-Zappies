@@ -39,7 +39,7 @@ class QuantityDropdown extends React.Component {
     for (let i = 1; i <= range; i++) {
       amount.push(i);
     }
-    let sizePicked = '-';
+    let sizePicked = 'Quantity';
     if (this.props.size) {
       if (this.props.amount) {
         sizePicked = this.props.amount;
@@ -49,29 +49,48 @@ class QuantityDropdown extends React.Component {
     }
 
     return (
-      <div>
-        Quantity
-        <button type="button" id="showMenu" onClick={this.showMenu}>
-          {sizePicked}
-        </button>
-
-        {
-          this.state.showMenu
-            ? (
-              <div className="menu">
-                {amount.map((item, index) => (
-                  <button type="button" value={item} onClick={this.props.chooseAmount} key={index}>{item}</button>
-
-                ))}
-
-              </div>
-            )
-            : (
-              null
-            )
+      <div className="dropdown" style={{ width: "200px" }} >
+        <div className="button" onClick={this.showMenu}>{sizePicked}</div>
+        {this.state.showMenu ? (
+          <ul id="dd">
+            {amount.map((item, index) => (
+              <li value={item} onClick={this.props.chooseAmount} key={index}>{item}</li>
+            ))}
+          </ul>
+        )
+          :
+          (
+            null
+          )
         }
       </div>
-    );
+    )
   }
 }
 export default QuantityDropdown;
+
+
+// return (
+  //   <div>
+  //     Quantity
+  //     <button type="button" id="showMenu" onClick={this.showMenu}>
+  //       {sizePicked}
+  //     </button>
+
+  //     {
+  //       this.state.showMenu
+  //         ? (
+  //           <div className="menu">
+  //             {amount.map((item, index) => (
+  //               <li value={item} onClick={this.props.chooseAmount} key={index}>{item}</li>
+
+  //             ))}
+
+  //           </div>
+  //         )
+  //         : (
+  //           null
+  //         )
+  //     }
+  //   </div>
+  // );
