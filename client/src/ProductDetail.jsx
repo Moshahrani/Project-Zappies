@@ -214,7 +214,12 @@ class ProductDetail extends React.Component {
 
     chooseSize = (event) => {
         const value = event.target.getAttribute('value')
+        let changed = null;
+        if (value !== this.state.size) {
+          changed = 'Quantity';
+        }
         this.setState({
+            amount: changed,
             size: value,
             quantity: this.state.shoeDetails[this.state.currentItem].sizes[value]
         })
