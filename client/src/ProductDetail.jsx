@@ -211,12 +211,11 @@ class ProductDetail extends React.Component {
 
     }
 
-
     chooseSize = (event) => {
         const value = event.target.getAttribute('value')
         let changed = null;
         if (value !== this.state.size) {
-          changed = 'Quantity';
+            changed = 'Quantity';
         }
         this.setState({
             amount: changed,

@@ -37,7 +37,7 @@ class ColorsDropdown extends React.Component {
               <li value={item} onClick={this.props.printShoe} key={index}>{item}</li>
             ))}
           </ul>
-          )
+        )
           :
           (
             null
