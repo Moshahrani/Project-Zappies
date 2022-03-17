@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import axios from 'axios'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
 class ShoppingCart extends React.Component {
@@ -44,7 +45,8 @@ class ShoppingCart extends React.Component {
     render() {
         return (
             <div>
-                <button className="Cart" onClick={this.addToCart}>Add to Cart</button>
+                <ShoppingCartOutlinedIcon onClick={this.addToCart}/>
+                <button className="cart" onClick={this.addToCart}>Add to Cart</button>
             </div>
         )
 

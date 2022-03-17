@@ -121,6 +121,10 @@ li:hover {
   color: black;
 }
 
+.cart {
+  border-radius: 8px;
+}
+
 /* #showShoe {
   z-index: 990;
 } */

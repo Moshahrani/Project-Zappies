@@ -365,9 +365,7 @@ class ProductDetail extends React.Component {
                                     <QuantityDropdown amount={this.state.amount} size={this.state.size} quantity={this.state.quantity} chooseAmount={this.chooseAmount} />
                                 </div>
                                 <div>
-                                    <div className="cart" style={{ paddingLeft: '20px' }}>
-                                        <button className="Cart" onClick={this.addToCart} >Add to Cart</button>
-                                    </div>
+                                    <ShoppingCart />
                                 </div>
                             </div>
                         </div>
