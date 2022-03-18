@@ -122,7 +122,10 @@ li:hover {
 }
 
 .cart {
+  display: flex;
   border-radius: 8px;
+  padding-left: 20px;
+  border-color: #000;
 }
 
 /* #showShoe {

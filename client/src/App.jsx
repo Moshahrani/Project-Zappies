@@ -4,7 +4,6 @@ import axios from 'axios';
 import MainPage from './MainPage.jsx'
 import ProductDetail from './ProductDetail.jsx';
 
-//import './styles.css';
 
 
 class App extends React.Component {

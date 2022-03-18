@@ -44,9 +44,9 @@ class ShoppingCart extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="cart" >
                 <ShoppingCartOutlinedIcon onClick={this.addToCart}/>
-                <button className="cart" onClick={this.addToCart}>Add to Cart</button>
+                <button onClick={this.addToCart}>Add to Cart</button>
             </div>
         )
 
