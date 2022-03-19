@@ -49,33 +49,3 @@ class ColorsDropdown extends React.Component {
   }
 }
 export default ColorsDropdown;
-
-
-// if (!this.state.showMenu) {
-//   return (
-//     <div id="menu" className="colorsButton" onClick={this.showMenu}>
-//       Colors
-//     </div>
-//   )
-// } else {
-//   return (<div className="ddList">
-//     {
-//       this.state.showMenu
-//         ? (
-//           <div className="ddContent">
-//             {this.props.colors.map((item, index) => (
-//               <p className="dd-color-item" key={index}>
-//                 <button type="button" id="printShoeProp" value={item} onClick={this.props.printShoe} key={index}>
-//                   <span>{item}</span>
-//                 </button>
-//               </p>
-//             ))}
-//           </div>
-//         )
-//         : (
-//           null
-//         )
-//     }
-//   </div>
-//   )
-// }

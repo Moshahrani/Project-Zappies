@@ -19,6 +19,7 @@ class ShoppingCart extends React.Component {
 
 
     addToCart = (event) => {
+        
         let add = {};
         let order = {};
 
