@@ -19,7 +19,7 @@ class ShoppingCart extends React.Component {
 
 
     addToCart = (event) => {
-        
+
         let add = {};
         let order = {};
 
@@ -46,7 +46,7 @@ class ShoppingCart extends React.Component {
     render() {
         return (
             <div className="cart" >
-                <ShoppingCartOutlinedIcon onClick={this.addToCart}/>
+                <ShoppingCartOutlinedIcon onClick={this.addToCart} />
                 <button onClick={this.addToCart}>Add to Cart</button>
             </div>
         )
