@@ -24,14 +24,14 @@ class ShoppingCart extends React.Component {
         let order = {};
 
         if (this.state.size && this.state.amount) {
+            
             let price = this.state.price;
             let quantity = this.state.amount;
             let size = this.state.size
+
             order["price"] = this.state.price;
             order["quantity"] = this.state.amount;
             order["size"] = this.state.size;
-
-
             add[this.state.currentItem] = order;
 
             this.setState({
