@@ -84,7 +84,6 @@ function Reviews(props) {
             </div>
         </div>
     );
-
 }
 export default Reviews;
 
