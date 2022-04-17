@@ -14,7 +14,6 @@ class ShoppingCart extends React.Component {
             quantity: null
         }
         this.addToCart = this.addToCart.bind(this);
-
     }
 
     addToCart = (event) => {
@@ -23,7 +22,7 @@ class ShoppingCart extends React.Component {
         let order = {};
 
         if (this.state.size && this.state.amount) {
-            
+
             let price = this.state.price;
             let quantity = this.state.amount;
             let size = this.state.size
@@ -46,10 +45,6 @@ class ShoppingCart extends React.Component {
                 <button onClick={this.addToCart}>Add to Cart</button>
             </div>
         )
-
-
-
-
     }
 
 
