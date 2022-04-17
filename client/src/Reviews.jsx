@@ -9,7 +9,6 @@ function Reviews(props) {
     let reviewLeastVotes = props.reviews.reviewWithLeastVotes;
 
     return (
-
         <div className="reviews" >
             <div className="positiveReview">
                 <p id="reviewTitle">Top Positive Review</p>
