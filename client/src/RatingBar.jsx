@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './styles.css';
 
-
 function RatingBar(props) {
 
     let ratings = props.ratings;
@@ -19,8 +18,6 @@ function RatingBar(props) {
         numRatings.push(num)
     }
     
-
-     
     for (let i in ratings) {
         ratings[i] = String(Math.round(100 * (ratings[i] / totalRatings)));
     }
