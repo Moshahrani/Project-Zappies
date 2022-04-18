@@ -4,8 +4,6 @@ import axios from 'axios';
 import MainPage from './MainPage.jsx'
 import ProductDetail from './ProductDetail.jsx';
 
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
