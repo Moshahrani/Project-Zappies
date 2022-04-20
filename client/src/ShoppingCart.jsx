@@ -3,7 +3,6 @@ import ReactDom from 'react-dom';
 import axios from 'axios'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-
 class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
