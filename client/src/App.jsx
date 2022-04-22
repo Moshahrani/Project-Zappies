@@ -14,8 +14,8 @@ class App extends React.Component {
       nextPage: false
     }
     this.getMensShoes = this.getMensShoes.bind(this);
-
   }
+  
   getMensShoes = () => {
     // const options = {
     //   method: 'GET',
