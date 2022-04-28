@@ -22,14 +22,11 @@ class PhotoGallery extends React.Component {
         document.addEventListener('mousedown', this.outsideClick);
     }
 
-
-
     outsideImage = (event) => {
         if (event.target.className === "expandedCarousel")
             this.setState({
                 showPopup: false
             })
-
     }
     // Renders Expanded Image View
     showExpanded(event) {
@@ -95,8 +92,6 @@ class PhotoGallery extends React.Component {
     }
 }
 export default PhotoGallery;
-
-
 
 
 // Outside click method that might be implemented later
