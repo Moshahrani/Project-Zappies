@@ -44,7 +44,6 @@ class PhotoGallery extends React.Component {
         }
     }
 
-
     render() {
         const expandView = this.state.showPopup;
         // expanded Product Image Carousel/View
