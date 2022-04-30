@@ -103,8 +103,8 @@ class ProductDetail extends React.Component {
             url: 'https://zappos1.p.rapidapi.com/products/detail',
             params: { productId: '7213524' },
             headers: {
-                'x-rapidapi-key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f',
-                'x-rapidapi-host': 'zappos1.p.rapidapi.com'
+                'X-RapidAPI-Host': 'zappos1.p.rapidapi.com',
+                'X-RapidAPI-Key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f'
             }
         };
 
