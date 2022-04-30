@@ -65,7 +65,6 @@ class PhotoGallery extends React.Component {
                         </div>
                     </div>
                 </div>
-
             )
         } else {
             // normal product image carousel/view
