@@ -323,7 +323,6 @@ class ProductDetail extends React.Component {
 
     }
 
-
     render() {
         if (!this.state.itemExists) {
             return (
