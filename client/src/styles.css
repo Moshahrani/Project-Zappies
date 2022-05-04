@@ -120,18 +120,15 @@ li:hover {
   font-weight: 400;
   color: black;
 }
-
 .cart {
   display: flex;
   border-radius: 8px;
   padding-left: 20px;
   border-color: #000;
 }
-
 /* #showShoe {
   z-index: 990;
 } */
-
 .detailsContainer {
   display: flex;
   margin-left: 180px;
@@ -228,7 +225,6 @@ li:hover {
   height: 150px;
   padding: 25px;
 }
-
 .allStars {
   padding-left: 20px;
 }
