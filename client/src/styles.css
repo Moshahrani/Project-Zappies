@@ -4,9 +4,12 @@
 
 body
 {
-    margin: 0;
+    max-width: 1440px; 
+	  margin: 0 auto !important; 
+	  /* float: none !important; 
+    margin: 0; */
     padding: 0;
-    min-height: 70%;
+    /* min-height: 70%; */
 }
 
 .shoeDetailWrapper {
@@ -203,7 +206,6 @@ li:hover {
 
 .topBar {
   height: 120px;
-  width: 4000px;
   background-color: #00BFFF;
   z-index: 4;
 }
