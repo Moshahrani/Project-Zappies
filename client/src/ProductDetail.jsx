@@ -172,8 +172,7 @@ class ProductDetail extends React.Component {
                 allPictures[response.data.product[0].styles[i].color] = [...allImages]
                 allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
             }
-
-
+            
             // Get all sizes for particular color in array for efficient dropdown mapping
 
             let allSizes = []
@@ -335,8 +334,7 @@ class ProductDetail extends React.Component {
         } else {
             return (
                 <div>
-                    <div className="topBar">
-                    </div>
+                    <div className="topBar" />
                     <img id="logo" className="storeLogo" src={Logo} />
                     <div id="pd" className="productDetailWrapper">
                         <div className="shoeDetailWrapper">
