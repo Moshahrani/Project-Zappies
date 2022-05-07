@@ -45,10 +45,6 @@ class ShoppingCart extends React.Component {
             </div>
         )
     }
-
-
-
-
 }
 
 export default ShoppingCart;
