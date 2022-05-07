@@ -28,7 +28,6 @@ body
   /* height: 50px;
   width: 50px;
 } */ 
-
 #productId {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -132,6 +131,10 @@ li:hover {
   padding-left: 20px;
   border-color: #000;
 }
+.cartButton {
+  height: 50px;
+  width: 200px;
+}
 /* #showShoe {
   z-index: 990;
 } */
@@ -182,6 +185,7 @@ li:hover {
   border-bottom: 8px solid rgba(0, 0, 0, 0.4);
   height: 10px;
   margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 50px;
 }
 .reviewDivider {
