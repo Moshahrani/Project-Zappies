@@ -31,6 +31,7 @@ class SizesDropdown extends React.Component {
   }
 
   render() {
+    
     let option = 'Select Size';
     if (this.props.size) {
       option = this.props.size;
