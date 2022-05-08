@@ -31,14 +31,14 @@ class SizesDropdown extends React.Component {
   }
 
   render() {
-    
+
     let option = 'Select Size';
     if (this.props.size) {
       option = this.props.size;
     }
 
     return (
-      <div className="dropdown" style={{ width: "200px" }} >
+      <div className="dropdown" style={{ width: "200px"}} >
         <div className="button" onClick={this.showMenu}>{option}</div>
         {this.state.showMenu ? (
           <ul id="dd">
