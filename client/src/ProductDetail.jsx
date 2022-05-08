@@ -353,7 +353,7 @@ class ProductDetail extends React.Component {
                                 <div className="allStars">
                                     <StarRatings rating={this.state.productRating} style={{ paddingLeft: '20px' }} />
                                 </div>
-                                <div className="socialMedia" style={{ paddingLeft: '20px' }}>
+                                <div className="socialMedia" style={{ paddingLeft: '20px', paddingBottom: '10px' }}>
                                     <SocialMedia />
                                 </div>
                                 <div id="dropdowns" style={{ paddingLeft: '20px' }}>
@@ -366,7 +366,7 @@ class ProductDetail extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="horizontalDivider" />
+                        <div className="horizontalDivider" style={{ paddingTop: 30 }}/>
                         <div className="detailsContainer">
                             <div className="description" dangerouslySetInnerHTML={{ __html: this.state.description }} />
                             <div id="ratingBar">
@@ -378,6 +378,7 @@ class ProductDetail extends React.Component {
                                 leastUpVote={this.leastUpVote} />
                         </div>
                     </div>
+                    <div className="horizontalDivider" />
                     <div className="brands">
                         <Brands />
                     </div>

@@ -43,7 +43,7 @@ class SizesDropdown extends React.Component {
         {this.state.showMenu ? (
           <ul id="dd">
             {this.props.sizes.map((item, index) => (
-              <li value={item} onClick={this.props.getSize} key={index}>{item}</li>
+              <li value={item} onClick={this.props.getSize} key={index}>{item} </li>
             ))}
           </ul>
         )
