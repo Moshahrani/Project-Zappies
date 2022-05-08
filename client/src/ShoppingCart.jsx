@@ -41,7 +41,7 @@ class ShoppingCart extends React.Component {
         return (
             <div className="cart" >
                 <ul className="button" onClick={this.addToCart}>Add to Cart</ul>
-                <ShoppingCartOutlinedIcon onClick={this.addToCart} style={{ height: 50, width: 50, paddingTop: 13 }} />
+                <ShoppingCartOutlinedIcon onClick={this.addToCart} style={{ height: 50, width: 50, paddingTop: 11 }} />
             </div>
         )
     }
