@@ -76,7 +76,6 @@ class ProductDetail extends React.Component {
         let size = null;
         let amount = this.state.amount
 
-
         for (let i in this.state.shoeDetails[chosenColor].sizes) {
             allSizes.push(i)
         }
@@ -141,7 +140,7 @@ class ProductDetail extends React.Component {
 
                 shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
             }
-            
+
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
 
             let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
