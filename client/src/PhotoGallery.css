@@ -40,15 +40,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 1150px;
-    height: 750px;
-    padding: 20%;
-    background: rgba(0, 0, 0, 0.8);
-    background-size: contain;
+    width: 100%;
+    height: 100%;
+    padding-right: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 10%;
+    background: rgba(0, 0, 0, 0.8)
 }
 .expandedCarouselInner {
-    height: 100%;
-    width: 100%;
+    height: 1000px;
+    width: 1440px;
     /* background-position: center;
     background-repeat: no-repeat; */
     background-size: cover;
