@@ -34,23 +34,25 @@
     color: black;
 }
 .expandedCarousel {
-    position: absolute;
+    position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 1200px;
+    width: 1150px;
     height: 750px;
-    padding: 25%;
+    padding: 20%;
     background: rgba(0, 0, 0, 0.8);
+    background-size: contain;
 }
 .expandedCarouselInner {
     height: 100%;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-position: center;
+    background-repeat: no-repeat; */
     background-size: cover;
+    position: relative;
     display: flex;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -112,6 +114,7 @@
     margin-bottom: 150px;
     /* margin-left: 200px; */
     padding-right: 30px;
+    cursor: pointer;
 }
 
 .images {
