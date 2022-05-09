@@ -141,8 +141,7 @@ class ProductDetail extends React.Component {
 
                 shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
             }
-
-
+            
             // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
 
             let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
@@ -157,8 +156,6 @@ class ProductDetail extends React.Component {
             let brand = response.data.product[0].brandName;
             let model = response.data.product[0].productName;
             let id = response.data.product[0].productId;
-
-
 
             let imageLink = response.data.product[0].styles[0].color
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
@@ -179,7 +176,6 @@ class ProductDetail extends React.Component {
             for (let i in shoeDetails[imageLink].sizes) {
                 allSizes.push(i)
             }
-
 
             this.setState({
                 brandName: brand,
@@ -206,8 +202,6 @@ class ProductDetail extends React.Component {
         }).catch((error) => {
             console.error(error);
         });
-
-
     }
 
     chooseSize = (event) => {
@@ -304,8 +298,6 @@ class ProductDetail extends React.Component {
                 mostVoteSubmit: false
             })
         }
-
-        console.log(this.state.ratings)
     }
     leastUpVote = (event) => {
         if (!this.state.leastVoteSubmit) {
