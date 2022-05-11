@@ -51,8 +51,6 @@
 .expandedCarouselInner {
     height: 1000px;
     width: 1440px;
-    /* background-position: center;
-    background-repeat: no-repeat; */
     background-size: cover;
     position: relative;
     display: flex;
