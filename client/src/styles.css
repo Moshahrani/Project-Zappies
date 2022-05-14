@@ -402,11 +402,9 @@ li:hover {
     animation: fade-in-text 2.2s 0.1s forwards;
     opacity: 0;
   }
-  
   .ratings-graph-horizontal {
     max-width: 400px;
   }
-  
   .ratings-graph-horizontal > div {
     float: left;
     margin-bottom: 8px;
@@ -414,9 +412,7 @@ li:hover {
     height: 55px;
     background-color: lightgrey;
     opacity: 0.85;
-    
   }
-  
   .ratings-graph-horizontal .rating {
     float: left;
     width: 15px;
@@ -424,14 +420,12 @@ li:hover {
     padding-bottom: 20px;
     background-color: white;
   }
-
   .ratings-graph-horizontal .totalRatings {
     float: right;
     margin-top: 18px;
     margin-right: 5px;
     font-weight: 600;
   }
-  
   .ratings-graph-horizontal .ratings {
     border-radius: 3px;
     height: 55px;
@@ -455,48 +449,41 @@ li:hover {
     width: 90px;
     padding-top: 10px;
   }
-  
   .ratings-graph-one .ratings::after {
     -webkit-animation: fade-in-text 2.2s 0.1s forwards;
     -moz-animation: fade-in-text 2.2s 0.1s forwards;
     animation: fade-in-text 2.2s 0.1s forwards;
   }
-  
   .ratings-graph-one .ratings-one .ratings {
     background-color: #2ecc71;
     -webkit-animation: show-ratings-one 1.2s 0.1s forwards;
     -moz-animation: show-ratings-one 1.2s 0.1s forwards;
     animation: show-ratings-one 1.2s 0.1s forwards;
   }
-  
   .ratings-graph-one .ratings-two .ratings {
     background-color: #2ecc71;
     -webkit-animation: show-ratings-two 1.2s 0.2s forwards;
     -moz-animation: show-ratings-two 1.2s 0.2s forwards;
     animation: show-ratings-two 1.2s 0.2s forwards;
   }
-  
   .ratings-graph-one .ratings-three .ratings {
     background-color: #2ecc71;
     -webkit-animation: show-ratings-three 1.2s 0.3s forwards;
     -moz-animation: show-ratings-three 1.2s 0.3s forwards;
     animation: show-ratings-three 1.2s 0.3s forwards;
   }
-  
   .ratings-graph-one .ratings-four .ratings {
     background-color: #2ecc71;
     -webkit-animation: show-ratings-four 1.2s 0.4s forwards;
     -moz-animation: show-ratings-four 1.2s 0.4s forwards;
     animation: show-ratings-four 1.2s 0.4s forwards;
   }
-  
   .ratings-graph-one .ratings-five .ratings {
     background-color: #2ecc71;
     -webkit-animation: show-ratings-five 1.2s 0.4s forwards;
     -moz-animation: show-ratings-five 1.2s 0.4s forwards;
     animation: show-ratings-five 1.2s 0.4s forwards;
   }
-  
   /* Horizontal Animations */
   @-webkit-keyframes show-ratings-one {
     0% {
