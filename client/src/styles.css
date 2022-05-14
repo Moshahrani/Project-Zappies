@@ -491,31 +491,26 @@ li:hover {
     }
     
   }
-  
   @-webkit-keyframes show-ratings-two {
     0% {
       width: 0;
     }
   }
-  
   @-webkit-keyframes show-ratings-three {
     0% {
       width: 0;
     }
   }
-  
   @-webkit-keyframes show-ratings-four {
     0% {
       width: 0;
     }
   }
-
   @-webkit-keyframes show-ratings-five {
     0% {
       width: 0;
     }
   }
-  
   @-webkit-keyframes fade-in-text {
     0% {
       opacity: 0;
