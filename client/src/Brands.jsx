@@ -1,4 +1,3 @@
-
 import React from 'react'
 import ReactDom from 'react-dom';
 import Adidas from './BrandLogos/Adidas.png';
@@ -26,26 +25,26 @@ function Brands(props) {
 
     return (
         <div className="brandsContainer" >
-            <img id="brand" src={Adidas} />
-            <img id="brand" src={Asics} />
-            <img id="brand" src={Clarks} />
-            <img id="brand" src={Columbia} />
-            <img id="brand" src={Converse} />
-            <img id="brand" src={CoolPlanet} />
-            <img id="brand" src={Crocs} />
-            <img id="brand" src={DCShoes} />
-            <img id="brand" src={Lacoste} />
-            <img id="brand" src={NewBalance} />
-            <img id="brand" src={Puma} />
-            <img id="brand" src={Reebok} />
-            <img id="brand" src={Saucony} />
-            <img id="brand" src={Skechers} />
-            <img id="brand" src={SkechersPerformance} />
-            <img id="brand" src={Sperry} />
-            <img id="brand" src={SteveMadden} />
-            <img id="brand" src={Ugg} />
-            <img id="brand" src={UnderArmour} />
-            <img id="brand" src={Vans} />
+            <img className="brand" id='8466374' src={Adidas} onClick={props.getSpecificShoe}/>
+            <img className="brand" src={Asics} />
+            <img className="brand" src={Clarks} />
+            <img className="brand" src={Columbia} />
+            <img className="brand" src={Converse} />
+            <img className="brand" src={CoolPlanet} />
+            <img className="brand" src={Crocs} />
+            <img className="brand" src={DCShoes} />
+            <img className="brand" src={Lacoste} />
+            <img className="brand" src={NewBalance} />
+            <img className="brand" src={Puma} />
+            <img className="brand" src={Reebok} />
+            <img className="brand" src={Saucony} />
+            <img className="brand" src={Skechers} />
+            <img className="brand" src={SkechersPerformance} />
+            <img className="brand" src={Sperry} />
+            <img className="brand" src={SteveMadden} />
+            <img className="brand" src={Ugg} />
+            <img className="brand" src={UnderArmour} />
+            <img className="brand" src={Vans} />
         </div>
     );
 }

@@ -245,10 +245,11 @@ li:hover {
   width: 900px;
   height: 600px;
 }
-#brand {
+.brand {
   width: 225px;
   height: 150px;
   padding: 25px;
+  cursor: pointer;
 }
 .allStars {
   padding-left: 20px;
