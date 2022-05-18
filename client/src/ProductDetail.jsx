@@ -243,6 +243,7 @@ class ProductDetail extends React.Component {
             })
         }
     }
+
     chooseImage = (event) => {
         let chosenImage = event.target.src.split("._AC_SR700,525_.jpg");
         let images = this.state.allImages[this.state.currentItem];
@@ -298,6 +299,7 @@ class ProductDetail extends React.Component {
             })
         }
     }
+    
     leastUpVote = (event) => {
         if (!this.state.leastVoteSubmit) {
             this.setState({
