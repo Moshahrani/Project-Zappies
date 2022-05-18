@@ -49,7 +49,7 @@ class ProductDetail extends React.Component {
             currentIndex: 0,
             lastIndex: null
         }
-        this.getSpecificShoe = this.getSpecificShoe.bind(this);
+        // this.getSpecificShoe = this.getSpecificShoe.bind(this);
         this.printShoe = this.printShoe.bind(this);
         this.chooseSize = this.chooseSize.bind(this);
         this.chooseAmount = this.chooseAmount.bind(this);
@@ -95,113 +95,221 @@ class ProductDetail extends React.Component {
             price: '$' + this.state.shoeDetails[chosenColor]["price"]
         })
     }
-
-    getSpecificShoe = () => {
-        var options = {
-            method: 'GET',
-            url: 'https://zappos1.p.rapidapi.com/products/detail',
-            params: { productId: '7213524' },
-            headers: {
-                'X-RapidAPI-Host': 'zappos1.p.rapidapi.com',
-                'X-RapidAPI-Key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f'
-            }
-        };
-
-        axios.request(options).then((response) => {
-            console.log(response.data.product[0])
-            let shoeDetails = {};
-            let priceString = "";
-            for (let i = 0; i < response.data.product[0].styles.length; i++) {
-                let sizeInventory = {};
-                let sizes = {};
-                //Converting sizes in stock from strings to Numbers
-                for (let j = 0; j < response.data.product[0].styles[i].stocks.length; j++) {
-                    sizes[response.data.product[0].styles[i].stocks[j].size] = Number(response.data.product[0].styles[i].stocks[j].onHand);
+   
+    componentDidMount() {
+            var options = {
+                method: 'GET',
+                url: 'https://zappos1.p.rapidapi.com/products/detail',
+                params: { productId: '7213524' },
+                headers: {
+                    'X-RapidAPI-Host': 'zappos1.p.rapidapi.com',
+                    'X-RapidAPI-Key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f'
                 }
+            };
+         console.log('testing request');
 
-                // Putting sizes in separate object to make searching easier
-                sizeInventory["sizes"] = sizes
-
-                // Checking if product on sale, if so, convert original sale price string to integer by removing $ sign
-                if (response.data.product[0].styles[i].onSale === "true") {
-                    let orgPrice = response.data.product[0].styles[i].originalPrice.split('$')
-                    let cost = Number(orgPrice[1]);
-                    let numPrice = parseFloat((cost).toFixed(2))
-                    sizeInventory["originalPrice"] = numPrice;
-                    sizeInventory["onSale"] = true;
-                    sizeInventory["percentOff"] = response.data.product[0].styles[i].percentOff;
+            axios.request(options).then((response) => {
+                console.log(response.data.product[0])
+                let shoeDetails = {};
+                let priceString = "";
+                for (let i = 0; i < response.data.product[0].styles.length; i++) {
+                    let sizeInventory = {};
+                    let sizes = {};
+                    //Converting sizes in stock from strings to Numbers
+                    for (let j = 0; j < response.data.product[0].styles[i].stocks.length; j++) {
+                        sizes[response.data.product[0].styles[i].stocks[j].size] = Number(response.data.product[0].styles[i].stocks[j].onHand);
+                    }
+    
+                    // Putting sizes in separate object to make searching easier
+                    sizeInventory["sizes"] = sizes
+    
+                    // Checking if product on sale, if so, convert original sale price string to integer by removing $ sign
+                    if (response.data.product[0].styles[i].onSale === "true") {
+                        let orgPrice = response.data.product[0].styles[i].originalPrice.split('$')
+                        let cost = Number(orgPrice[1]);
+                        let numPrice = parseFloat((cost).toFixed(2))
+                        sizeInventory["originalPrice"] = numPrice;
+                        sizeInventory["onSale"] = true;
+                        sizeInventory["percentOff"] = response.data.product[0].styles[i].percentOff;
+                    }
+                    // Removing $ sign from string value but for current price value
+                    let price = response.data.product[0].styles[i].price.split('$')
+                    priceString = response.data.product[0].styles[i].price;
+                    let cost = Number(price[1])
+                    let regPrice = parseFloat((cost).toFixed(2))
+                    sizeInventory["price"] = regPrice;
+    
+                    shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
                 }
-                // Removing $ sign from string value but for current price value
-                let price = response.data.product[0].styles[i].price.split('$')
-                priceString = response.data.product[0].styles[i].price;
-                let cost = Number(price[1])
-                let regPrice = parseFloat((cost).toFixed(2))
-                sizeInventory["price"] = regPrice;
-
-                shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
-            }
-
-            // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
-
-            let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
-            // Getting general shoe information
-            // all colors, product images, price
-            let describe = response.data.product[0].description
-            //let cost = response.data.product[0].styles[0].price
-            let styleList = [];
-            let shoeSizes = [];
-            let allPictures = {};
-            let allThumbnails = {};
-            let brand = response.data.product[0].brandName;
-            let model = response.data.product[0].productName;
-            let id = response.data.product[0].productId;
-
-            let imageLink = response.data.product[0].styles[0].color
-            for (let i = 0; i < response.data.product[0].styles.length; i++) {
-                styleList.push(response.data.product[0].styles[i].color);
-                let allImages = [];
-                let thumbnails = [];
-                for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
-                    allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg");
-                    thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
+    
+                // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
+    
+                let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
+                // Getting general shoe information
+                // all colors, product images, price
+                let describe = response.data.product[0].description
+                //let cost = response.data.product[0].styles[0].price
+                let styleList = [];
+                let shoeSizes = [];
+                let allPictures = {};
+                let allThumbnails = {};
+                let brand = response.data.product[0].brandName;
+                let model = response.data.product[0].productName;
+                let id = response.data.product[0].productId;
+    
+                let imageLink = response.data.product[0].styles[0].color
+                for (let i = 0; i < response.data.product[0].styles.length; i++) {
+                    styleList.push(response.data.product[0].styles[i].color);
+                    let allImages = [];
+                    let thumbnails = [];
+                    for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
+                        allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg");
+                        thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
+                    }
+                    allPictures[response.data.product[0].styles[i].color] = [...allImages]
+                    allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
                 }
-                allPictures[response.data.product[0].styles[i].color] = [...allImages]
-                allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
-            }
-            
-            // Get all sizes for particular color in array for efficient dropdown mapping
-
-            let allSizes = []
-            for (let i in shoeDetails[imageLink].sizes) {
-                allSizes.push(i)
-            }
-
-            this.setState({
-                brandName: brand,
-                productName: model,
-                productId: id,
-                currentItem: imageLink,
-                description: describe,
-                currentDetails: shoeDetails[imageLink],
-                itemExists: true,
-                price: priceString,
-                productRating: rating,
-                // sizes: [...shoeSizes],
-                sizes: [...allSizes],
-                colors: [...styleList],
-                allImages: allPictures,
-                allThumbnails: allThumbnails,
-                lastIndex: allPictures[imageLink].length - 1,
-                reviews: response.data.product[0].reviewSummary,
-                ratings: response.data.product[0].overallRating,
-                leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
-                mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
-                shoeDetails: shoeDetails
-            })
-        }).catch((error) => {
-            console.error(error);
-        });
+                
+                // Get all sizes for particular color in array for efficient dropdown mapping
+    
+                let allSizes = []
+                for (let i in shoeDetails[imageLink].sizes) {
+                    allSizes.push(i)
+                }
+    
+                this.setState({
+                    brandName: brand,
+                    productName: model,
+                    productId: id,
+                    currentItem: imageLink,
+                    description: describe,
+                    currentDetails: shoeDetails[imageLink],
+                    itemExists: true,
+                    price: priceString,
+                    productRating: rating,
+                    // sizes: [...shoeSizes],
+                    sizes: [...allSizes],
+                    colors: [...styleList],
+                    allImages: allPictures,
+                    allThumbnails: allThumbnails,
+                    lastIndex: allPictures[imageLink].length - 1,
+                    reviews: response.data.product[0].reviewSummary,
+                    ratings: response.data.product[0].overallRating,
+                    leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
+                    mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
+                    shoeDetails: shoeDetails
+                })
+            }).catch((error) => {
+                console.error(error);
+            });
+    
     }
+    // getSpecificShoe = () => {
+    //     var options = {
+    //         method: 'GET',
+    //         url: 'https://zappos1.p.rapidapi.com/products/detail',
+    //         params: { productId: '7213524' },
+    //         headers: {
+    //             'X-RapidAPI-Host': 'zappos1.p.rapidapi.com',
+    //             'X-RapidAPI-Key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f'
+    //         }
+    //     };
+
+    //     axios.request(options).then((response) => {
+    //         console.log(response.data.product[0])
+    //         let shoeDetails = {};
+    //         let priceString = "";
+    //         for (let i = 0; i < response.data.product[0].styles.length; i++) {
+    //             let sizeInventory = {};
+    //             let sizes = {};
+    //             //Converting sizes in stock from strings to Numbers
+    //             for (let j = 0; j < response.data.product[0].styles[i].stocks.length; j++) {
+    //                 sizes[response.data.product[0].styles[i].stocks[j].size] = Number(response.data.product[0].styles[i].stocks[j].onHand);
+    //             }
+
+    //             // Putting sizes in separate object to make searching easier
+    //             sizeInventory["sizes"] = sizes
+
+    //             // Checking if product on sale, if so, convert original sale price string to integer by removing $ sign
+    //             if (response.data.product[0].styles[i].onSale === "true") {
+    //                 let orgPrice = response.data.product[0].styles[i].originalPrice.split('$')
+    //                 let cost = Number(orgPrice[1]);
+    //                 let numPrice = parseFloat((cost).toFixed(2))
+    //                 sizeInventory["originalPrice"] = numPrice;
+    //                 sizeInventory["onSale"] = true;
+    //                 sizeInventory["percentOff"] = response.data.product[0].styles[i].percentOff;
+    //             }
+    //             // Removing $ sign from string value but for current price value
+    //             let price = response.data.product[0].styles[i].price.split('$')
+    //             priceString = response.data.product[0].styles[i].price;
+    //             let cost = Number(price[1])
+    //             let regPrice = parseFloat((cost).toFixed(2))
+    //             sizeInventory["price"] = regPrice;
+
+    //             shoeDetails[response.data.product[0].styles[i].color] = sizeInventory;
+    //         }
+
+    //         // Getting Shoe Details  for each model (inventory, sizes, price, sale?, etc...)
+
+    //         let rating = response.data.product[0].reviewSummary.reviewWithMostVotes.overallRating;
+    //         // Getting general shoe information
+    //         // all colors, product images, price
+    //         let describe = response.data.product[0].description
+    //         //let cost = response.data.product[0].styles[0].price
+    //         let styleList = [];
+    //         let shoeSizes = [];
+    //         let allPictures = {};
+    //         let allThumbnails = {};
+    //         let brand = response.data.product[0].brandName;
+    //         let model = response.data.product[0].productName;
+    //         let id = response.data.product[0].productId;
+
+    //         let imageLink = response.data.product[0].styles[0].color
+    //         for (let i = 0; i < response.data.product[0].styles.length; i++) {
+    //             styleList.push(response.data.product[0].styles[i].color);
+    //             let allImages = [];
+    //             let thumbnails = [];
+    //             for (let j = 1; j < response.data.product[0].styles[i].images.length; j++) {
+    //                 allImages.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg");
+    //                 thumbnails.push("https://m.media-amazon.com/images/I/" + response.data.product[0].styles[i].images[j].imageId + "._AC_SR700,525_.jpg")
+    //             }
+    //             allPictures[response.data.product[0].styles[i].color] = [...allImages]
+    //             allThumbnails[response.data.product[0].styles[i].color] = [...thumbnails]
+    //         }
+            
+    //         // Get all sizes for particular color in array for efficient dropdown mapping
+
+    //         let allSizes = []
+    //         for (let i in shoeDetails[imageLink].sizes) {
+    //             allSizes.push(i)
+    //         }
+
+    //         this.setState({
+    //             brandName: brand,
+    //             productName: model,
+    //             productId: id,
+    //             currentItem: imageLink,
+    //             description: describe,
+    //             currentDetails: shoeDetails[imageLink],
+    //             itemExists: true,
+    //             price: priceString,
+    //             productRating: rating,
+    //             // sizes: [...shoeSizes],
+    //             sizes: [...allSizes],
+    //             colors: [...styleList],
+    //             allImages: allPictures,
+    //             allThumbnails: allThumbnails,
+    //             lastIndex: allPictures[imageLink].length - 1,
+    //             reviews: response.data.product[0].reviewSummary,
+    //             ratings: response.data.product[0].overallRating,
+    //             leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
+    //             mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
+    //             shoeDetails: shoeDetails
+    //         })
+    //     }).catch((error) => {
+    //         console.error(error);
+    //     });
+    // }
 
     chooseSize = (event) => {
         const value = event.target.getAttribute('value')
@@ -214,7 +322,6 @@ class ProductDetail extends React.Component {
             size: value,
             quantity: this.state.shoeDetails[this.state.currentItem].sizes[value]
         })
-
     }
 
     chooseAmount = (event) => {
@@ -319,9 +426,6 @@ class ProductDetail extends React.Component {
         if (!this.state.itemExists) {
             return (
                 <div id="getProductDetails" className="beforeGetShoe">
-                    <h1>
-                        <button type="button" id="getShoeButton" className="getShoeButton" onClick={this.getSpecificShoe}>Vans</button>
-                    </h1>
                 </div>
             )
         } else {

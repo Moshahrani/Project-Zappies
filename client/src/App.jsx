@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import MainPage from './MainPage.jsx'
 import ProductDetail from './ProductDetail.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
-      image: '',
-      description: [],
-      nextPage: false
+      // items: [],
+      // image: '',
+      // description: [],
+      // nextPage: false
     }
-    this.getMensShoes = this.getMensShoes.bind(this);
+    // this.getMensShoes = this.getMensShoes.bind(this);
   }
   
-  getMensShoes = () => {
+  // getMensShoes = () => {
     // const options = {
     //   method: 'GET',
     //   url: 'https://zappos1.p.rapidapi.com/categories/list',
@@ -60,29 +59,29 @@ class App extends React.Component {
     //   console.error(error);
     // });
     //console.log('testing', list)
-    this.setState({
-      nextPage: true
-    })
-  }
+  //   this.setState({
+  //     nextPage: true
+  //   })
+  // }
 
   render() {
-    if (this.state.nextPage) {
+    // if (this.state.nextPage) {
       return (
         <div>
           <ProductDetail />
         </div>
       )
-    } else {
-      return (<div id="app" className="app">
-        <h1>
-          Zappies
-        </h1>
-        <div >
-          <button type="button" className="getShoes" onClick={this.getMensShoes}>Products</button>
-        </div>
-      </div>
-      )
-    }
+    // } else {
+    //   return (<div id="app" className="app">
+    //     <h1>
+    //       Zappies
+    //     </h1>
+    //     <div >
+    //       <button type="button" className="getShoes" onClick={this.getMensShoes}>Products</button>
+    //     </div>
+    //   </div>
+    //   )
+    // }
   }
 }
 
