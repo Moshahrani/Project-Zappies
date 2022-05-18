@@ -57,13 +57,13 @@ class PhotoGallery extends React.Component {
                         style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }}
                     >
                         <div className="left" >
-                            <ArrowCircleLeftOutlinedIcon onClick={this.props.leftArrow} style={{ fontSize: 60, color: "black" }} />
+                            <ArrowCircleLeftOutlinedIcon onClick={this.props.leftArrow} style={{ fontSize: 60, color: "black", cursor: 'pointer' }} />
                         </div>
                         <div className="center" onClick={this.showExpanded}>
 
                         </div>
                         <div className="right" >
-                            <ArrowCircleRightOutlinedIcon onClick={this.props.rightArrow} style={{ fontSize: 60, color: "black" }} />
+                            <ArrowCircleRightOutlinedIcon onClick={this.props.rightArrow} style={{ fontSize: 60, color: "black", cursor: 'pointer' }} />
                         </div>
                     </div>
                 </div>
@@ -77,13 +77,13 @@ class PhotoGallery extends React.Component {
 
                     >
                         <div className="left" >
-                            <ArrowBackIosIcon onClick={this.props.leftArrow} />
+                            <ArrowBackIosIcon onClick={this.props.leftArrow} style={{ cursor: 'pointer' }}/>
                         </div>
                         <div className="center" onClick={this.showExpanded} style={{ backgroundImage: `url(${this.props.imageList[this.props.firstIndex]})` }} >
                             <ImageMagnifier image={`${this.props.imageList[this.props.firstIndex]}`} />
                         </div>
                         <div className="right" >
-                            <ArrowForwardIosIcon onClick={this.props.rightArrow} />
+                            <ArrowForwardIosIcon onClick={this.props.rightArrow} style={{ cursor: 'pointer' }}/>
                         </div>
                     </div>
                 </div>
