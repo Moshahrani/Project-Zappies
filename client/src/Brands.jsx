@@ -34,17 +34,17 @@ function Brands(props) {
             <img className="brand" id='9479154' src={Crocs} />
             <img className="brand" id='7550798' src={DCShoes} />
             <img className="brand" src={Lacoste} />
-            <img className="brand" id='9404584' src={NewBalance} />
-            <img className="brand" src={Puma} />
-            <img className="brand" src={Reebok} />
-            <img className="brand" src={Saucony} />
-            <img className="brand" src={Skechers} />
-            <img className="brand" src={SkechersPerformance} />
-            <img className="brand" src={Sperry} />
-            <img className="brand" src={SteveMadden} />
-            <img className="brand" src={Ugg} />
-            <img className="brand" src={UnderArmour} />
-            <img className="brand" src={Vans} />
+            <img className="brand" id='9477716' src={NewBalance} />
+            <img className="brand" id='9469154' src={Puma} />
+            <img className="brand" id='9290811' src={Reebok} />
+            <img className="brand" id='9518040' src={Saucony} />
+            <img className="brand" id='9369965' src={Skechers} />
+            <img className="brand" id='9140957' src={SkechersPerformance} />
+            <img className="brand" id='9340979' src={Sperry} />
+            <img className="brand"  src={SteveMadden} />
+            <img className="brand" id='9469603' src={Ugg} />
+            <img className="brand" id='9469603' src={UnderArmour} />
+            <img className="brand" id='7213524' src={Vans} />
         </div>
     );
 }

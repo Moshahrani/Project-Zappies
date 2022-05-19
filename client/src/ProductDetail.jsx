@@ -285,7 +285,7 @@ class ProductDetail extends React.Component {
             for (let i in shoeDetails[imageLink].sizes) {
                 allSizes.push(i)
             }
-
+            
             this.setState({
                 brandName: brand,
                 productName: model,
@@ -304,8 +304,8 @@ class ProductDetail extends React.Component {
                 lastIndex: allPictures[imageLink].length - 1,
                 reviews: response.data.product[0].reviewSummary,
                 ratings: response.data.product[0].overallRating,
-                leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
-                mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
+                leastUpVotes: Number(response.data.product[0].reviewSummary.reviewWithLeastVotes.upVotes),
+                mostUpVotes: Number(response.data.product[0].reviewSummary.reviewWithMostVotes.upVotes),
                 shoeDetails: shoeDetails
             })
         }).catch((error) => {

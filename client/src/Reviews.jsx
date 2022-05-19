@@ -4,10 +4,10 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import StarRatings from './StarRatings.jsx';
 
 function Reviews(props) {
-
+    
     let reviewMostVotes = props.reviews.reviewWithMostVotes;
     let reviewLeastVotes = props.reviews.reviewWithLeastVotes;
-
+    
     return (
         <div className="reviews" >
             <div className="positiveReview">
