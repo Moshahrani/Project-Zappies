@@ -24,17 +24,17 @@ import Vans from './BrandLogos/Vans.png';
 function Brands(props) {
 
     return (
-        <div className="brandsContainer" >
-            <img className="brand" id='8466374' src={Adidas} onClick={props.getSpecificShoe}/>
-            <img className="brand" src={Asics} />
-            <img className="brand" src={Clarks} />
-            <img className="brand" src={Columbia} />
-            <img className="brand" src={Converse} />
+        <div className="brandsContainer" onClick={props.getSpecificShoe}>
+            <img className="brand" id='8466374' src={Adidas} />
+            <img className="brand" id='9514768' src={Asics} />
+            <img className="brand" id='9617026' src={Clarks} />
+            <img className="brand" id='8806722' src={Columbia} />
+            <img className="brand" id='9467466' src={Converse} />
             <img className="brand" src={CoolPlanet} />
-            <img className="brand" src={Crocs} />
-            <img className="brand" src={DCShoes} />
+            <img className="brand" id='9479154' src={Crocs} />
+            <img className="brand" id='7550798' src={DCShoes} />
             <img className="brand" src={Lacoste} />
-            <img className="brand" src={NewBalance} />
+            <img className="brand" id='9404584' src={NewBalance} />
             <img className="brand" src={Puma} />
             <img className="brand" src={Reebok} />
             <img className="brand" src={Saucony} />
