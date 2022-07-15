@@ -17,7 +17,7 @@ it('renders Colors text ', () => {
 
 describe('Colors shoeMenu button ', () => {
     const wrapper = shallow(<ColorsDropdown colors={[]} />);
-    const menuButton = wrapper.find('#showMenu');
+    const menuButton = wrapper.find('.button');
     it('Colors menu button exists', () => {
         expect(menuButton.exists()).toBe(true);
     });
@@ -39,7 +39,7 @@ describe('Colors printShoe button ', () => {
     wrapper.setState({
         showMenu: true
     });
-    const printButton = wrapper.find('#showShoe');
+    const printButton = wrapper.find('#dd');
     it('PrintShoe button exists', () => {
         expect(printButton.exists()).toBe(true);
     });
