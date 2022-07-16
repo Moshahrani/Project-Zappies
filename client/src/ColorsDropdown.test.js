@@ -9,11 +9,10 @@ it('renders Colors Component without any issues', () => {
 
 it('renders Colors text ', () => {
     const wrapper = shallow(<ColorsDropdown />);
-    const colorsDisplay = 'Colors';
-    expect(wrapper.contains(colorsDisplay)).toEqual(true);
+    const menuButton = wrapper.find('.button');
+    const colorsDisplay = ' Colors ';
+    expect(menuButton.contains(colorsDisplay)).toEqual(true);
 });
-
-
 
 describe('Colors shoeMenu button ', () => {
     const wrapper = shallow(<ColorsDropdown colors={[]} />);
@@ -31,7 +30,6 @@ describe('Colors shoeMenu button ', () => {
         wrapper.instance().forceUpdate();
         expect(wrapper.state('showMenu')).toEqual(true);
     });
-
 });
 
 describe('Colors printShoe button ', () => {

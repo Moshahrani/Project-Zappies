@@ -4,7 +4,6 @@ import ReactDom from 'react-dom';
 class ColorsDropdown extends React.Component {
   constructor(props) {
     super();
-
     this.state = {
       showMenu: false,
     };

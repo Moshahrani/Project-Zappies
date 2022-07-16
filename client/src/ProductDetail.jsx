@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import axios from 'axios'
 import ColorsDropdown from './ColorsDropdown.jsx';
 import SizesDropdown from './SizesDropdown.jsx';
@@ -10,7 +9,6 @@ import ShoppingCart from './ShoppingCart.jsx';
 import PhotoGallery from './PhotoGallery.jsx';
 import Reviews from './Reviews.jsx';
 import RatingBar from './RatingBar.jsx';
-import ImageMagnifier from './ImageMagnifier.jsx';
 import Logo from './logo.png'
 import Brands from './Brands.jsx'
 
@@ -37,7 +35,7 @@ class ProductDetail extends React.Component {
             mostUpVotes: '',
             mostVoteSubmit: false,
             leastVoteSubmit: false,
-            sizes: null,
+            sizes: [],
             colors: [],
             allImages: {},
             allThumbnails: {},
@@ -106,7 +104,6 @@ class ProductDetail extends React.Component {
                 'X-RapidAPI-Key': 'fa300790c6msh1f0a61b57b1d3ecp1e914djsn75574964670f'
             }
         };
-        console.log('testing request');
 
         axios.request(options).then((response) => {
             console.log(response.data.product[0])
@@ -296,7 +293,6 @@ class ProductDetail extends React.Component {
                 itemExists: true,
                 price: priceString,
                 productRating: rating,
-                // sizes: [...shoeSizes],
                 sizes: [...allSizes],
                 colors: [...styleList],
                 allImages: allPictures,

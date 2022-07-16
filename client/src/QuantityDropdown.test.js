@@ -16,7 +16,7 @@ it("renders Quantity text", () => {
 
 describe('Quantity button ', () => {
     const wrapper = shallow(<QuantityDropdown colors={[]} />);
-    const menuButton = wrapper.find('#showMenu');
+    const menuButton = wrapper.find('.button');
 
     it('Quantity button exists', () => {
         expect(menuButton.exists()).toBe(true);

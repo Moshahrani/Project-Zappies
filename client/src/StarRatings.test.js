@@ -7,10 +7,5 @@ it("renders without issues" , () => {
     expect(wrapper.exists()).toBe(true);
 });
 
-it("renders Stars Phrase ", () => {
-    const wrapper = shallow(<StarRatings />);
-    const starRatings = "Stars";
-    expect(wrapper.contains(starRatings)).toEqual(true);
-})
 
 
