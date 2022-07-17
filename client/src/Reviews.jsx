@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import StarRatings from './StarRatings.jsx';
 

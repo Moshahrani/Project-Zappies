@@ -12,7 +12,6 @@ import RatingBar from './RatingBar.jsx';
 import Logo from './logo.png'
 import Brands from './Brands.jsx'
 
-
 class ProductDetail extends React.Component {
     constructor(props) {
         super(props);
@@ -94,7 +93,7 @@ class ProductDetail extends React.Component {
         })
     }
 
-    componentDidMount() {
+     componentDidMount() {
         var options = {
             method: 'GET',
             url: 'https://zappos1.p.rapidapi.com/products/detail',
@@ -105,8 +104,8 @@ class ProductDetail extends React.Component {
             }
         };
 
-        axios.request(options).then((response) => {
-            console.log(response.data.product[0])
+        return axios.request(options).then((response) => {
+            // console.log(response.data.product[0])
             let shoeDetails = {};
             let priceString = "";
             for (let i = 0; i < response.data.product[0].styles.length; i++) {
@@ -214,7 +213,7 @@ class ProductDetail extends React.Component {
             }
         };
 
-        axios.request(options).then((response) => {
+       return  axios.request(options).then((response) => {
             console.log(response.data.product[0])
             let shoeDetails = {};
             let priceString = "";
