@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658028972953" clover="3.2.0">
-  <project timestamp="1658028972954" name="All files">
+<coverage generated="1658088036924" clover="3.2.0">
+  <project timestamp="1658088036924" name="All files">
     <metrics statements="307" coveredstatements="79" conditionals="70" coveredconditionals="18" methods="58" coveredmethods="23" elements="435" coveredelements="120" complexity="0" loc="307" ncloc="307" packages="1" files="13" classes="13"/>
     <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

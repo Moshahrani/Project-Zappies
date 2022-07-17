@@ -7,7 +7,6 @@ import QuantityDropdown from "./QuantityDropdown.jsx";
 import StarRatings from "./StarRatings.jsx";
 import SocialMedia from "./SocialMedia.jsx";
 import ProductDetail from "./ProductDetail.jsx";
-import { blue } from "@mui/material/colors";
 
 it("renders without issues", () => {
     shallow(<ProductDetail />);
