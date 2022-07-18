@@ -42,13 +42,13 @@ describe("ProductDetail renders for second half of conditional ", () => {
 });
 
 it("should render thumbnails of product ", () => {
-    let wrapper = shallow(<ProductDetail allThumbnails={{}} currentItem={""}/>);
+    let wrapper = shallow(<ProductDetail allThumbnails={{}} currentItem={""} />);
     wrapper.setState({
 
         currentItem: "blue"
     });
     expect(wrapper.state("currentItem")).toEqual("blue");
- });
+});
 
 
 // already tested for in ColorsDropwdown component
@@ -102,7 +102,7 @@ it("should render thumbnails of product ", () => {
 // });
 
 it("should invoke chooseAmount method as a prop in QuantityDropdown Component", () => {
-    let wrapper = shallow(<ProductDetail allThumbnails={{}} currentItem={""}/>);
+    let wrapper = shallow(<ProductDetail allThumbnails={{}} currentItem={""} />);
     wrapper.setState({
         itemExists: true,
         allImages: { red: [], blue: [] },
@@ -113,7 +113,7 @@ it("should invoke chooseAmount method as a prop in QuantityDropdown Component", 
         size: 0,
         sizes: null,
         currentItem: "blue",
-        allThumbnails: {"blue": [1,2,3]}
+        allThumbnails: { "blue": [1, 2, 3] }
     });
     const event = {
         target: { value: 1 }
@@ -127,8 +127,8 @@ it("should invoke chooseAmount method as a prop in QuantityDropdown Component", 
 describe('axios get request to zappos api', () => {
     test('should call componentDidMount', () => {
         const wrapper = mount(<ProductDetail></ProductDetail>);
-           wrapper.instance().componentDidMount();
-           wrapper.update();
+        wrapper.instance().componentDidMount();
+        wrapper.update();
     });
 });
 
