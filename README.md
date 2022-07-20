@@ -19,6 +19,8 @@ Developed functionality with Vanilla Javascript for all features excluding icons
 Personal API Key must be obtained at 
 https://rapidapi.com/apidojo/api/zappos1/
 
+- create a new .env file in root directory and add variable & key combo 
+
 
 To run this project, install it locally using npm:
 
