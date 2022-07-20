@@ -93,7 +93,7 @@ class ProductDetail extends React.Component {
         })
     }
 
-     componentDidMount() {
+    componentDidMount() {
         var options = {
             method: 'GET',
             url: 'https://zappos1.p.rapidapi.com/products/detail',
@@ -213,7 +213,7 @@ class ProductDetail extends React.Component {
             }
         };
 
-       return  axios.request(options).then((response) => {
+        return axios.request(options).then((response) => {
             console.log(response.data.product[0])
             let shoeDetails = {};
             let priceString = "";
