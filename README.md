@@ -12,6 +12,8 @@ Developed functionality with Vanilla Javascript for all features excluding icons
 - Express
 - Jest, Enzyme
 - Material-UI
+- CircleCI
+- Heroku
 
 ## Setup
 Personal API Key must be obtained at 
