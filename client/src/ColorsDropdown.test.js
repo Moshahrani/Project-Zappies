@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ColorsDropdown from './ColorsDropdown.jsx';
+import ColorsDropdown from './ColorsDropdown.js';
 
 it('renders Colors Component without any issues', () => {
     const wrapper = shallow(<ColorsDropdown />);

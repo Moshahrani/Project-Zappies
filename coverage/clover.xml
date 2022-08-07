@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658108242447" clover="3.2.0">
-  <project timestamp="1658108242447" name="All files">
+<coverage generated="1659908050992" clover="3.2.0">
+  <project timestamp="1659908050992" name="All files">
     <metrics statements="307" coveredstatements="79" conditionals="70" coveredconditionals="18" methods="58" coveredmethods="23" elements="435" coveredelements="120" complexity="0" loc="307" ncloc="307" packages="1" files="13" classes="13"/>
-    <file name="App.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.jsx">
+    <file name="App.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/App.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="6" count="2" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
       <line num="13" count="2" type="stmt"/>
     </file>
-    <file name="Brands.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/Brands.jsx">
+    <file name="Brands.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/Brands.js">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <line num="26" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
     </file>
-    <file name="ColorsDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ColorsDropdown.jsx">
+    <file name="ColorsDropdown.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ColorsDropdown.js">
       <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="5"/>
       <line num="6" count="4" type="stmt"/>
       <line num="7" count="4" type="stmt"/>
@@ -26,7 +26,7 @@
       <line num="30" count="9" type="stmt"/>
       <line num="36" count="2" type="stmt"/>
     </file>
-    <file name="ImageMagnifier.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ImageMagnifier.jsx">
+    <file name="ImageMagnifier.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ImageMagnifier.js">
       <metrics statements="20" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <line num="4" count="0" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
@@ -49,7 +49,7 @@
       <line num="42" count="0" type="stmt"/>
       <line num="46" count="0" type="stmt"/>
     </file>
-    <file name="PhotoGallery.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/PhotoGallery.jsx">
+    <file name="PhotoGallery.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/PhotoGallery.js">
       <metrics statements="17" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <line num="14" count="0" type="stmt"/>
       <line num="15" count="0" type="stmt"/>
@@ -69,7 +69,7 @@
       <line num="53" count="0" type="stmt"/>
       <line num="73" count="0" type="stmt"/>
     </file>
-    <file name="ProductDetail.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ProductDetail.jsx">
+    <file name="ProductDetail.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ProductDetail.js">
       <metrics statements="172" coveredstatements="29" conditionals="24" coveredconditionals="2" methods="18" coveredmethods="5"/>
       <line num="17" count="5" type="stmt"/>
       <line num="18" count="5" type="stmt"/>
@@ -244,7 +244,7 @@
       <line num="429" count="3" type="stmt"/>
       <line num="437" count="8" type="stmt"/>
     </file>
-    <file name="QuantityDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/QuantityDropdown.jsx">
+    <file name="QuantityDropdown.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/QuantityDropdown.js">
       <metrics statements="19" coveredstatements="13" conditionals="8" coveredconditionals="4" methods="7" coveredmethods="4"/>
       <line num="10" count="3" type="stmt"/>
       <line num="12" count="3" type="stmt"/>
@@ -266,7 +266,7 @@
       <line num="49" count="6" type="stmt"/>
       <line num="55" count="0" type="stmt"/>
     </file>
-    <file name="RatingBar.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/RatingBar.jsx">
+    <file name="RatingBar.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/RatingBar.js">
       <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="7" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
@@ -283,13 +283,13 @@
       <line num="25" count="0" type="stmt"/>
       <line num="27" count="0" type="stmt"/>
     </file>
-    <file name="Reviews.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/Reviews.jsx">
+    <file name="Reviews.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/Reviews.js">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="7" count="0" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
       <line num="10" count="0" type="stmt"/>
     </file>
-    <file name="ShoppingCart.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ShoppingCart.jsx">
+    <file name="ShoppingCart.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/ShoppingCart.js">
       <metrics statements="16" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <line num="8" count="2" type="stmt"/>
       <line num="9" count="2" type="stmt"/>
@@ -308,7 +308,7 @@
       <line num="34" count="0" type="stmt"/>
       <line num="41" count="2" type="stmt"/>
     </file>
-    <file name="SizesDropdown.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/SizesDropdown.jsx">
+    <file name="SizesDropdown.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/SizesDropdown.js">
       <metrics statements="14" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="7" coveredmethods="4"/>
       <line num="9" count="2" type="stmt"/>
       <line num="11" count="2" type="stmt"/>
@@ -325,11 +325,11 @@
       <line num="40" count="5" type="stmt"/>
       <line num="46" count="0" type="stmt"/>
     </file>
-    <file name="SocialMedia.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/SocialMedia.jsx">
+    <file name="SocialMedia.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/SocialMedia.js">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="5" count="0" type="stmt"/>
     </file>
-    <file name="StarRatings.jsx" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/StarRatings.jsx">
+    <file name="StarRatings.js" path="/Users/moshfeqshahrani/Desktop/Project-Zappies/client/src/StarRatings.js">
       <metrics statements="16" coveredstatements="10" conditionals="14" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>

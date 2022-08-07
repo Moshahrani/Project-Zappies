@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ShoppingCart from './ShoppingCart.jsx';
+import ShoppingCart from './ShoppingCart.js';
 
 
 it("renders Add to Cart phrase ", () => {

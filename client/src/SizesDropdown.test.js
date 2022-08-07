@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SizesDropdown from './SizesDropdown.jsx';
+import SizesDropdown from './SizesDropdown.js';
 
 
 it("renders Sizes phrase ", () => {

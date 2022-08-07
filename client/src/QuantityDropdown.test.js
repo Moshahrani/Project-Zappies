@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import QuantityDropdown from './QuantityDropdown.jsx';
+import QuantityDropdown from './QuantityDropdown.js';
 
 
 it("renders Quantity Component without any issues" , () => {

@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDom from 'react-dom';
 import Adidas from './BrandLogos/Adidas.png';
 import Asics from './BrandLogos/Asics.png';
 import Clarks from './BrandLogos/Clarks.png';
