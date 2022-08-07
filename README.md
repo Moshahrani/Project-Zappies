@@ -2,7 +2,7 @@
 
 ## General Info
 An E-Commerce Product Details page using the Zappos API.
-Developed functionality with Vanilla Javascript for all features excluding icons, which were dependent on material-ui's library.
+Developed functionality mainly with Vanilla Javascript for all features excluding icons, which were dependent on material-ui's library.
 
 
 ## Technologies:
@@ -12,10 +12,14 @@ Developed functionality with Vanilla Javascript for all features excluding icons
 - Express
 - Jest, Enzyme
 - Material-UI
+- CircleCI
+- Heroku
 
 ## Setup
 Personal API Key must be obtained at 
 https://rapidapi.com/apidojo/api/zappos1/
+
+- create a new .env file in root directory and add variable & key combo 
 
 
 To run this project, install it locally using npm:
