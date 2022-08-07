@@ -1,16 +1,16 @@
 import React from 'react';
 import axios from 'axios'
-import ColorsDropdown from './ColorsDropdown.jsx';
-import SizesDropdown from './SizesDropdown.jsx';
-import QuantityDropdown from './QuantityDropdown.jsx';
-import StarRatings from './StarRatings.jsx';
-import SocialMedia from './SocialMedia.jsx';
-import ShoppingCart from './ShoppingCart.jsx';
-import PhotoGallery from './PhotoGallery.jsx';
-import Reviews from './Reviews.jsx';
-import RatingBar from './RatingBar.jsx';
+import ColorsDropdown from './ColorsDropdown.js';
+import SizesDropdown from './SizesDropdown.js';
+import QuantityDropdown from './QuantityDropdown.js';
+import StarRatings from './StarRatings.js';
+import SocialMedia from './SocialMedia.js';
+import ShoppingCart from './ShoppingCart.js';
+import PhotoGallery from './PhotoGallery.js';
+import Reviews from './Reviews.js';
+import RatingBar from './RatingBar.js';
 import Logo from './logo.png'
-import Brands from './Brands.jsx'
+import Brands from './Brands.js'
 
 class ProductDetail extends React.Component {
     constructor(props) {
@@ -105,7 +105,7 @@ class ProductDetail extends React.Component {
         };
 
         return axios.request(options).then((response) => {
-            // console.log(response.data.product[0])
+
             let shoeDetails = {};
             let priceString = "";
             for (let i = 0; i < response.data.product[0].styles.length; i++) {

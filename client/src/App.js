@@ -9,7 +9,7 @@ class App extends React.Component {
   }
 
   render() {
-    // if (this.state.nextPage) {
+    
     return (
       <div>
         <ProductDetail />

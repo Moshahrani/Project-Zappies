@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ProductDetail from './ProductDetail.jsx';
-//import StarRatings from './StarRatings';
 import App from './App.jsx';
 
 
