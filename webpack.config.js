@@ -1,5 +1,5 @@
 var path = require("path");
-const webpack = require("webpack");
+
 const Dotenv = require("dotenv-webpack");
 
 var SRC_DIR = path.join(__dirname, "/client/src");
