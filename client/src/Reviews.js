@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import StarRatings from './StarRatings.js';
 
 function Reviews(props) {
