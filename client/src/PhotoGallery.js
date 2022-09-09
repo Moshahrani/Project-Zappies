@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactDom, { flushSync } from 'react-dom';
-import ProductDetail from './ProductDetail.js'
 import './PhotoGallery.css';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ImageMagnifier from './ImageMagnifier.js';
-
 
 class PhotoGallery extends React.Component {
     constructor(props) {
