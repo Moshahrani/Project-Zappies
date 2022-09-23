@@ -9,7 +9,7 @@ import ShoppingCart from './ShoppingCart.js';
 import PhotoGallery from './PhotoGallery.js';
 import Reviews from './Reviews.js';
 import RatingBar from './RatingBar.js';
-import Logo from './logo.png';
+import StoreLogo from './storeLogo.png';
 import Brands from './Brands.js';
 
 class ProductDetail extends React.Component {
@@ -429,7 +429,7 @@ class ProductDetail extends React.Component {
             return (
                 <div>
                     <div className="topBar" />
-                    <img id="logo" className="storeLogo" src={Logo} />
+                    <img id="logo" className="storeLogo" src={StoreLogo} />
                     <div id="pd" className="productDetailWrapper">
                         <div className="shoeDetailWrapper">
                             <div className="thumbnails" >
