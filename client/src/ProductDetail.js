@@ -9,8 +9,8 @@ import ShoppingCart from './ShoppingCart.js';
 import PhotoGallery from './PhotoGallery.js';
 import Reviews from './Reviews.js';
 import RatingBar from './RatingBar.js';
-import Logo from './logo.png'
-import Brands from './Brands.js'
+import Logo from './logo.png';
+import Brands from './Brands.js';
 
 class ProductDetail extends React.Component {
     constructor(props) {
