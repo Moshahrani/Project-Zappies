@@ -55,8 +55,8 @@
     "dotenv": "^16.0.1",
     "express": "^4.15.0",
     "jest-environment-enzyme": "^7.1.2",
-    "react": "^16.8",
-    "react-dom": "^16.4",
+    "react": "^17.0",
+    "react-dom": "^17.0",
     "react-social-icons": "^5.6.1",
     "unirest": "^0.6.0"
   },
