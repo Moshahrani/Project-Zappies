@@ -2,11 +2,11 @@
   "name": "Zappies",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "react-dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "server-dev": "nodemon server/index.js",
+    "server-dev": "nodemon server/index.jsx",
     "start": "concurrently \" npm run build \" \"npm run server-dev\"",
     "test": "jest --coverage"
   },
